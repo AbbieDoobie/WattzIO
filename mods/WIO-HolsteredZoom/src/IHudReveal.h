@@ -1,5 +1,12 @@
 #pragma once
 
+// === F4RD RELOCATIONS ========================================================
+// This file resolves no addresses, but its Papyrus dispatch reaches a per-runtime
+// ABI offset through the shared compat layer: WIO::Papyrus hands the game a
+// BSTThreadScrapFunction whose impl pointer it reads at 0x18 on OG and 0x38 on
+// NG/AE. That banner is in lib/commonlibf4rd/compat/WattzIO/Papyrus.h.
+// =============================================================================
+
 #include <algorithm>
 #include <atomic>
 #include <cstdint>

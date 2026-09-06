@@ -73,7 +73,9 @@ Licensed MIT. [Source](https://github.com/AbbieDoobie/WattzIO/tree/main/mods/WIO
 
 ## Changelog
 
-Initial release.
+**1.0.1** - Fixed an issue causing the game to crash on Fallout 4 1.10.163 (OG).
+
+**1.0.0** - Initial release.
 
 ## Building
 
