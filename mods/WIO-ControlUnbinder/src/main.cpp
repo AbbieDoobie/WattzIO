@@ -1,5 +1,17 @@
 // === F4RD RELOCATIONS ========================================================
-// This plugin resolves no addresses.
+// This plugin's own source resolves no addresses, but it does reach one through
+// the shared compat layer: WIO::Translations loads the MCM translation file, and
+// that resolves the game's translation-map insert. Its banner is in
+// lib/commonlibf4rd/compat/WattzIO/Translations.h.
+//
+// It also reaches a per-runtime ABI offset there: ControlRemap's MCM pushes go
+// through WIO::Papyrus, which hands the game a BSTThreadScrapFunction whose impl
+// pointer it reads at 0x18 on OG and 0x38 on NG/AE. Banner in
+// lib/commonlibf4rd/compat/WattzIO/Papyrus.h.
+//
+// This banner covers everything the compat layer pins to a specific runtime,
+// not just its ids. An ABI offset counts; anything reached through the layer
+// belongs here even though this file resolves nothing itself.
 // =============================================================================
 
 #include "ApiProvider.h"
@@ -27,7 +39,7 @@ namespace
 	}
 }
 
-WIO_PLUGIN_VERSION("WIO-ControlUnbinder", "Abbie Doobie", 1, 0, 0);
+WIO_PLUGIN_VERSION("WIO-ControlUnbinder", "Abbie Doobie", 1, 0, 1);
 
 F4SE_PLUGIN_LOAD(const F4SE::LoadInterface* a_f4se)
 {

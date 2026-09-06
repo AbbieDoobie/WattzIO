@@ -98,7 +98,9 @@ Licensed MIT. [Source](https://github.com/AbbieDoobie/WattzIO/tree/main/mods/WIO
 
 ## Changelog
 
-Initial release.
+**1.0.1** - Fixed an issue causing the original edition of the game to crash.
+
+**1.0.0** - Initial release.
 
 ## Building
 
