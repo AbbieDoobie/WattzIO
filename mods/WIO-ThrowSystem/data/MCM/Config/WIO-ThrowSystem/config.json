@@ -1,0 +1,1105 @@
+{
+    "modName": "WIO-ThrowSystem",
+    "author": "Abbie Doobie",
+    "displayName": "$TSO_Main_ModName",
+    "minMcmVersion": 4,
+    "content": [
+        {
+            "type": "text",
+            "text": "$TSO_Main_Welcome_Intro"
+        },
+        {
+            "type": "text",
+            "text": "$TSO_Main_Welcome_BulletA"
+        },
+        {
+            "type": "text",
+            "text": "$TSO_Main_Welcome_BulletB"
+        },
+        {
+            "type": "text",
+            "text": "$TSO_Main_Welcome_BulletC"
+        },
+        {
+            "type": "text",
+            "text": "$TSO_Main_Welcome_BulletD"
+        },
+        {
+            "type": "text",
+            "text": "$TSO_Main_Welcome_BulletE"
+        },
+        {
+            "type": "text",
+            "text": "$TSO_Main_Welcome_BulletF"
+        },
+        {
+            "type": "text",
+            "text": "$TSO_Main_Welcome_Gp_Notes"
+        },
+        {
+            "type": "spacer"
+        },
+        {
+            "type": "text",
+            "html": true,
+            "text": "<font color='#AAAAAA' size='14'>$TSO_Main_Welcome_Credits</font>"
+        }
+    ],
+    "pages": [
+        {
+            "pageDisplayName": "$TSO_Gen_Page_General",
+            "content": [
+                {
+                    "type": "section",
+                    "text": "$TSO_Gen_Sect_Gamepad"
+                },
+                {
+                    "id": "iThrowGamepadKey:Settings",
+                    "text": "$TSO_Gen_ThrowGP_Text",
+                    "type": "dropdown",
+                    "help": "$TSO_Gen_ThrowGP_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$TSO_Opt_None",
+                            "$TSO_Input_GP_Up",
+                            "$TSO_Input_GP_Down",
+                            "$TSO_Input_GP_Left",
+                            "$TSO_Input_GP_Right",
+                            "$TSO_Input_GP_Start",
+                            "$TSO_Input_GP_Select",
+                            "$TSO_Input_GP_LS",
+                            "$TSO_Input_GP_RS",
+                            "$TSO_Input_GP_LB",
+                            "$TSO_Input_GP_RB",
+                            "$TSO_Input_GP_A",
+                            "$TSO_Input_GP_B",
+                            "$TSO_Input_GP_X",
+                            "$TSO_Input_GP_Y",
+                            "$TSO_Input_GP_LT",
+                            "$TSO_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iThrowGamepadModifier:Settings",
+                    "text": "$TSO_Gen_ThrowMod_Text",
+                    "type": "dropdown",
+                    "help": "$TSO_Gen_ThrowMod_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$TSO_Opt_None",
+                            "$TSO_Input_GP_Up",
+                            "$TSO_Input_GP_Down",
+                            "$TSO_Input_GP_Left",
+                            "$TSO_Input_GP_Right",
+                            "$TSO_Input_GP_Start",
+                            "$TSO_Input_GP_Select",
+                            "$TSO_Input_GP_LS",
+                            "$TSO_Input_GP_RS",
+                            "$TSO_Input_GP_LB",
+                            "$TSO_Input_GP_RB",
+                            "$TSO_Input_GP_A",
+                            "$TSO_Input_GP_B",
+                            "$TSO_Input_GP_X",
+                            "$TSO_Input_GP_Y",
+                            "$TSO_Input_GP_LT",
+                            "$TSO_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iMeleeGamepadKey:Settings",
+                    "text": "$TSO_Gen_MeleeGP_Text",
+                    "type": "dropdown",
+                    "help": "$TSO_Gen_MeleeGP_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$TSO_Opt_None",
+                            "$TSO_Input_GP_Up",
+                            "$TSO_Input_GP_Down",
+                            "$TSO_Input_GP_Left",
+                            "$TSO_Input_GP_Right",
+                            "$TSO_Input_GP_Start",
+                            "$TSO_Input_GP_Select",
+                            "$TSO_Input_GP_LS",
+                            "$TSO_Input_GP_RS",
+                            "$TSO_Input_GP_LB",
+                            "$TSO_Input_GP_RB",
+                            "$TSO_Input_GP_A",
+                            "$TSO_Input_GP_B",
+                            "$TSO_Input_GP_X",
+                            "$TSO_Input_GP_Y",
+                            "$TSO_Input_GP_LT",
+                            "$TSO_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iMeleeGamepadModifier:Settings",
+                    "text": "$TSO_Gen_MeleeMod_Text",
+                    "type": "dropdown",
+                    "help": "$TSO_Gen_MeleeMod_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$TSO_Opt_None",
+                            "$TSO_Input_GP_Up",
+                            "$TSO_Input_GP_Down",
+                            "$TSO_Input_GP_Left",
+                            "$TSO_Input_GP_Right",
+                            "$TSO_Input_GP_Start",
+                            "$TSO_Input_GP_Select",
+                            "$TSO_Input_GP_LS",
+                            "$TSO_Input_GP_RS",
+                            "$TSO_Input_GP_LB",
+                            "$TSO_Input_GP_RB",
+                            "$TSO_Input_GP_A",
+                            "$TSO_Input_GP_B",
+                            "$TSO_Input_GP_X",
+                            "$TSO_Input_GP_Y",
+                            "$TSO_Input_GP_LT",
+                            "$TSO_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iUnbindMeleeGamepad:Settings",
+                    "text": "$TSO_Adv_UnbindKeyGP_Text",
+                    "type": "dropdown",
+                    "help": "$TSO_Adv_UnbindKeyGP_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$TSO_Cmd_NoChange",
+                            "$TSO_Cmd_Unbind",
+                            "$TSO_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sMeleeGamepadStatus:Settings",
+                    "text": "$TSO_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$TSO_Gen_Sect_Keyboard"
+                },
+                {
+                    "id": "ThrowKeyboardHotkey",
+                    "text": "$TSO_Gen_ThrowKey_Text",
+                    "type": "hotkey",
+                    "help": "$TSO_Gen_ThrowKey_Help",
+                    "allowModifierKeys": true
+                },
+                {
+                    "id": "MeleeKeyboardHotkey",
+                    "text": "$TSO_Gen_MeleeKey_Text",
+                    "type": "hotkey",
+                    "help": "$TSO_Gen_MeleeKey_Help",
+                    "allowModifierKeys": true
+                },
+                {
+                    "id": "iUnbindMeleeKeyboard:Settings",
+                    "text": "$TSO_Adv_UnbindKeyKB_Text",
+                    "type": "dropdown",
+                    "help": "$TSO_Adv_UnbindKeyKB_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$TSO_Cmd_NoChange",
+                            "$TSO_Cmd_Unbind",
+                            "$TSO_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sMeleeKeyboardStatus:Settings",
+                    "text": "$TSO_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$TSO_Gen_Sect_ThrowSettings"
+                },
+                {
+                    "id": "bThrowCheckWeaponDrawn:Settings",
+                    "text": "$TSO_Gen_CheckDrawn_Text",
+                    "type": "switcher",
+                    "help": "$TSO_Gen_CheckDrawn_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                },
+                {
+                    "id": "bThrowCheckThrowableEquipped:Settings",
+                    "text": "$TSO_Gen_CheckEquip_Text",
+                    "type": "switcher",
+                    "help": "$TSO_Gen_CheckEquip_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                },
+                {
+                    "id": "bThrowBlockIfWeaponBlocked:Settings",
+                    "text": "$TSO_Gen_CheckBlock_Text",
+                    "type": "switcher",
+                    "help": "$TSO_Gen_CheckBlock_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                },
+                {
+                    "id": "bThrowBlockIfWeaponRelaxed:Settings",
+                    "text": "$TSO_Gen_CheckRelax_Text",
+                    "type": "switcher",
+                    "help": "$TSO_Gen_CheckRelax_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                },
+                {
+                    "id": "bThrowBlockIfReloading:Settings",
+                    "text": "$TSO_Gen_CheckReload_Text",
+                    "type": "switcher",
+                    "help": "$TSO_Gen_CheckReload_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                },
+                {
+                    "id": "iThrowAutoEquipMode:Settings",
+                    "text": "$TSO_Gen_AutoEquip_Text",
+                    "type": "dropdown",
+                    "help": "$TSO_Gen_AutoEquip_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$TSO_Opt_No",
+                            "$TSO_Gen_AutoEquip_Opt_QuickSlots",
+                            "$TSO_Gen_AutoEquip_Opt_Search",
+                            "$TSO_Gen_AutoEquip_Opt_Both"
+                        ]
+                    }
+                },
+                {
+                    "id": "bThrowAutoEquipImmediateThrow:Settings",
+                    "text": "$TSO_Gen_AutoEquipThrow_Text",
+                    "type": "switcher",
+                    "help": "$TSO_Gen_AutoEquipThrow_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                }
+            ]
+        },
+        {
+            "pageDisplayName": "$TSO_Cyc_Page_Cycle",
+            "content": [
+                {
+                    "type": "section",
+                    "text": "$TSO_Cyc_Sect_Cycle"
+                },
+                {
+                    "id": "iQuickSwapCycleSlots:QuickSwap",
+                    "text": "$TSO_Cyc_CycleSlots_Text",
+                    "type": "dropdown",
+                    "help": "$TSO_Cyc_CycleSlots_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$TSO_Cyc_Opt_Slots12",
+                            "$TSO_Cyc_Opt_Slots123",
+                            "$TSO_Cyc_Opt_Slots1234"
+                        ]
+                    }
+                },
+                {
+                    "id": "bCycleSearchOnFail:QuickSwap",
+                    "text": "$TSO_Cyc_Fallback_Text",
+                    "type": "switcher",
+                    "help": "$TSO_Cyc_Fallback_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                },
+                {
+                    "id": "iQuickSwapSlotThrowMode:QuickSwap",
+                    "text": "$TSO_Cyc_SlotThrow_Text",
+                    "type": "dropdown",
+                    "help": "$TSO_Cyc_SlotThrow_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$TSO_Opt_No",
+                            "$TSO_Cyc_Opt_YesCheck",
+                            "$TSO_Cyc_Opt_YesSkip"
+                        ]
+                    }
+                },
+                {
+                    "id": "iQuickSwapClearHoldMode:QuickSwap",
+                    "text": "$TSO_Cyc_ClearHold_Text",
+                    "type": "dropdown",
+                    "help": "$TSO_Cyc_ClearHold_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$TSO_Opt_Off",
+                            "$TSO_Cyc_ClearHold_Opt_10s",
+                            "$TSO_Cyc_ClearHold_Opt_5s",
+                            "$TSO_Cyc_ClearHold_Opt_2s"
+                        ]
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$TSO_Cyc_Sect_Cycle_Input"
+                },
+                {
+                    "id": "QuickSwapCycleKeyboardHotkey",
+                    "text": "$TSO_Cyc_CycleKey_Text",
+                    "type": "hotkey",
+                    "help": "$TSO_Cyc_CycleKey_Help",
+                    "allowModifierKeys": true
+                },
+                {
+                    "id": "iQuickSwapCycleGamepadKey:QuickSwap",
+                    "text": "$TSO_Cyc_CycleGP_Text",
+                    "type": "dropdown",
+                    "help": "$TSO_Cyc_CycleGP_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$TSO_Opt_None",
+                            "$TSO_Input_GP_Up",
+                            "$TSO_Input_GP_Down",
+                            "$TSO_Input_GP_Left",
+                            "$TSO_Input_GP_Right",
+                            "$TSO_Input_GP_Start",
+                            "$TSO_Input_GP_Select",
+                            "$TSO_Input_GP_LS",
+                            "$TSO_Input_GP_RS",
+                            "$TSO_Input_GP_LB",
+                            "$TSO_Input_GP_RB",
+                            "$TSO_Input_GP_A",
+                            "$TSO_Input_GP_B",
+                            "$TSO_Input_GP_X",
+                            "$TSO_Input_GP_Y",
+                            "$TSO_Input_GP_LT",
+                            "$TSO_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iQuickSwapGamepadModifier:QuickSwap",
+                    "text": "$TSO_Cyc_CycleMod_Text",
+                    "type": "dropdown",
+                    "help": "$TSO_Cyc_CycleMod_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$TSO_Opt_None",
+                            "$TSO_Input_GP_Up",
+                            "$TSO_Input_GP_Down",
+                            "$TSO_Input_GP_Left",
+                            "$TSO_Input_GP_Right",
+                            "$TSO_Input_GP_Start",
+                            "$TSO_Input_GP_Select",
+                            "$TSO_Input_GP_LS",
+                            "$TSO_Input_GP_RS",
+                            "$TSO_Input_GP_LB",
+                            "$TSO_Input_GP_RB",
+                            "$TSO_Input_GP_A",
+                            "$TSO_Input_GP_B",
+                            "$TSO_Input_GP_X",
+                            "$TSO_Input_GP_Y",
+                            "$TSO_Input_GP_LT",
+                            "$TSO_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$TSO_Cyc_Sect_QS1"
+                },
+                {
+                    "id": "QuickSwap1KeyboardHotkey",
+                    "text": "$TSO_Cyc_QS1Key_Text",
+                    "type": "hotkey",
+                    "help": "$TSO_Cyc_QS1Key_Help",
+                    "allowModifierKeys": true
+                },
+                {
+                    "id": "iQuickSwap1GamepadKey:QuickSwap",
+                    "text": "$TSO_Cyc_QS1GP_Text",
+                    "type": "dropdown",
+                    "help": "$TSO_Cyc_QS1GP_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$TSO_Opt_None",
+                            "$TSO_Input_GP_Up",
+                            "$TSO_Input_GP_Down",
+                            "$TSO_Input_GP_Left",
+                            "$TSO_Input_GP_Right",
+                            "$TSO_Input_GP_Start",
+                            "$TSO_Input_GP_Select",
+                            "$TSO_Input_GP_LS",
+                            "$TSO_Input_GP_RS",
+                            "$TSO_Input_GP_LB",
+                            "$TSO_Input_GP_RB",
+                            "$TSO_Input_GP_A",
+                            "$TSO_Input_GP_B",
+                            "$TSO_Input_GP_X",
+                            "$TSO_Input_GP_Y",
+                            "$TSO_Input_GP_LT",
+                            "$TSO_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "sQuickSwap1Ref:QuickSwap",
+                    "text": "$TSO_Cyc_QS1Ref_Text",
+                    "type": "textinput",
+                    "help": "$TSO_Cyc_QS1Ref_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$TSO_Cyc_Sect_QS2"
+                },
+                {
+                    "id": "QuickSwap2KeyboardHotkey",
+                    "text": "$TSO_Cyc_QS2Key_Text",
+                    "type": "hotkey",
+                    "help": "$TSO_Cyc_QS2Key_Help",
+                    "allowModifierKeys": true
+                },
+                {
+                    "id": "iQuickSwap2GamepadKey:QuickSwap",
+                    "text": "$TSO_Cyc_QS2GP_Text",
+                    "type": "dropdown",
+                    "help": "$TSO_Cyc_QS2GP_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$TSO_Opt_None",
+                            "$TSO_Input_GP_Up",
+                            "$TSO_Input_GP_Down",
+                            "$TSO_Input_GP_Left",
+                            "$TSO_Input_GP_Right",
+                            "$TSO_Input_GP_Start",
+                            "$TSO_Input_GP_Select",
+                            "$TSO_Input_GP_LS",
+                            "$TSO_Input_GP_RS",
+                            "$TSO_Input_GP_LB",
+                            "$TSO_Input_GP_RB",
+                            "$TSO_Input_GP_A",
+                            "$TSO_Input_GP_B",
+                            "$TSO_Input_GP_X",
+                            "$TSO_Input_GP_Y",
+                            "$TSO_Input_GP_LT",
+                            "$TSO_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "sQuickSwap2Ref:QuickSwap",
+                    "text": "$TSO_Cyc_QS2Ref_Text",
+                    "type": "textinput",
+                    "help": "$TSO_Cyc_QS2Ref_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$TSO_Cyc_Sect_QS3"
+                },
+                {
+                    "id": "QuickSwap3KeyboardHotkey",
+                    "text": "$TSO_Cyc_QS3Key_Text",
+                    "type": "hotkey",
+                    "help": "$TSO_Cyc_QS3Key_Help",
+                    "allowModifierKeys": true
+                },
+                {
+                    "id": "iQuickSwap3GamepadKey:QuickSwap",
+                    "text": "$TSO_Cyc_QS3GP_Text",
+                    "type": "dropdown",
+                    "help": "$TSO_Cyc_QS3GP_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$TSO_Opt_None",
+                            "$TSO_Input_GP_Up",
+                            "$TSO_Input_GP_Down",
+                            "$TSO_Input_GP_Left",
+                            "$TSO_Input_GP_Right",
+                            "$TSO_Input_GP_Start",
+                            "$TSO_Input_GP_Select",
+                            "$TSO_Input_GP_LS",
+                            "$TSO_Input_GP_RS",
+                            "$TSO_Input_GP_LB",
+                            "$TSO_Input_GP_RB",
+                            "$TSO_Input_GP_A",
+                            "$TSO_Input_GP_B",
+                            "$TSO_Input_GP_X",
+                            "$TSO_Input_GP_Y",
+                            "$TSO_Input_GP_LT",
+                            "$TSO_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "sQuickSwap3Ref:QuickSwap",
+                    "text": "$TSO_Cyc_QS3Ref_Text",
+                    "type": "textinput",
+                    "help": "$TSO_Cyc_QS3Ref_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$TSO_Cyc_Sect_QS4"
+                },
+                {
+                    "id": "QuickSwap4KeyboardHotkey",
+                    "text": "$TSO_Cyc_QS4Key_Text",
+                    "type": "hotkey",
+                    "help": "$TSO_Cyc_QS4Key_Help",
+                    "allowModifierKeys": true
+                },
+                {
+                    "id": "iQuickSwap4GamepadKey:QuickSwap",
+                    "text": "$TSO_Cyc_QS4GP_Text",
+                    "type": "dropdown",
+                    "help": "$TSO_Cyc_QS4GP_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$TSO_Opt_None",
+                            "$TSO_Input_GP_Up",
+                            "$TSO_Input_GP_Down",
+                            "$TSO_Input_GP_Left",
+                            "$TSO_Input_GP_Right",
+                            "$TSO_Input_GP_Start",
+                            "$TSO_Input_GP_Select",
+                            "$TSO_Input_GP_LS",
+                            "$TSO_Input_GP_RS",
+                            "$TSO_Input_GP_LB",
+                            "$TSO_Input_GP_RB",
+                            "$TSO_Input_GP_A",
+                            "$TSO_Input_GP_B",
+                            "$TSO_Input_GP_X",
+                            "$TSO_Input_GP_Y",
+                            "$TSO_Input_GP_LT",
+                            "$TSO_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "sQuickSwap4Ref:QuickSwap",
+                    "text": "$TSO_Cyc_QS4Ref_Text",
+                    "type": "textinput",
+                    "help": "$TSO_Cyc_QS4Ref_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                }
+            ]
+        },
+        {
+            "pageDisplayName": "$TSO_Src_Page_Search",
+            "content": [
+                {
+                    "type": "section",
+                    "text": "$TSO_Src_Sect_Input"
+                },
+                {
+                    "id": "SearchEquipKeyboardHotkey",
+                    "text": "$TSO_Src_EquipRandom_Text",
+                    "type": "hotkey",
+                    "help": "$TSO_Src_EquipRandom_Help",
+                    "allowModifierKeys": true
+                },
+                {
+                    "id": "iSearchEquipGamepadKey:SearchEquip",
+                    "text": "$TSO_Src_EquipRandomGP_Text",
+                    "type": "dropdown",
+                    "help": "$TSO_Src_EquipRandomGP_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$TSO_Opt_None",
+                            "$TSO_Input_GP_Up",
+                            "$TSO_Input_GP_Down",
+                            "$TSO_Input_GP_Left",
+                            "$TSO_Input_GP_Right",
+                            "$TSO_Input_GP_Start",
+                            "$TSO_Input_GP_Select",
+                            "$TSO_Input_GP_LS",
+                            "$TSO_Input_GP_RS",
+                            "$TSO_Input_GP_LB",
+                            "$TSO_Input_GP_RB",
+                            "$TSO_Input_GP_A",
+                            "$TSO_Input_GP_B",
+                            "$TSO_Input_GP_X",
+                            "$TSO_Input_GP_Y",
+                            "$TSO_Input_GP_LT",
+                            "$TSO_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iSearchEquipGamepadModifier:SearchEquip",
+                    "text": "$TSO_Src_EquipRandomMod_Text",
+                    "type": "dropdown",
+                    "help": "$TSO_Src_EquipRandomMod_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$TSO_Opt_None",
+                            "$TSO_Input_GP_Up",
+                            "$TSO_Input_GP_Down",
+                            "$TSO_Input_GP_Left",
+                            "$TSO_Input_GP_Right",
+                            "$TSO_Input_GP_Start",
+                            "$TSO_Input_GP_Select",
+                            "$TSO_Input_GP_LS",
+                            "$TSO_Input_GP_RS",
+                            "$TSO_Input_GP_LB",
+                            "$TSO_Input_GP_RB",
+                            "$TSO_Input_GP_A",
+                            "$TSO_Input_GP_B",
+                            "$TSO_Input_GP_X",
+                            "$TSO_Input_GP_Y",
+                            "$TSO_Input_GP_LT",
+                            "$TSO_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$TSO_Src_Sect_Search"
+                },
+                {
+                    "id": "bSearchIncludeMines:SearchEquip",
+                    "text": "$TSO_Src_IncMine_Text",
+                    "type": "switcher",
+                    "help": "$TSO_Src_IncMine_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                }
+            ]
+        },
+        {
+            "pageDisplayName": "$TSO_Kill_Page_BonusOnKill",
+            "content": [
+                {
+                    "type": "section",
+                    "text": "$TSO_Kill_Sect_General"
+                },
+                {
+                    "id": "bKillBonusEnabled:KillBonus",
+                    "text": "$TSO_Kill_Enable_Text",
+                    "type": "switcher",
+                    "help": "$TSO_Kill_Enable_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                },
+                {
+                    "id": "iKillBonusChance:KillBonus",
+                    "text": "$TSO_Kill_Chance_Text",
+                    "type": "slider",
+                    "help": "$TSO_Kill_Chance_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1
+                    }
+                },
+                {
+                    "id": "iKillBonusLegendaryChance:KillBonus",
+                    "text": "$TSO_Kill_LegChance_Text",
+                    "type": "slider",
+                    "help": "$TSO_Kill_LegChance_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1
+                    }
+                },
+                {
+                    "type": "text",
+                    "html": true,
+                    "text": "<font color='#AAAAAA' size='14'>$TSO_Kill_Legendary_Detail_Note</font>"
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$TSO_Kill_Sect_ItemPool"
+                },
+                {
+                    "id": "iKillBonusType:KillBonus",
+                    "text": "$TSO_Kill_Type_Text",
+                    "type": "dropdown",
+                    "help": "$TSO_Kill_Type_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$TSO_Kill_Type_Opt_QS",
+                            "$TSO_Kill_Type_Opt_Random",
+                            "$TSO_Kill_Type_Opt_QS_Fallback"
+                        ]
+                    }
+                },
+                {
+                    "id": "bKillBonusIncludeMines:KillBonus",
+                    "text": "$TSO_Kill_IncMine_Text",
+                    "type": "switcher",
+                    "help": "$TSO_Kill_IncMine_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                },
+                {
+                    "type": "text",
+                    "html": true,
+                    "text": "<font color='#AAAAAA' size='14'>$TSO_Kill_Pool_Note</font>"
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$TSO_Kill_Sect_ItemLimit"
+                },
+                {
+                    "id": "bKillBonusLimitEnabled:KillBonus",
+                    "text": "$TSO_Kill_LimitEnabled_Text",
+                    "type": "switcher",
+                    "help": "$TSO_Kill_LimitEnabled_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                },
+                {
+                    "id": "iKillBonusLimitCount:KillBonus",
+                    "text": "$TSO_Kill_LimitCount_Text",
+                    "type": "slider",
+                    "help": "$TSO_Kill_LimitCount_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "min": 2,
+                        "max": 10,
+                        "step": 1
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$TSO_Kill_Sect_Proximity"
+                },
+                {
+                    "id": "bKillBonusDeferToProximity:KillBonus",
+                    "text": "$TSO_Kill_DeferProximity_Text",
+                    "type": "switcher",
+                    "help": "$TSO_Kill_DeferProximity_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                },
+                {
+                    "id": "iKillBonusProximityTimeoutSecs:KillBonus",
+                    "text": "$TSO_Kill_ProximityTimeout_Text",
+                    "type": "slider",
+                    "help": "$TSO_Kill_ProximityTimeout_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "min": 10,
+                        "max": 300,
+                        "step": 10
+                    }
+                }
+            ]
+        },
+        {
+            "pageDisplayName": "$TSO_Not_Page_Notify",
+            "content": [
+                {
+                    "type": "section",
+                    "text": "$TSO_Not_Sect_Gen"
+                },
+                {
+                    "id": "bCleanNotificationNames:Notifications",
+                    "text": "$TSO_Not_Gen_Clean_Text",
+                    "type": "switcher",
+                    "help": "$TSO_Not_Gen_Clean_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$TSO_Not_Sect_Throw"
+                },
+                {
+                    "id": "bThrowNotifyOnNothingEquipped:Notifications",
+                    "text": "$TSO_Not_NoEquip_Text",
+                    "type": "switcher",
+                    "help": "$TSO_Not_NoEquip_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$TSO_Not_Sect_QS"
+                },
+                {
+                    "id": "bQuickSwapNotifyOnEquip:Notifications",
+                    "text": "$TSO_Not_QSEquip_Text",
+                    "type": "switcher",
+                    "help": "$TSO_Not_QSEquip_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                },
+                {
+                    "id": "bQuickSwapNotifyOnSave:Notifications",
+                    "text": "$TSO_Not_QSSave_Text",
+                    "type": "switcher",
+                    "help": "$TSO_Not_QSSave_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                },
+                {
+                    "id": "bQuickSwapNotifyOnCycleSuccess:Notifications",
+                    "text": "$TSO_Not_CycleOK_Text",
+                    "type": "switcher",
+                    "help": "$TSO_Not_CycleOK_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                },
+                {
+                    "id": "bQuickSwapNotifyOnCycleFail:Notifications",
+                    "text": "$TSO_Not_CycleFail_Text",
+                    "type": "switcher",
+                    "help": "$TSO_Not_CycleFail_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$TSO_Not_Sect_Search"
+                },
+                {
+                    "id": "bSearchNotifyOnEquip:Notifications",
+                    "text": "$TSO_Not_SearchOK_Text",
+                    "type": "switcher",
+                    "help": "$TSO_Not_SearchOK_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                },
+                {
+                    "id": "bSearchNotifyOnFail:Notifications",
+                    "text": "$TSO_Not_SearchFail_Text",
+                    "type": "switcher",
+                    "help": "$TSO_Not_SearchFail_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$TSO_Not_Sect_KillBonus"
+                },
+                {
+                    "id": "iKillBonusNotify:Notifications",
+                    "text": "$TSO_Not_KillBonus_Text",
+                    "type": "dropdown",
+                    "help": "$TSO_Not_KillBonus_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$TSO_Opt_Off",
+                            "$TSO_Not_KillBonus_Opt_Minimal",
+                            "$TSO_Not_KillBonus_Opt_Full"
+                        ]
+                    }
+                },
+                {
+                    "id": "bKillBonusSound:Notifications",
+                    "text": "$TSO_Not_KillBonusSound_Text",
+                    "type": "switcher",
+                    "help": "$TSO_Not_KillBonusSound_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                }
+            ]
+        },
+        {
+            "pageDisplayName": "$TSO_Adv_Page_Adv",
+            "content": [
+                {
+                    "type": "section",
+                    "text": "$TSO_Gen_Sect_InputType"
+                },
+                {
+                    "id": "iThrowInputType:Settings",
+                    "text": "$TSO_Gen_ThrowType_Text",
+                    "type": "dropdown",
+                    "help": "$TSO_Gen_ThrowType_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$TSO_Opt_Engine",
+                            "$TSO_Opt_Animation"
+                        ]
+                    }
+                },
+                {
+                    "id": "iMeleeInputType:Settings",
+                    "text": "$TSO_Gen_MeleeType_Text",
+                    "type": "dropdown",
+                    "help": "$TSO_Gen_MeleeType_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$TSO_Opt_Engine",
+                            "$TSO_Opt_Animation"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "html": true,
+                    "text": "<font color='#AAAAAA' size='14'>$TSO_Gen_InputType_Note</font>"
+                },
+                {
+                    "type": "section",
+                    "text": "$TSO_Adv_Sect_Input"
+                },
+                {
+                    "id": "iAdvancedBlockHotkeysInMenus:Advanced",
+                    "text": "$TSO_Adv_BlockMenuHotkeys_Text",
+                    "type": "dropdown",
+                    "help": "$TSO_Adv_BlockMenuHotkeys_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$TSO_Block_MenusOnly",
+                            "$TSO_Block_PromptsAndMenus",
+                            "$TSO_Block_Off"
+                        ]
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$TSO_Adv_Sect_Keywords"
+                },
+                {
+                    "type": "text",
+                    "text": "$TSO_Adv_GrenadeKeywords_Text"
+                },
+                {
+                    "id": "sGrenadeKeywordStrings:Advanced",
+                    "text": "",
+                    "type": "textinput",
+                    "help": "$TSO_Adv_GrenadeKeywords_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "$TSO_Adv_MineKeywords_Text"
+                },
+                {
+                    "id": "sMineKeywordStrings:Advanced",
+                    "text": "",
+                    "type": "textinput",
+                    "help": "$TSO_Adv_MineKeywords_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "bAdvancedCheckPlayable:Advanced",
+                    "text": "$TSO_Adv_Playable_Text",
+                    "type": "switcher",
+                    "help": "$TSO_Adv_Playable_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                }
+            ]
+        }
+    ]
+}

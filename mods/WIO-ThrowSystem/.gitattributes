@@ -1,0 +1,33 @@
+# Line endings are decided here, in-repo, not by a machine's core.autocrlf setting.
+# Text is stored LF in git and checked out with the platform's native endings.
+* text=auto
+
+# Source and build config - always text.
+*.cpp   text
+*.h     text
+*.lua   text
+*.md    text
+*.py    text
+*.json  text
+*.ini   text
+
+# Fallout 4 MCM translation files are UTF-16LE. Git must never touch their
+# line endings or try to diff them as text - that corrupts the encoding.
+*_en.txt                        -text
+Interface/Translations/*.txt    -text
+interface/Translations/*.txt    -text
+
+# Binary artifacts - never line-ending converted, never diffed as text.
+*.dll   binary
+*.esl   binary
+*.esp   binary
+*.ba2   binary
+*.pex   binary
+*.zip   binary
+*.7z    binary
+
+# Authored deliverable content under data/ must round-trip byte-for-byte: it is
+# copied verbatim into the shipped mod, and the shipped files are LF. Leaving it
+# to `* text=auto` means git stores LF but checks out CRLF on Windows, so a fresh
+# clone would produce a deliverable that differs byte-wise from what was tested.
+data/**  -text

@@ -1,0 +1,3 @@
+[submodule "mods/WIO-ThrowSystem/lib/commonlibf4rd"]
+	path = mods/WIO-ThrowSystem/lib/commonlibf4rd
+	url = https://github.com/AbbieDoobie/commonlibf4rd-xmake.git

@@ -1,0 +1,69 @@
+{
+    "modName": "WIO-ThrowSystem",
+    "keybinds": [
+        {
+            "id": "ThrowKeyboardHotkey",
+            "desc": "$TSO_KB_Throw",
+            "action": {
+                "type": "RunConsoleCommand",
+                "command": ""
+            }
+        },
+        {
+            "id": "MeleeKeyboardHotkey",
+            "desc": "$TSO_KB_Melee",
+            "action": {
+                "type": "RunConsoleCommand",
+                "command": ""
+            }
+        },
+        {
+            "id": "QuickSwapCycleKeyboardHotkey",
+            "desc": "$TSO_KB_Cycle",
+            "action": {
+                "type": "RunConsoleCommand",
+                "command": ""
+            }
+        },
+        {
+            "id": "QuickSwap1KeyboardHotkey",
+            "desc": "$TSO_KB_QS1",
+            "action": {
+                "type": "RunConsoleCommand",
+                "command": ""
+            }
+        },
+        {
+            "id": "QuickSwap2KeyboardHotkey",
+            "desc": "$TSO_KB_QS2",
+            "action": {
+                "type": "RunConsoleCommand",
+                "command": ""
+            }
+        },
+        {
+            "id": "QuickSwap3KeyboardHotkey",
+            "desc": "$TSO_KB_QS3",
+            "action": {
+                "type": "RunConsoleCommand",
+                "command": ""
+            }
+        },
+        {
+            "id": "QuickSwap4KeyboardHotkey",
+            "desc": "$TSO_KB_QS4",
+            "action": {
+                "type": "RunConsoleCommand",
+                "command": ""
+            }
+        },
+        {
+            "id": "SearchEquipKeyboardHotkey",
+            "desc": "$TSO_KB_SearchEquip",
+            "action": {
+                "type": "RunConsoleCommand",
+                "command": ""
+            }
+        }
+    ]
+}
