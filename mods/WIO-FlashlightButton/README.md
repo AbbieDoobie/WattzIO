@@ -71,6 +71,12 @@ Licensed MIT. [Source](https://github.com/AbbieDoobie/WattzIO/tree/main/mods/WIO
 
 ## Changelog
 
+**1.0.1**
+
+Fixed an issue causing OG to crash.
+
+**1.0.0**
+
 Initial release.
 
 ## Building
