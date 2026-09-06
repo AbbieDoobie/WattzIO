@@ -1,0 +1,118 @@
+{
+    "modName": "WIO-HolsteredZoom",
+    "author": "Abbie Doobie",
+    "displayName": "$ZOH_Main_ModName",
+    "minMcmVersion": 4,
+    "content": [
+        {
+            "type": "text",
+            "text": "$ZOH_Main_Welcome_Intro"
+        },
+        {
+            "type": "text",
+            "text": "$ZOH_Main_Welcome_BulletA"
+        },
+        {
+            "type": "text",
+            "text": "$ZOH_Main_Welcome_BulletB"
+        },
+        { "type": "spacer" },
+        {
+            "type": "text",
+            "html": true,
+            "text": "<font color='#AAAAAA' size='14'>$ZOH_Main_Welcome_Credits</font>"
+        }
+    ],
+    "pages": [
+        {
+            "pageDisplayName": "$ZOH_Gen_Page_General",
+            "content": [
+                {
+                    "type": "section",
+                    "text": "$ZOH_Gen_Sect_Zoom"
+                },
+                {
+                    "id": "bEnabled:Settings",
+                    "text": "$ZOH_Gen_Enable_Text",
+                    "type": "switcher",
+                    "help": "$ZOH_Gen_Enable_Help",
+                    "valueOptions": { "sourceType": "ModSettingBool" }
+                },
+                {
+                    "id": "iZoomPercent:Settings",
+                    "text": "$ZOH_Gen_Percent_Text",
+                    "type": "slider",
+                    "help": "$ZOH_Gen_Percent_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "min": 30,
+                        "max": 95,
+                        "step": 5
+                    }
+                },
+                {
+                    "id": "iZoomSpeedMs:Settings",
+                    "text": "$ZOH_Gen_Speed_Text",
+                    "type": "slider",
+                    "help": "$ZOH_Gen_Speed_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "min": 0,
+                        "max": 1000,
+                        "step": 25
+                    }
+                },
+                { "type": "spacer" },
+                {
+                    "type": "section",
+                    "text": "$ZOH_Gen_Sect_Perspective"
+                },
+                {
+                    "id": "bApplyInFirstPerson:Settings",
+                    "text": "$ZOH_Gen_FirstPerson_Text",
+                    "type": "switcher",
+                    "help": "$ZOH_Gen_FirstPerson_Help",
+                    "valueOptions": { "sourceType": "ModSettingBool" }
+                },
+                {
+                    "id": "bApplyInThirdPerson:Settings",
+                    "text": "$ZOH_Gen_ThirdPerson_Text",
+                    "type": "switcher",
+                    "help": "$ZOH_Gen_ThirdPerson_Help",
+                    "valueOptions": { "sourceType": "ModSettingBool" }
+                },
+                { "type": "spacer" },
+                {
+                    "type": "section",
+                    "text": "$ZOH_Gen_Sect_Gamepad"
+                },
+                {
+                    "id": "bAnalogTriggerScaling:Settings",
+                    "text": "$ZOH_Gen_Analog_Text",
+                    "type": "switcher",
+                    "help": "$ZOH_Gen_Analog_Help",
+                    "valueOptions": { "sourceType": "ModSettingBool" }
+                },
+                { "type": "spacer" },
+                {
+                    "type": "section",
+                    "text": "$ZOH_Gen_Sect_iHUD"
+                },
+                {
+                    "id": "iHudRevealMode:Settings",
+                    "text": "$ZOH_Gen_iHudReveal_Text",
+                    "type": "dropdown",
+                    "help": "$ZOH_Gen_iHudReveal_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$ZOH_Gen_iHudReveal_Off",
+                            "$ZOH_Gen_iHudReveal_Compass",
+                            "$ZOH_Gen_iHudReveal_All"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
