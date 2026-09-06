@@ -4,3 +4,6 @@
 [submodule "mods/WIO-ControlUnbinder/lib/commonlibf4rd"]
 	path = mods/WIO-ControlUnbinder/lib/commonlibf4rd
 	url = https://github.com/AbbieDoobie/commonlibf4rd-xmake.git
+[submodule "mods/WIO-FlashlightButton/lib/commonlibf4rd"]
+	path = mods/WIO-FlashlightButton/lib/commonlibf4rd
+	url = https://github.com/AbbieDoobie/commonlibf4rd-xmake.git

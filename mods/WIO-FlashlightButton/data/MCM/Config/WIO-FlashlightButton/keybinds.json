@@ -1,0 +1,13 @@
+{
+    "modName": "WIO-FlashlightButton",
+    "keybinds": [
+        {
+            "id": "MultiButtonKeyboardHotkey",
+            "desc": "$FMB_KB_MultiButton",
+            "action": {
+                "type": "RunConsoleCommand",
+                "command": ""
+            }
+        }
+    ]
+}

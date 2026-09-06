@@ -1,0 +1,211 @@
+{
+    "modName": "WIO-FlashlightButton",
+    "author": "Abbie Doobie",
+    "displayName": "$FMB_Main_ModName",
+    "minMcmVersion": 4,
+    "content": [
+        {
+            "type": "text",
+            "text": "$FMB_Main_Welcome_Intro"
+        },
+        {
+            "type": "text",
+            "text": "$FMB_Main_Welcome_BulletA"
+        },
+        {
+            "type": "text",
+            "text": "$FMB_Main_Welcome_BulletB"
+        },
+        {
+            "type": "text",
+            "text": "$FMB_Main_Welcome_BulletC"
+        },
+        {
+            "type": "spacer"
+        },
+        {
+            "type": "text",
+            "html": true,
+            "text": "<font color='#AAAAAA' size='14'>$FMB_Main_Welcome_Credits</font>"
+        }
+    ],
+    "pages": [
+        {
+            "pageDisplayName": "$FMB_Gen_Page_General",
+            "content": [
+                {
+                    "type": "section",
+                    "text": "$FMB_Sect_Gamepad"
+                },
+                {
+                    "id": "iGamepadKey:Gamepad",
+                    "text": "$FMB_GP_Key_Text",
+                    "type": "dropdown",
+                    "help": "$FMB_GP_Key_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$FMB_Opt_None",
+                            "$FMB_Input_GP_Up",
+                            "$FMB_Input_GP_Down",
+                            "$FMB_Input_GP_Left",
+                            "$FMB_Input_GP_Right",
+                            "$FMB_Input_GP_Start",
+                            "$FMB_Input_GP_Select",
+                            "$FMB_Input_GP_LS",
+                            "$FMB_Input_GP_RS",
+                            "$FMB_Input_GP_LB",
+                            "$FMB_Input_GP_RB",
+                            "$FMB_Input_GP_A",
+                            "$FMB_Input_GP_B",
+                            "$FMB_Input_GP_X",
+                            "$FMB_Input_GP_Y",
+                            "$FMB_Input_GP_LT",
+                            "$FMB_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iGamepadModifier:Gamepad",
+                    "text": "$FMB_GP_Mod_Text",
+                    "type": "dropdown",
+                    "help": "$FMB_GP_Mod_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$FMB_Opt_None",
+                            "$FMB_Input_GP_Up",
+                            "$FMB_Input_GP_Down",
+                            "$FMB_Input_GP_Left",
+                            "$FMB_Input_GP_Right",
+                            "$FMB_Input_GP_Start",
+                            "$FMB_Input_GP_Select",
+                            "$FMB_Input_GP_LS",
+                            "$FMB_Input_GP_RS",
+                            "$FMB_Input_GP_LB",
+                            "$FMB_Input_GP_RB",
+                            "$FMB_Input_GP_A",
+                            "$FMB_Input_GP_B",
+                            "$FMB_Input_GP_X",
+                            "$FMB_Input_GP_Y",
+                            "$FMB_Input_GP_LT",
+                            "$FMB_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iUnbindTogglePOVGamepad:Gamepad",
+                    "text": "$FMB_GP_Unbind_Text",
+                    "type": "dropdown",
+                    "help": "$FMB_GP_Unbind_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$FMB_Cmd_NoChange",
+                            "$FMB_Cmd_Unbind",
+                            "$FMB_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sTogglePOVGamepadStatus:Gamepad",
+                    "text": "$FMB_UnbindPOV_GP_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$FMB_Sect_Keyboard"
+                },
+                {
+                    "id": "MultiButtonKeyboardHotkey",
+                    "text": "$FMB_KBM_Hotkey_Text",
+                    "type": "hotkey",
+                    "help": "$FMB_KBM_Hotkey_Help",
+                    "allowModifierKeys": true
+                },
+                {
+                    "id": "iUnbindTogglePOVKeyboard:Keyboard",
+                    "text": "$FMB_KBM_Unbind_Text",
+                    "type": "dropdown",
+                    "help": "$FMB_KBM_Unbind_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$FMB_Cmd_NoChange",
+                            "$FMB_Cmd_Unbind",
+                            "$FMB_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sTogglePOVKeyboardStatus:Keyboard",
+                    "text": "$FMB_UnbindPOV_KB_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$FMB_Sect_HoldAction"
+                },
+                {
+                    "id": "bEnablePovWorkshop:Advanced",
+                    "text": "$FMB_Adv_PovWorkshop_Text",
+                    "type": "switcher",
+                    "help": "$FMB_Adv_PovWorkshop_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                },
+                {
+                    "id": "iHoldTenths:Advanced",
+                    "text": "$FMB_Adv_Hold_Text",
+                    "type": "slider",
+                    "help": "$FMB_Adv_Hold_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "min": 1,
+                        "max": 10,
+                        "step": 1
+                    }
+                },
+                {
+                    "type": "text",
+                    "html": true,
+                    "text": "<font color='#AAAAAA' size='14'>$FMB_Adv_Hold_Note</font>"
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$FMB_Sect_Advanced"
+                },
+                {
+                    "id": "iBlockHotkeysInMenus:Advanced",
+                    "text": "$FMB_Adv_BlockMenus_Text",
+                    "type": "dropdown",
+                    "help": "$FMB_Adv_BlockMenus_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$FMB_Block_MenusOnly",
+                            "$FMB_Block_PromptsAndMenus",
+                            "$FMB_Block_Off"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
