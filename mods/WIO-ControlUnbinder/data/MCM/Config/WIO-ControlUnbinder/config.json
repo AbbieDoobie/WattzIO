@@ -1,0 +1,1072 @@
+{
+    "modName": "WIO-ControlUnbinder",
+    "author": "Abbie Doobie",
+    "displayName": "$UC_Main_ModName",
+    "minMcmVersion": 4,
+    "content": [
+        {
+            "type": "text",
+            "text": "$UC_Main_Welcome_Intro"
+        },
+        {
+            "type": "text",
+            "text": "$UC_Main_Welcome_BulletA"
+        },
+        {
+            "type": "spacer"
+        },
+        {
+            "type": "text",
+            "html": true,
+            "text": "<font color='#AAAAAA' size='14'>$UC_Main_Welcome_Credits</font>"
+        }
+    ],
+    "pages": [
+        {
+            "pageDisplayName": "$UC_GP_Page_Gamepad",
+            "content": [
+                {
+                    "type": "section",
+                    "text": "$UC_Sect_Movement"
+                },
+                {
+                    "id": "iUnbind_Jump:Gamepad",
+                    "text": "$UC_GP_Jump_Text",
+                    "type": "dropdown",
+                    "help": "$UC_GP_Jump_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Jump:Gamepad",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "iUnbind_Sprint:Gamepad",
+                    "text": "$UC_GP_Sprint_Text",
+                    "type": "dropdown",
+                    "help": "$UC_GP_Sprint_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Sprint:Gamepad",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "iUnbind_Sneak:Gamepad",
+                    "text": "$UC_GP_Sneak_Text",
+                    "type": "dropdown",
+                    "help": "$UC_GP_Sneak_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Sneak:Gamepad",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$UC_Sect_Combat"
+                },
+                {
+                    "id": "iUnbind_PrimaryAttack:Gamepad",
+                    "text": "$UC_GP_PrimaryAttack_Text",
+                    "type": "dropdown",
+                    "help": "$UC_GP_PrimaryAttack_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_PrimaryAttack:Gamepad",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "iUnbind_SecondaryAttack:Gamepad",
+                    "text": "$UC_GP_SecondaryAttack_Text",
+                    "type": "dropdown",
+                    "help": "$UC_GP_SecondaryAttack_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_SecondaryAttack:Gamepad",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "iUnbind_Melee:Gamepad",
+                    "text": "$UC_GP_Melee_Text",
+                    "type": "dropdown",
+                    "help": "$UC_GP_Melee_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Melee:Gamepad",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "iUnbind_VATS:Gamepad",
+                    "text": "$UC_GP_VATS_Text",
+                    "type": "dropdown",
+                    "help": "$UC_GP_VATS_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_VATS:Gamepad",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$UC_Sect_Interaction"
+                },
+                {
+                    "id": "iUnbind_Activate:Gamepad",
+                    "text": "$UC_GP_Activate_Text",
+                    "type": "dropdown",
+                    "help": "$UC_GP_Activate_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Activate:Gamepad",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "iUnbind_ReadyWeapon:Gamepad",
+                    "text": "$UC_GP_ReadyWeapon_Text",
+                    "type": "dropdown",
+                    "help": "$UC_GP_ReadyWeapon_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_ReadyWeapon:Gamepad",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$UC_Sect_Camera"
+                },
+                {
+                    "id": "iUnbind_TogglePOV:Gamepad",
+                    "text": "$UC_GP_TogglePOV_Text",
+                    "type": "dropdown",
+                    "help": "$UC_GP_TogglePOV_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_TogglePOV:Gamepad",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$UC_Sect_Menus"
+                },
+                {
+                    "id": "iUnbind_Pipboy:Gamepad",
+                    "text": "$UC_GP_Pipboy_Text",
+                    "type": "dropdown",
+                    "help": "$UC_GP_Pipboy_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Pipboy:Gamepad",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "iUnbind_Pause:Gamepad",
+                    "text": "$UC_GP_Pause_Text",
+                    "type": "dropdown",
+                    "help": "$UC_GP_Pause_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Pause:Gamepad",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$UC_Sect_QuickSlots"
+                },
+                {
+                    "id": "bUnbind_QuickSlotUp:Gamepad",
+                    "text": "$UC_GP_QuickSlotUp_Text",
+                    "type": "dropdown",
+                    "help": "$UC_GP_QuickSlotUp_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_Bound",
+                            "$UC_Cmd_Unbound"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_QuickSlotUp:Gamepad",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "bUnbind_QuickSlotDown:Gamepad",
+                    "text": "$UC_GP_QuickSlotDown_Text",
+                    "type": "dropdown",
+                    "help": "$UC_GP_QuickSlotDown_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_Bound",
+                            "$UC_Cmd_Unbound"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_QuickSlotDown:Gamepad",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "bUnbind_QuickSlotLeft:Gamepad",
+                    "text": "$UC_GP_QuickSlotLeft_Text",
+                    "type": "dropdown",
+                    "help": "$UC_GP_QuickSlotLeft_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_Bound",
+                            "$UC_Cmd_Unbound"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_QuickSlotLeft:Gamepad",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "bUnbind_QuickSlotRight:Gamepad",
+                    "text": "$UC_GP_QuickSlotRight_Text",
+                    "type": "dropdown",
+                    "help": "$UC_GP_QuickSlotRight_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_Bound",
+                            "$UC_Cmd_Unbound"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_QuickSlotRight:Gamepad",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                }
+            ]
+        },
+        {
+            "pageDisplayName": "$UC_KBM_Page_KBM",
+            "content": [
+                {
+                    "type": "section",
+                    "text": "$UC_Sect_Movement"
+                },
+                {
+                    "id": "iUnbind_Forward:Keyboard",
+                    "text": "$UC_KBM_Forward_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_Forward_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Forward:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "iUnbind_Back:Keyboard",
+                    "text": "$UC_KBM_Back_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_Back_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Back:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "iUnbind_StrafeLeft:Keyboard",
+                    "text": "$UC_KBM_StrafeLeft_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_StrafeLeft_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_StrafeLeft:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "iUnbind_StrafeRight:Keyboard",
+                    "text": "$UC_KBM_StrafeRight_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_StrafeRight_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_StrafeRight:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "iUnbind_Jump:Keyboard",
+                    "text": "$UC_KBM_Jump_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_Jump_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Jump:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "iUnbind_Sprint:Keyboard",
+                    "text": "$UC_KBM_Sprint_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_Sprint_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Sprint:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "iUnbind_Sneak:Keyboard",
+                    "text": "$UC_KBM_Sneak_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_Sneak_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Sneak:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "iUnbind_Run:Keyboard",
+                    "text": "$UC_KBM_Run_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_Run_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Run:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "iUnbind_ToggleAlwaysRun:Keyboard",
+                    "text": "$UC_KBM_ToggleAlwaysRun_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_ToggleAlwaysRun_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_ToggleAlwaysRun:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "iUnbind_AutoMove:Keyboard",
+                    "text": "$UC_KBM_AutoMove_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_AutoMove_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_AutoMove:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$UC_Sect_Combat"
+                },
+                {
+                    "id": "iUnbind_PrimaryAttack:Keyboard",
+                    "text": "$UC_KBM_PrimaryAttack_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_PrimaryAttack_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_PrimaryAttack:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "iUnbind_SecondaryAttack:Keyboard",
+                    "text": "$UC_KBM_SecondaryAttack_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_SecondaryAttack_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_SecondaryAttack:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "iUnbind_Melee:Keyboard",
+                    "text": "$UC_KBM_Melee_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_Melee_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Melee:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "iUnbind_VATS:Keyboard",
+                    "text": "$UC_KBM_VATS_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_VATS_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_VATS:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$UC_Sect_Interaction"
+                },
+                {
+                    "id": "iUnbind_Activate:Keyboard",
+                    "text": "$UC_KBM_Activate_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_Activate_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Activate:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "iUnbind_ReadyWeapon:Keyboard",
+                    "text": "$UC_KBM_ReadyWeapon_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_ReadyWeapon_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_ReadyWeapon:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$UC_Sect_Camera"
+                },
+                {
+                    "id": "iUnbind_TogglePOV:Keyboard",
+                    "text": "$UC_KBM_TogglePOV_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_TogglePOV_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_TogglePOV:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$UC_Sect_Menus"
+                },
+                {
+                    "id": "iUnbind_Pipboy:Keyboard",
+                    "text": "$UC_KBM_Pipboy_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_Pipboy_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Pipboy:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "iUnbind_Quickkeys:Keyboard",
+                    "text": "$UC_KBM_Quickkeys_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_Quickkeys_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Quickkeys:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "iUnbind_Quicksave:Keyboard",
+                    "text": "$UC_KBM_Quicksave_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_Quicksave_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Quicksave:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "iUnbind_Quickload:Keyboard",
+                    "text": "$UC_KBM_Quickload_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_Quickload_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Quickload:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "iUnbind_Pause:Keyboard",
+                    "text": "$UC_KBM_Pause_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_Pause_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Pause:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "iUnbind_QuickStats:Keyboard",
+                    "text": "$UC_KBM_QuickStats_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_QuickStats_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_QuickStats:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "iUnbind_QuickInventory:Keyboard",
+                    "text": "$UC_KBM_QuickInventory_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_QuickInventory_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_QuickInventory:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "iUnbind_QuickData:Keyboard",
+                    "text": "$UC_KBM_QuickData_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_QuickData_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_QuickData:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "iUnbind_QuickMap:Keyboard",
+                    "text": "$UC_KBM_QuickMap_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_QuickMap_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_QuickMap:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "iUnbind_QuickRadio:Keyboard",
+                    "text": "$UC_KBM_QuickRadio_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_QuickRadio_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_NoChange",
+                            "$UC_Cmd_Unbind",
+                            "$UC_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_QuickRadio:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                }
+            ]
+        },
+        {
+            "pageDisplayName": "$UC_Adv_Page_Adv",
+            "content": [
+                {
+                    "type": "section",
+                    "text": "$UC_Adv_Sect_Gamepad"
+                },
+                {
+                    "type": "text",
+                    "html": true,
+                    "text": "<font color='#AAAAAA' size='14'>$UC_GP_DialogueWorkaround_Note</font>"
+                },
+                {
+                    "id": "bWorkaroundIncorrectMenuBinds:Gamepad",
+                    "text": "$UC_GP_DialogueWorkaround_Text",
+                    "type": "switcher",
+                    "help": "$UC_GP_DialogueWorkaround_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                }
+            ]
+        }
+    ]
+}
