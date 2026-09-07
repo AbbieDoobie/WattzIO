@@ -1,0 +1,1640 @@
+{
+    "modName":  "WIO-GamepadHotkeys",
+    "author":  "Abbie Doobie",
+    "displayName":  "$GMH_Main_ModName",
+    "minMcmVersion":  4,
+    "content":  [
+                    {
+                        "type":  "text",
+                        "text":  "$GMH_Main_Welcome_Intro"
+                    },
+                    {
+                        "type":  "text",
+                        "text":  "$GMH_Main_Welcome_BulletA"
+                    },
+                    {
+                        "type":  "text",
+                        "text":  "$GMH_Main_Welcome_BulletB"
+                    },
+                    {
+                        "type":  "text",
+                        "text":  "$GMH_Main_Welcome_BulletC"
+                    },
+                    {
+                        "type":  "text",
+                        "text":  "$GMH_Main_Welcome_HowItWorks"
+                    },
+                    {
+                        "type":  "spacer"
+                    },
+                    {
+                        "type":  "text",
+                        "html":  true,
+                        "text":  "\u003cfont color=\u0027#AAAAAA\u0027 size=\u002714\u0027\u003e$GMH_Main_Welcome_Credits\u003c/font\u003e"
+                    }
+                ],
+    "pages":  [
+                  {
+                      "pageDisplayName":  "$GMH_Slots_Page_Title",
+                      "content":  [
+                                      {
+                                          "type":  "section",
+                                          "text":  "$GMH_Slots_Sect_1"
+                                      },
+                                      {
+                                          "id":  "iSlot1GamepadKey:Slots",
+                                          "text":  "$GMH_Slots_GPKey_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_GPKey_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Opt_None",
+                                                                               "$GMH_Input_GP_Up",
+                                                                               "$GMH_Input_GP_Down",
+                                                                               "$GMH_Input_GP_Left",
+                                                                               "$GMH_Input_GP_Right",
+                                                                               "$GMH_Input_GP_Start",
+                                                                               "$GMH_Input_GP_Select",
+                                                                               "$GMH_Input_GP_LS",
+                                                                               "$GMH_Input_GP_RS",
+                                                                               "$GMH_Input_GP_LB",
+                                                                               "$GMH_Input_GP_RB",
+                                                                               "$GMH_Input_GP_A",
+                                                                               "$GMH_Input_GP_B",
+                                                                               "$GMH_Input_GP_X",
+                                                                               "$GMH_Input_GP_Y",
+                                                                               "$GMH_Input_GP_LT",
+                                                                               "$GMH_Input_GP_RT"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot1GamepadModifier:Slots",
+                                          "text":  "$GMH_Slots_GPMod_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_GPMod_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Opt_None",
+                                                                               "$GMH_Input_GP_Up",
+                                                                               "$GMH_Input_GP_Down",
+                                                                               "$GMH_Input_GP_Left",
+                                                                               "$GMH_Input_GP_Right",
+                                                                               "$GMH_Input_GP_Start",
+                                                                               "$GMH_Input_GP_Select",
+                                                                               "$GMH_Input_GP_LS",
+                                                                               "$GMH_Input_GP_RS",
+                                                                               "$GMH_Input_GP_LB",
+                                                                               "$GMH_Input_GP_RB",
+                                                                               "$GMH_Input_GP_A",
+                                                                               "$GMH_Input_GP_B",
+                                                                               "$GMH_Input_GP_X",
+                                                                               "$GMH_Input_GP_Y",
+                                                                               "$GMH_Input_GP_LT",
+                                                                               "$GMH_Input_GP_RT"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot1VirtualKey:Slots",
+                                          "text":  "$GMH_Slots_VKey_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_VKey_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Opt_None",
+                                                                               "$GMH_VKey_NumPad0",
+                                                                               "$GMH_VKey_NumPad1",
+                                                                               "$GMH_VKey_NumPad2",
+                                                                               "$GMH_VKey_NumPad3",
+                                                                               "$GMH_VKey_NumPad4",
+                                                                               "$GMH_VKey_NumPad5",
+                                                                               "$GMH_VKey_NumPad6",
+                                                                               "$GMH_VKey_NumPad7",
+                                                                               "$GMH_VKey_NumPad8",
+                                                                               "$GMH_VKey_NumPad9",
+                                                                               "$GMH_VKey_NumPadDivide",
+                                                                               "$GMH_VKey_NumPadMultiply",
+                                                                               "$GMH_VKey_NumPadMinus",
+                                                                               "$GMH_VKey_NumPadPlus",
+                                                                               "$GMH_VKey_NumPadPeriod",
+                                                                               "$GMH_VKey_Insert",
+                                                                               "$GMH_VKey_Delete",
+                                                                               "$GMH_VKey_Home",
+                                                                               "$GMH_VKey_End",
+                                                                               "$GMH_VKey_PageUp",
+                                                                               "$GMH_VKey_PageDown"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot1BlockInMenus:Slots",
+                                          "text":  "$GMH_Slots_BlockMode_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_BlockMode_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Block_UseGlobal",
+                                                                               "$GMH_Block_MenusOnly",
+                                                                               "$GMH_Block_PromptsAndMenus",
+                                                                               "$GMH_Block_Off"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "type":  "spacer"
+                                      },
+                                      {
+                                          "type":  "section",
+                                          "text":  "$GMH_Slots_Sect_2"
+                                      },
+                                      {
+                                          "id":  "iSlot2GamepadKey:Slots",
+                                          "text":  "$GMH_Slots_GPKey_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_GPKey_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Opt_None",
+                                                                               "$GMH_Input_GP_Up",
+                                                                               "$GMH_Input_GP_Down",
+                                                                               "$GMH_Input_GP_Left",
+                                                                               "$GMH_Input_GP_Right",
+                                                                               "$GMH_Input_GP_Start",
+                                                                               "$GMH_Input_GP_Select",
+                                                                               "$GMH_Input_GP_LS",
+                                                                               "$GMH_Input_GP_RS",
+                                                                               "$GMH_Input_GP_LB",
+                                                                               "$GMH_Input_GP_RB",
+                                                                               "$GMH_Input_GP_A",
+                                                                               "$GMH_Input_GP_B",
+                                                                               "$GMH_Input_GP_X",
+                                                                               "$GMH_Input_GP_Y",
+                                                                               "$GMH_Input_GP_LT",
+                                                                               "$GMH_Input_GP_RT"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot2GamepadModifier:Slots",
+                                          "text":  "$GMH_Slots_GPMod_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_GPMod_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Opt_None",
+                                                                               "$GMH_Input_GP_Up",
+                                                                               "$GMH_Input_GP_Down",
+                                                                               "$GMH_Input_GP_Left",
+                                                                               "$GMH_Input_GP_Right",
+                                                                               "$GMH_Input_GP_Start",
+                                                                               "$GMH_Input_GP_Select",
+                                                                               "$GMH_Input_GP_LS",
+                                                                               "$GMH_Input_GP_RS",
+                                                                               "$GMH_Input_GP_LB",
+                                                                               "$GMH_Input_GP_RB",
+                                                                               "$GMH_Input_GP_A",
+                                                                               "$GMH_Input_GP_B",
+                                                                               "$GMH_Input_GP_X",
+                                                                               "$GMH_Input_GP_Y",
+                                                                               "$GMH_Input_GP_LT",
+                                                                               "$GMH_Input_GP_RT"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot2VirtualKey:Slots",
+                                          "text":  "$GMH_Slots_VKey_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_VKey_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Opt_None",
+                                                                               "$GMH_VKey_NumPad0",
+                                                                               "$GMH_VKey_NumPad1",
+                                                                               "$GMH_VKey_NumPad2",
+                                                                               "$GMH_VKey_NumPad3",
+                                                                               "$GMH_VKey_NumPad4",
+                                                                               "$GMH_VKey_NumPad5",
+                                                                               "$GMH_VKey_NumPad6",
+                                                                               "$GMH_VKey_NumPad7",
+                                                                               "$GMH_VKey_NumPad8",
+                                                                               "$GMH_VKey_NumPad9",
+                                                                               "$GMH_VKey_NumPadDivide",
+                                                                               "$GMH_VKey_NumPadMultiply",
+                                                                               "$GMH_VKey_NumPadMinus",
+                                                                               "$GMH_VKey_NumPadPlus",
+                                                                               "$GMH_VKey_NumPadPeriod",
+                                                                               "$GMH_VKey_Insert",
+                                                                               "$GMH_VKey_Delete",
+                                                                               "$GMH_VKey_Home",
+                                                                               "$GMH_VKey_End",
+                                                                               "$GMH_VKey_PageUp",
+                                                                               "$GMH_VKey_PageDown"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot2BlockInMenus:Slots",
+                                          "text":  "$GMH_Slots_BlockMode_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_BlockMode_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Block_UseGlobal",
+                                                                               "$GMH_Block_MenusOnly",
+                                                                               "$GMH_Block_PromptsAndMenus",
+                                                                               "$GMH_Block_Off"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "type":  "spacer"
+                                      },
+                                      {
+                                          "type":  "section",
+                                          "text":  "$GMH_Slots_Sect_3"
+                                      },
+                                      {
+                                          "id":  "iSlot3GamepadKey:Slots",
+                                          "text":  "$GMH_Slots_GPKey_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_GPKey_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Opt_None",
+                                                                               "$GMH_Input_GP_Up",
+                                                                               "$GMH_Input_GP_Down",
+                                                                               "$GMH_Input_GP_Left",
+                                                                               "$GMH_Input_GP_Right",
+                                                                               "$GMH_Input_GP_Start",
+                                                                               "$GMH_Input_GP_Select",
+                                                                               "$GMH_Input_GP_LS",
+                                                                               "$GMH_Input_GP_RS",
+                                                                               "$GMH_Input_GP_LB",
+                                                                               "$GMH_Input_GP_RB",
+                                                                               "$GMH_Input_GP_A",
+                                                                               "$GMH_Input_GP_B",
+                                                                               "$GMH_Input_GP_X",
+                                                                               "$GMH_Input_GP_Y",
+                                                                               "$GMH_Input_GP_LT",
+                                                                               "$GMH_Input_GP_RT"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot3GamepadModifier:Slots",
+                                          "text":  "$GMH_Slots_GPMod_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_GPMod_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Opt_None",
+                                                                               "$GMH_Input_GP_Up",
+                                                                               "$GMH_Input_GP_Down",
+                                                                               "$GMH_Input_GP_Left",
+                                                                               "$GMH_Input_GP_Right",
+                                                                               "$GMH_Input_GP_Start",
+                                                                               "$GMH_Input_GP_Select",
+                                                                               "$GMH_Input_GP_LS",
+                                                                               "$GMH_Input_GP_RS",
+                                                                               "$GMH_Input_GP_LB",
+                                                                               "$GMH_Input_GP_RB",
+                                                                               "$GMH_Input_GP_A",
+                                                                               "$GMH_Input_GP_B",
+                                                                               "$GMH_Input_GP_X",
+                                                                               "$GMH_Input_GP_Y",
+                                                                               "$GMH_Input_GP_LT",
+                                                                               "$GMH_Input_GP_RT"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot3VirtualKey:Slots",
+                                          "text":  "$GMH_Slots_VKey_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_VKey_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Opt_None",
+                                                                               "$GMH_VKey_NumPad0",
+                                                                               "$GMH_VKey_NumPad1",
+                                                                               "$GMH_VKey_NumPad2",
+                                                                               "$GMH_VKey_NumPad3",
+                                                                               "$GMH_VKey_NumPad4",
+                                                                               "$GMH_VKey_NumPad5",
+                                                                               "$GMH_VKey_NumPad6",
+                                                                               "$GMH_VKey_NumPad7",
+                                                                               "$GMH_VKey_NumPad8",
+                                                                               "$GMH_VKey_NumPad9",
+                                                                               "$GMH_VKey_NumPadDivide",
+                                                                               "$GMH_VKey_NumPadMultiply",
+                                                                               "$GMH_VKey_NumPadMinus",
+                                                                               "$GMH_VKey_NumPadPlus",
+                                                                               "$GMH_VKey_NumPadPeriod",
+                                                                               "$GMH_VKey_Insert",
+                                                                               "$GMH_VKey_Delete",
+                                                                               "$GMH_VKey_Home",
+                                                                               "$GMH_VKey_End",
+                                                                               "$GMH_VKey_PageUp",
+                                                                               "$GMH_VKey_PageDown"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot3BlockInMenus:Slots",
+                                          "text":  "$GMH_Slots_BlockMode_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_BlockMode_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Block_UseGlobal",
+                                                                               "$GMH_Block_MenusOnly",
+                                                                               "$GMH_Block_PromptsAndMenus",
+                                                                               "$GMH_Block_Off"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "type":  "spacer"
+                                      },
+                                      {
+                                          "type":  "section",
+                                          "text":  "$GMH_Slots_Sect_4"
+                                      },
+                                      {
+                                          "id":  "iSlot4GamepadKey:Slots",
+                                          "text":  "$GMH_Slots_GPKey_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_GPKey_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Opt_None",
+                                                                               "$GMH_Input_GP_Up",
+                                                                               "$GMH_Input_GP_Down",
+                                                                               "$GMH_Input_GP_Left",
+                                                                               "$GMH_Input_GP_Right",
+                                                                               "$GMH_Input_GP_Start",
+                                                                               "$GMH_Input_GP_Select",
+                                                                               "$GMH_Input_GP_LS",
+                                                                               "$GMH_Input_GP_RS",
+                                                                               "$GMH_Input_GP_LB",
+                                                                               "$GMH_Input_GP_RB",
+                                                                               "$GMH_Input_GP_A",
+                                                                               "$GMH_Input_GP_B",
+                                                                               "$GMH_Input_GP_X",
+                                                                               "$GMH_Input_GP_Y",
+                                                                               "$GMH_Input_GP_LT",
+                                                                               "$GMH_Input_GP_RT"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot4GamepadModifier:Slots",
+                                          "text":  "$GMH_Slots_GPMod_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_GPMod_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Opt_None",
+                                                                               "$GMH_Input_GP_Up",
+                                                                               "$GMH_Input_GP_Down",
+                                                                               "$GMH_Input_GP_Left",
+                                                                               "$GMH_Input_GP_Right",
+                                                                               "$GMH_Input_GP_Start",
+                                                                               "$GMH_Input_GP_Select",
+                                                                               "$GMH_Input_GP_LS",
+                                                                               "$GMH_Input_GP_RS",
+                                                                               "$GMH_Input_GP_LB",
+                                                                               "$GMH_Input_GP_RB",
+                                                                               "$GMH_Input_GP_A",
+                                                                               "$GMH_Input_GP_B",
+                                                                               "$GMH_Input_GP_X",
+                                                                               "$GMH_Input_GP_Y",
+                                                                               "$GMH_Input_GP_LT",
+                                                                               "$GMH_Input_GP_RT"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot4VirtualKey:Slots",
+                                          "text":  "$GMH_Slots_VKey_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_VKey_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Opt_None",
+                                                                               "$GMH_VKey_NumPad0",
+                                                                               "$GMH_VKey_NumPad1",
+                                                                               "$GMH_VKey_NumPad2",
+                                                                               "$GMH_VKey_NumPad3",
+                                                                               "$GMH_VKey_NumPad4",
+                                                                               "$GMH_VKey_NumPad5",
+                                                                               "$GMH_VKey_NumPad6",
+                                                                               "$GMH_VKey_NumPad7",
+                                                                               "$GMH_VKey_NumPad8",
+                                                                               "$GMH_VKey_NumPad9",
+                                                                               "$GMH_VKey_NumPadDivide",
+                                                                               "$GMH_VKey_NumPadMultiply",
+                                                                               "$GMH_VKey_NumPadMinus",
+                                                                               "$GMH_VKey_NumPadPlus",
+                                                                               "$GMH_VKey_NumPadPeriod",
+                                                                               "$GMH_VKey_Insert",
+                                                                               "$GMH_VKey_Delete",
+                                                                               "$GMH_VKey_Home",
+                                                                               "$GMH_VKey_End",
+                                                                               "$GMH_VKey_PageUp",
+                                                                               "$GMH_VKey_PageDown"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot4BlockInMenus:Slots",
+                                          "text":  "$GMH_Slots_BlockMode_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_BlockMode_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Block_UseGlobal",
+                                                                               "$GMH_Block_MenusOnly",
+                                                                               "$GMH_Block_PromptsAndMenus",
+                                                                               "$GMH_Block_Off"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "type":  "spacer"
+                                      },
+                                      {
+                                          "type":  "section",
+                                          "text":  "$GMH_Slots_Sect_5"
+                                      },
+                                      {
+                                          "id":  "iSlot5GamepadKey:Slots",
+                                          "text":  "$GMH_Slots_GPKey_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_GPKey_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Opt_None",
+                                                                               "$GMH_Input_GP_Up",
+                                                                               "$GMH_Input_GP_Down",
+                                                                               "$GMH_Input_GP_Left",
+                                                                               "$GMH_Input_GP_Right",
+                                                                               "$GMH_Input_GP_Start",
+                                                                               "$GMH_Input_GP_Select",
+                                                                               "$GMH_Input_GP_LS",
+                                                                               "$GMH_Input_GP_RS",
+                                                                               "$GMH_Input_GP_LB",
+                                                                               "$GMH_Input_GP_RB",
+                                                                               "$GMH_Input_GP_A",
+                                                                               "$GMH_Input_GP_B",
+                                                                               "$GMH_Input_GP_X",
+                                                                               "$GMH_Input_GP_Y",
+                                                                               "$GMH_Input_GP_LT",
+                                                                               "$GMH_Input_GP_RT"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot5GamepadModifier:Slots",
+                                          "text":  "$GMH_Slots_GPMod_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_GPMod_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Opt_None",
+                                                                               "$GMH_Input_GP_Up",
+                                                                               "$GMH_Input_GP_Down",
+                                                                               "$GMH_Input_GP_Left",
+                                                                               "$GMH_Input_GP_Right",
+                                                                               "$GMH_Input_GP_Start",
+                                                                               "$GMH_Input_GP_Select",
+                                                                               "$GMH_Input_GP_LS",
+                                                                               "$GMH_Input_GP_RS",
+                                                                               "$GMH_Input_GP_LB",
+                                                                               "$GMH_Input_GP_RB",
+                                                                               "$GMH_Input_GP_A",
+                                                                               "$GMH_Input_GP_B",
+                                                                               "$GMH_Input_GP_X",
+                                                                               "$GMH_Input_GP_Y",
+                                                                               "$GMH_Input_GP_LT",
+                                                                               "$GMH_Input_GP_RT"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot5VirtualKey:Slots",
+                                          "text":  "$GMH_Slots_VKey_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_VKey_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Opt_None",
+                                                                               "$GMH_VKey_NumPad0",
+                                                                               "$GMH_VKey_NumPad1",
+                                                                               "$GMH_VKey_NumPad2",
+                                                                               "$GMH_VKey_NumPad3",
+                                                                               "$GMH_VKey_NumPad4",
+                                                                               "$GMH_VKey_NumPad5",
+                                                                               "$GMH_VKey_NumPad6",
+                                                                               "$GMH_VKey_NumPad7",
+                                                                               "$GMH_VKey_NumPad8",
+                                                                               "$GMH_VKey_NumPad9",
+                                                                               "$GMH_VKey_NumPadDivide",
+                                                                               "$GMH_VKey_NumPadMultiply",
+                                                                               "$GMH_VKey_NumPadMinus",
+                                                                               "$GMH_VKey_NumPadPlus",
+                                                                               "$GMH_VKey_NumPadPeriod",
+                                                                               "$GMH_VKey_Insert",
+                                                                               "$GMH_VKey_Delete",
+                                                                               "$GMH_VKey_Home",
+                                                                               "$GMH_VKey_End",
+                                                                               "$GMH_VKey_PageUp",
+                                                                               "$GMH_VKey_PageDown"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot5BlockInMenus:Slots",
+                                          "text":  "$GMH_Slots_BlockMode_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_BlockMode_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Block_UseGlobal",
+                                                                               "$GMH_Block_MenusOnly",
+                                                                               "$GMH_Block_PromptsAndMenus",
+                                                                               "$GMH_Block_Off"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "type":  "spacer"
+                                      },
+                                      {
+                                          "type":  "section",
+                                          "text":  "$GMH_Slots_Sect_6"
+                                      },
+                                      {
+                                          "id":  "iSlot6GamepadKey:Slots",
+                                          "text":  "$GMH_Slots_GPKey_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_GPKey_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Opt_None",
+                                                                               "$GMH_Input_GP_Up",
+                                                                               "$GMH_Input_GP_Down",
+                                                                               "$GMH_Input_GP_Left",
+                                                                               "$GMH_Input_GP_Right",
+                                                                               "$GMH_Input_GP_Start",
+                                                                               "$GMH_Input_GP_Select",
+                                                                               "$GMH_Input_GP_LS",
+                                                                               "$GMH_Input_GP_RS",
+                                                                               "$GMH_Input_GP_LB",
+                                                                               "$GMH_Input_GP_RB",
+                                                                               "$GMH_Input_GP_A",
+                                                                               "$GMH_Input_GP_B",
+                                                                               "$GMH_Input_GP_X",
+                                                                               "$GMH_Input_GP_Y",
+                                                                               "$GMH_Input_GP_LT",
+                                                                               "$GMH_Input_GP_RT"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot6GamepadModifier:Slots",
+                                          "text":  "$GMH_Slots_GPMod_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_GPMod_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Opt_None",
+                                                                               "$GMH_Input_GP_Up",
+                                                                               "$GMH_Input_GP_Down",
+                                                                               "$GMH_Input_GP_Left",
+                                                                               "$GMH_Input_GP_Right",
+                                                                               "$GMH_Input_GP_Start",
+                                                                               "$GMH_Input_GP_Select",
+                                                                               "$GMH_Input_GP_LS",
+                                                                               "$GMH_Input_GP_RS",
+                                                                               "$GMH_Input_GP_LB",
+                                                                               "$GMH_Input_GP_RB",
+                                                                               "$GMH_Input_GP_A",
+                                                                               "$GMH_Input_GP_B",
+                                                                               "$GMH_Input_GP_X",
+                                                                               "$GMH_Input_GP_Y",
+                                                                               "$GMH_Input_GP_LT",
+                                                                               "$GMH_Input_GP_RT"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot6VirtualKey:Slots",
+                                          "text":  "$GMH_Slots_VKey_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_VKey_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Opt_None",
+                                                                               "$GMH_VKey_NumPad0",
+                                                                               "$GMH_VKey_NumPad1",
+                                                                               "$GMH_VKey_NumPad2",
+                                                                               "$GMH_VKey_NumPad3",
+                                                                               "$GMH_VKey_NumPad4",
+                                                                               "$GMH_VKey_NumPad5",
+                                                                               "$GMH_VKey_NumPad6",
+                                                                               "$GMH_VKey_NumPad7",
+                                                                               "$GMH_VKey_NumPad8",
+                                                                               "$GMH_VKey_NumPad9",
+                                                                               "$GMH_VKey_NumPadDivide",
+                                                                               "$GMH_VKey_NumPadMultiply",
+                                                                               "$GMH_VKey_NumPadMinus",
+                                                                               "$GMH_VKey_NumPadPlus",
+                                                                               "$GMH_VKey_NumPadPeriod",
+                                                                               "$GMH_VKey_Insert",
+                                                                               "$GMH_VKey_Delete",
+                                                                               "$GMH_VKey_Home",
+                                                                               "$GMH_VKey_End",
+                                                                               "$GMH_VKey_PageUp",
+                                                                               "$GMH_VKey_PageDown"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot6BlockInMenus:Slots",
+                                          "text":  "$GMH_Slots_BlockMode_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_BlockMode_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Block_UseGlobal",
+                                                                               "$GMH_Block_MenusOnly",
+                                                                               "$GMH_Block_PromptsAndMenus",
+                                                                               "$GMH_Block_Off"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "type":  "spacer"
+                                      },
+                                      {
+                                          "type":  "section",
+                                          "text":  "$GMH_Slots_Sect_7"
+                                      },
+                                      {
+                                          "id":  "iSlot7GamepadKey:Slots",
+                                          "text":  "$GMH_Slots_GPKey_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_GPKey_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Opt_None",
+                                                                               "$GMH_Input_GP_Up",
+                                                                               "$GMH_Input_GP_Down",
+                                                                               "$GMH_Input_GP_Left",
+                                                                               "$GMH_Input_GP_Right",
+                                                                               "$GMH_Input_GP_Start",
+                                                                               "$GMH_Input_GP_Select",
+                                                                               "$GMH_Input_GP_LS",
+                                                                               "$GMH_Input_GP_RS",
+                                                                               "$GMH_Input_GP_LB",
+                                                                               "$GMH_Input_GP_RB",
+                                                                               "$GMH_Input_GP_A",
+                                                                               "$GMH_Input_GP_B",
+                                                                               "$GMH_Input_GP_X",
+                                                                               "$GMH_Input_GP_Y",
+                                                                               "$GMH_Input_GP_LT",
+                                                                               "$GMH_Input_GP_RT"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot7GamepadModifier:Slots",
+                                          "text":  "$GMH_Slots_GPMod_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_GPMod_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Opt_None",
+                                                                               "$GMH_Input_GP_Up",
+                                                                               "$GMH_Input_GP_Down",
+                                                                               "$GMH_Input_GP_Left",
+                                                                               "$GMH_Input_GP_Right",
+                                                                               "$GMH_Input_GP_Start",
+                                                                               "$GMH_Input_GP_Select",
+                                                                               "$GMH_Input_GP_LS",
+                                                                               "$GMH_Input_GP_RS",
+                                                                               "$GMH_Input_GP_LB",
+                                                                               "$GMH_Input_GP_RB",
+                                                                               "$GMH_Input_GP_A",
+                                                                               "$GMH_Input_GP_B",
+                                                                               "$GMH_Input_GP_X",
+                                                                               "$GMH_Input_GP_Y",
+                                                                               "$GMH_Input_GP_LT",
+                                                                               "$GMH_Input_GP_RT"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot7VirtualKey:Slots",
+                                          "text":  "$GMH_Slots_VKey_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_VKey_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Opt_None",
+                                                                               "$GMH_VKey_NumPad0",
+                                                                               "$GMH_VKey_NumPad1",
+                                                                               "$GMH_VKey_NumPad2",
+                                                                               "$GMH_VKey_NumPad3",
+                                                                               "$GMH_VKey_NumPad4",
+                                                                               "$GMH_VKey_NumPad5",
+                                                                               "$GMH_VKey_NumPad6",
+                                                                               "$GMH_VKey_NumPad7",
+                                                                               "$GMH_VKey_NumPad8",
+                                                                               "$GMH_VKey_NumPad9",
+                                                                               "$GMH_VKey_NumPadDivide",
+                                                                               "$GMH_VKey_NumPadMultiply",
+                                                                               "$GMH_VKey_NumPadMinus",
+                                                                               "$GMH_VKey_NumPadPlus",
+                                                                               "$GMH_VKey_NumPadPeriod",
+                                                                               "$GMH_VKey_Insert",
+                                                                               "$GMH_VKey_Delete",
+                                                                               "$GMH_VKey_Home",
+                                                                               "$GMH_VKey_End",
+                                                                               "$GMH_VKey_PageUp",
+                                                                               "$GMH_VKey_PageDown"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot7BlockInMenus:Slots",
+                                          "text":  "$GMH_Slots_BlockMode_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_BlockMode_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Block_UseGlobal",
+                                                                               "$GMH_Block_MenusOnly",
+                                                                               "$GMH_Block_PromptsAndMenus",
+                                                                               "$GMH_Block_Off"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "type":  "spacer"
+                                      },
+                                      {
+                                          "type":  "section",
+                                          "text":  "$GMH_Slots_Sect_8"
+                                      },
+                                      {
+                                          "id":  "iSlot8GamepadKey:Slots",
+                                          "text":  "$GMH_Slots_GPKey_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_GPKey_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Opt_None",
+                                                                               "$GMH_Input_GP_Up",
+                                                                               "$GMH_Input_GP_Down",
+                                                                               "$GMH_Input_GP_Left",
+                                                                               "$GMH_Input_GP_Right",
+                                                                               "$GMH_Input_GP_Start",
+                                                                               "$GMH_Input_GP_Select",
+                                                                               "$GMH_Input_GP_LS",
+                                                                               "$GMH_Input_GP_RS",
+                                                                               "$GMH_Input_GP_LB",
+                                                                               "$GMH_Input_GP_RB",
+                                                                               "$GMH_Input_GP_A",
+                                                                               "$GMH_Input_GP_B",
+                                                                               "$GMH_Input_GP_X",
+                                                                               "$GMH_Input_GP_Y",
+                                                                               "$GMH_Input_GP_LT",
+                                                                               "$GMH_Input_GP_RT"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot8GamepadModifier:Slots",
+                                          "text":  "$GMH_Slots_GPMod_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_GPMod_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Opt_None",
+                                                                               "$GMH_Input_GP_Up",
+                                                                               "$GMH_Input_GP_Down",
+                                                                               "$GMH_Input_GP_Left",
+                                                                               "$GMH_Input_GP_Right",
+                                                                               "$GMH_Input_GP_Start",
+                                                                               "$GMH_Input_GP_Select",
+                                                                               "$GMH_Input_GP_LS",
+                                                                               "$GMH_Input_GP_RS",
+                                                                               "$GMH_Input_GP_LB",
+                                                                               "$GMH_Input_GP_RB",
+                                                                               "$GMH_Input_GP_A",
+                                                                               "$GMH_Input_GP_B",
+                                                                               "$GMH_Input_GP_X",
+                                                                               "$GMH_Input_GP_Y",
+                                                                               "$GMH_Input_GP_LT",
+                                                                               "$GMH_Input_GP_RT"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot8VirtualKey:Slots",
+                                          "text":  "$GMH_Slots_VKey_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_VKey_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Opt_None",
+                                                                               "$GMH_VKey_NumPad0",
+                                                                               "$GMH_VKey_NumPad1",
+                                                                               "$GMH_VKey_NumPad2",
+                                                                               "$GMH_VKey_NumPad3",
+                                                                               "$GMH_VKey_NumPad4",
+                                                                               "$GMH_VKey_NumPad5",
+                                                                               "$GMH_VKey_NumPad6",
+                                                                               "$GMH_VKey_NumPad7",
+                                                                               "$GMH_VKey_NumPad8",
+                                                                               "$GMH_VKey_NumPad9",
+                                                                               "$GMH_VKey_NumPadDivide",
+                                                                               "$GMH_VKey_NumPadMultiply",
+                                                                               "$GMH_VKey_NumPadMinus",
+                                                                               "$GMH_VKey_NumPadPlus",
+                                                                               "$GMH_VKey_NumPadPeriod",
+                                                                               "$GMH_VKey_Insert",
+                                                                               "$GMH_VKey_Delete",
+                                                                               "$GMH_VKey_Home",
+                                                                               "$GMH_VKey_End",
+                                                                               "$GMH_VKey_PageUp",
+                                                                               "$GMH_VKey_PageDown"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot8BlockInMenus:Slots",
+                                          "text":  "$GMH_Slots_BlockMode_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_BlockMode_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Block_UseGlobal",
+                                                                               "$GMH_Block_MenusOnly",
+                                                                               "$GMH_Block_PromptsAndMenus",
+                                                                               "$GMH_Block_Off"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "type":  "spacer"
+                                      },
+                                      {
+                                          "type":  "section",
+                                          "text":  "$GMH_Slots_Sect_9"
+                                      },
+                                      {
+                                          "id":  "iSlot9GamepadKey:Slots",
+                                          "text":  "$GMH_Slots_GPKey_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_GPKey_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Opt_None",
+                                                                               "$GMH_Input_GP_Up",
+                                                                               "$GMH_Input_GP_Down",
+                                                                               "$GMH_Input_GP_Left",
+                                                                               "$GMH_Input_GP_Right",
+                                                                               "$GMH_Input_GP_Start",
+                                                                               "$GMH_Input_GP_Select",
+                                                                               "$GMH_Input_GP_LS",
+                                                                               "$GMH_Input_GP_RS",
+                                                                               "$GMH_Input_GP_LB",
+                                                                               "$GMH_Input_GP_RB",
+                                                                               "$GMH_Input_GP_A",
+                                                                               "$GMH_Input_GP_B",
+                                                                               "$GMH_Input_GP_X",
+                                                                               "$GMH_Input_GP_Y",
+                                                                               "$GMH_Input_GP_LT",
+                                                                               "$GMH_Input_GP_RT"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot9GamepadModifier:Slots",
+                                          "text":  "$GMH_Slots_GPMod_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_GPMod_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Opt_None",
+                                                                               "$GMH_Input_GP_Up",
+                                                                               "$GMH_Input_GP_Down",
+                                                                               "$GMH_Input_GP_Left",
+                                                                               "$GMH_Input_GP_Right",
+                                                                               "$GMH_Input_GP_Start",
+                                                                               "$GMH_Input_GP_Select",
+                                                                               "$GMH_Input_GP_LS",
+                                                                               "$GMH_Input_GP_RS",
+                                                                               "$GMH_Input_GP_LB",
+                                                                               "$GMH_Input_GP_RB",
+                                                                               "$GMH_Input_GP_A",
+                                                                               "$GMH_Input_GP_B",
+                                                                               "$GMH_Input_GP_X",
+                                                                               "$GMH_Input_GP_Y",
+                                                                               "$GMH_Input_GP_LT",
+                                                                               "$GMH_Input_GP_RT"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot9VirtualKey:Slots",
+                                          "text":  "$GMH_Slots_VKey_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_VKey_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Opt_None",
+                                                                               "$GMH_VKey_NumPad0",
+                                                                               "$GMH_VKey_NumPad1",
+                                                                               "$GMH_VKey_NumPad2",
+                                                                               "$GMH_VKey_NumPad3",
+                                                                               "$GMH_VKey_NumPad4",
+                                                                               "$GMH_VKey_NumPad5",
+                                                                               "$GMH_VKey_NumPad6",
+                                                                               "$GMH_VKey_NumPad7",
+                                                                               "$GMH_VKey_NumPad8",
+                                                                               "$GMH_VKey_NumPad9",
+                                                                               "$GMH_VKey_NumPadDivide",
+                                                                               "$GMH_VKey_NumPadMultiply",
+                                                                               "$GMH_VKey_NumPadMinus",
+                                                                               "$GMH_VKey_NumPadPlus",
+                                                                               "$GMH_VKey_NumPadPeriod",
+                                                                               "$GMH_VKey_Insert",
+                                                                               "$GMH_VKey_Delete",
+                                                                               "$GMH_VKey_Home",
+                                                                               "$GMH_VKey_End",
+                                                                               "$GMH_VKey_PageUp",
+                                                                               "$GMH_VKey_PageDown"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot9BlockInMenus:Slots",
+                                          "text":  "$GMH_Slots_BlockMode_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_BlockMode_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Block_UseGlobal",
+                                                                               "$GMH_Block_MenusOnly",
+                                                                               "$GMH_Block_PromptsAndMenus",
+                                                                               "$GMH_Block_Off"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "type":  "spacer"
+                                      },
+                                      {
+                                          "type":  "section",
+                                          "text":  "$GMH_Slots_Sect_10"
+                                      },
+                                      {
+                                          "id":  "iSlot10GamepadKey:Slots",
+                                          "text":  "$GMH_Slots_GPKey_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_GPKey_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Opt_None",
+                                                                               "$GMH_Input_GP_Up",
+                                                                               "$GMH_Input_GP_Down",
+                                                                               "$GMH_Input_GP_Left",
+                                                                               "$GMH_Input_GP_Right",
+                                                                               "$GMH_Input_GP_Start",
+                                                                               "$GMH_Input_GP_Select",
+                                                                               "$GMH_Input_GP_LS",
+                                                                               "$GMH_Input_GP_RS",
+                                                                               "$GMH_Input_GP_LB",
+                                                                               "$GMH_Input_GP_RB",
+                                                                               "$GMH_Input_GP_A",
+                                                                               "$GMH_Input_GP_B",
+                                                                               "$GMH_Input_GP_X",
+                                                                               "$GMH_Input_GP_Y",
+                                                                               "$GMH_Input_GP_LT",
+                                                                               "$GMH_Input_GP_RT"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot10GamepadModifier:Slots",
+                                          "text":  "$GMH_Slots_GPMod_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_GPMod_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Opt_None",
+                                                                               "$GMH_Input_GP_Up",
+                                                                               "$GMH_Input_GP_Down",
+                                                                               "$GMH_Input_GP_Left",
+                                                                               "$GMH_Input_GP_Right",
+                                                                               "$GMH_Input_GP_Start",
+                                                                               "$GMH_Input_GP_Select",
+                                                                               "$GMH_Input_GP_LS",
+                                                                               "$GMH_Input_GP_RS",
+                                                                               "$GMH_Input_GP_LB",
+                                                                               "$GMH_Input_GP_RB",
+                                                                               "$GMH_Input_GP_A",
+                                                                               "$GMH_Input_GP_B",
+                                                                               "$GMH_Input_GP_X",
+                                                                               "$GMH_Input_GP_Y",
+                                                                               "$GMH_Input_GP_LT",
+                                                                               "$GMH_Input_GP_RT"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot10VirtualKey:Slots",
+                                          "text":  "$GMH_Slots_VKey_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_VKey_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Opt_None",
+                                                                               "$GMH_VKey_NumPad0",
+                                                                               "$GMH_VKey_NumPad1",
+                                                                               "$GMH_VKey_NumPad2",
+                                                                               "$GMH_VKey_NumPad3",
+                                                                               "$GMH_VKey_NumPad4",
+                                                                               "$GMH_VKey_NumPad5",
+                                                                               "$GMH_VKey_NumPad6",
+                                                                               "$GMH_VKey_NumPad7",
+                                                                               "$GMH_VKey_NumPad8",
+                                                                               "$GMH_VKey_NumPad9",
+                                                                               "$GMH_VKey_NumPadDivide",
+                                                                               "$GMH_VKey_NumPadMultiply",
+                                                                               "$GMH_VKey_NumPadMinus",
+                                                                               "$GMH_VKey_NumPadPlus",
+                                                                               "$GMH_VKey_NumPadPeriod",
+                                                                               "$GMH_VKey_Insert",
+                                                                               "$GMH_VKey_Delete",
+                                                                               "$GMH_VKey_Home",
+                                                                               "$GMH_VKey_End",
+                                                                               "$GMH_VKey_PageUp",
+                                                                               "$GMH_VKey_PageDown"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot10BlockInMenus:Slots",
+                                          "text":  "$GMH_Slots_BlockMode_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_BlockMode_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Block_UseGlobal",
+                                                                               "$GMH_Block_MenusOnly",
+                                                                               "$GMH_Block_PromptsAndMenus",
+                                                                               "$GMH_Block_Off"
+                                                                           ]
+                                                           }
+                                      }
+                                  ]
+                  },
+                  {
+                      "pageDisplayName":  "$GMH_Disc_Page_Title",
+                      "content":  [
+                                      {
+                                          "type":  "section",
+                                          "text":  "$GMH_Disc_Sect"
+                                      },
+                                      {
+                                          "type":  "text",
+                                          "html":  true,
+                                          "text":  "\u003cfont color=\u0027#AAAAAA\u0027 size=\u002714\u0027\u003e$GMH_Disc_Note\u003c/font\u003e"
+                                      },
+                                      {
+                                          "type":  "spacer"
+                                      },
+                                      {
+                                          "id":  "sDiscovered1:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered2:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered3:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered4:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered5:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered6:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered7:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered8:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered9:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered10:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered11:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered12:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered13:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered14:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered15:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered16:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered17:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered18:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered19:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered20:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered21:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered22:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered23:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered24:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered25:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered26:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered27:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered28:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered29:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered30:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered31:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered32:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered33:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered34:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered35:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered36:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered37:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered38:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered39:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered40:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered41:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered42:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered43:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered44:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered45:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered46:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered47:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered48:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered49:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      },
+                                      {
+                                          "id":  "sDiscovered50:Discovered",
+                                          "text":  "",
+                                          "type":  "textinput",
+                                          "help":  "",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingString"
+                                                           }
+                                      }
+                                  ]
+                  },
+                  {
+                      "pageDisplayName":  "$GMH_Adv_Page_Title",
+                      "content":  [
+                                      {
+                                          "type":  "section",
+                                          "text":  "$GMH_Adv_Sect"
+                                      },
+                                      {
+                                          "id":  "iBlockHotkeysInMenus:Advanced",
+                                          "text":  "$GMH_Adv_BlockMenuHotkeys_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Adv_BlockMenuHotkeys_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Block_MenusOnly",
+                                                                               "$GMH_Block_PromptsAndMenus",
+                                                                               "$GMH_Block_Off"
+                                                                           ]
+                                                           }
+                                      }
+                                  ]
+                  }
+              ]
+}

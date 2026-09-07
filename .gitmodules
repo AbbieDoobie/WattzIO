@@ -10,3 +10,6 @@
 [submodule "mods/WIO-HolsteredZoom/lib/commonlibf4rd"]
 	path = mods/WIO-HolsteredZoom/lib/commonlibf4rd
 	url = https://github.com/AbbieDoobie/commonlibf4rd-xmake.git
+[submodule "mods/WIO-GamepadHotkeys/lib/commonlibf4rd"]
+	path = mods/WIO-GamepadHotkeys/lib/commonlibf4rd
+	url = https://github.com/AbbieDoobie/commonlibf4rd-xmake.git
