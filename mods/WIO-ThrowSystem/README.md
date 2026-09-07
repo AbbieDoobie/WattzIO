@@ -78,8 +78,8 @@ to finish.
 
 ## Requirements
 
-- **Game version**: tested only on AE 1.11.221. Addresses for OG (1.10.163) and NG (1.10.984) are
-included and it should work, but neither has been tested.
+- **Game version**: tested on AE (1.11.221) and OG (1.10.163). Addresses for NG (1.10.984) are
+included and it should work, but has not been tested.
 - [F4SE](https://www.nexusmods.com/fallout4/mods/42147)
 - [MCM](https://www.nexusmods.com/fallout4/mods/21497)
 - [Runtime Database](https://www.nexusmods.com/fallout4/mods/108394)
@@ -99,6 +99,10 @@ Vector assets in the images are from uxwing.
 Licensed MIT. [Source](https://github.com/AbbieDoobie/WattzIO/tree/main/mods/WIO-ThrowSystem)
 
 ## Changelog
+
+### 2.0.1
+
+Fixed an issue causing the game to crash on the original runtime (1.10.163).
 
 ### 2.0.0
 

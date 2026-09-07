@@ -42,7 +42,7 @@ namespace
 	}
 }
 
-WIO_PLUGIN_VERSION("WIO-ThrowSystem", "Abbie Doobie", 2, 0, 0);
+WIO_PLUGIN_VERSION("WIO-ThrowSystem", "Abbie Doobie", 2, 0, 1);
 
 F4SE_PLUGIN_LOAD(const F4SE::LoadInterface* a_f4se)
 {
