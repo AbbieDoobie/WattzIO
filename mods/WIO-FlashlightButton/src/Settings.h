@@ -62,6 +62,10 @@ namespace FMB::Settings
 	// bDebugLog=1 under [Advanced] in Data/MCM/Settings/WIO-FlashlightButton.ini by hand and close
 	// the pause menu - MCM leaves keys it does not own alone. Turns on MenuContext's
 	// change-detected state trace.
+	//
+	// It also has to raise the logger's own level: WIO::Init defaults a_verbose to false, which pins
+	// spdlog to Info, and REX::DEBUG is spdlog::debug - so without that the trace is formatted and
+	// dropped. Applied from Load() rather than at startup so it follows a pause-menu reload too.
 	inline bool         debugLog = false;
 
 	inline void Load()
@@ -73,6 +77,13 @@ namespace FMB::Settings
 		// fEnterWorkshopDelay, and the POV half of the mod would then silently never fire.
 		iHoldTenths = std::clamp(detail::GetInt("Advanced", "iHoldTenths", 4), 1, 10);
 		debugLog = detail::GetBool("Advanced", "bDebugLog", false);
+		// Guarded because a real debug build starts at trace, which this must not quieten - it is
+		// only NDEBUG builds that WIO::Init pins to Info and that this switch has to lift.
+#ifdef NDEBUG
+		const auto level = debugLog ? spdlog::level::debug : spdlog::level::info;
+		spdlog::set_level(level);
+		spdlog::flush_on(level);
+#endif
 
 		// Clamped rather than cast blind - a hand-edited ini can hold a value this enum does not
 		// have, and an out-of-range cast would silently mean "never block".
