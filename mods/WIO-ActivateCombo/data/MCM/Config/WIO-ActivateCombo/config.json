@@ -1,0 +1,249 @@
+{
+  "modName": "WIO-ActivateCombo",
+  "author": "Abbie Doobie",
+  "displayName": "$ARC_Main_ModName",
+  "minMcmVersion": 4,
+  "content": [
+    {
+      "type": "text",
+      "text": "$ARC_Main_Welcome_Intro"
+    },
+    {
+      "type": "text",
+      "text": "$ARC_Main_Welcome_BulletA"
+    },
+    {
+      "type": "text",
+      "text": "$ARC_Main_Welcome_BulletB"
+    },
+    {
+      "type": "text",
+      "text": "$ARC_Main_Welcome_BulletC"
+    },
+    {
+      "type": "spacer"
+    },
+    {
+      "type": "text",
+      "text": "$ARC_Main_Welcome_BulletD"
+    },
+    {
+      "type": "spacer"
+    },
+    {
+      "type": "text",
+      "html": true,
+      "text": "<font color='#AAAAAA' size='14'>$ARC_Main_Welcome_Credits</font>"
+    }
+  ],
+  "pages": [
+    {
+      "pageDisplayName": "$ARC_Gen_Page_General",
+      "content": [
+        {
+          "type": "section",
+          "text": "$ARC_Sect_Gamepad"
+        },
+        {
+          "id": "bEnableCombo:Gamepad",
+          "text": "$ARC_GP_EnableCombo_Text",
+          "type": "switcher",
+          "help": "$ARC_GP_EnableCombo_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingBool"
+          }
+        },
+        {
+          "id": "iSecondaryAction:Gamepad",
+          "text": "$ARC_GP_SecondaryAction_Text",
+          "type": "dropdown",
+          "help": "$ARC_GP_SecondaryAction_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingInt",
+            "options": [
+              "$ARC_Opt_None",
+              "$ARC_Input_GP_Up",
+              "$ARC_Input_GP_Down",
+              "$ARC_Input_GP_Left",
+              "$ARC_Input_GP_Right",
+              "$ARC_Input_GP_Start",
+              "$ARC_Input_GP_Select",
+              "$ARC_Input_GP_LS",
+              "$ARC_Input_GP_RS",
+              "$ARC_Input_GP_LB",
+              "$ARC_Input_GP_RB",
+              "$ARC_Input_GP_A",
+              "$ARC_Input_GP_B",
+              "$ARC_Input_GP_X",
+              "$ARC_Input_GP_Y",
+              "$ARC_Input_GP_LT",
+              "$ARC_Input_GP_RT"
+            ]
+          }
+        },
+        {
+          "id": "iUnbindReadyWeaponGamepad:Gamepad",
+          "text": "$ARC_GP_Unbind_Text",
+          "type": "dropdown",
+          "help": "$ARC_GP_Unbind_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingInt",
+            "options": [
+              "$ARC_Cmd_NoChange",
+              "$ARC_Cmd_Unbind",
+              "$ARC_Cmd_Rebind"
+            ]
+          }
+        },
+        {
+          "id": "sReadyWeaponGamepadStatus:Gamepad",
+          "text": "$ARC_Status",
+          "type": "textinput",
+          "valueOptions": {
+            "sourceType": "ModSettingString"
+          }
+        },
+        {
+          "type": "spacer"
+        },
+        {
+          "type": "section",
+          "text": "$ARC_Sect_Keyboard"
+        },
+        {
+          "id": "bEnableCombo:Keyboard",
+          "text": "$ARC_KBM_EnableCombo_Text",
+          "type": "switcher",
+          "help": "$ARC_KBM_EnableCombo_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingBool"
+          }
+        },
+        {
+          "id": "SecondaryActionKeyboardHotkey",
+          "text": "$ARC_KBM_SecondaryAction_Text",
+          "type": "hotkey",
+          "help": "$ARC_SecondaryAction_Help"
+        },
+        {
+          "id": "iUnbindReadyWeaponKeyboard:Keyboard",
+          "text": "$ARC_KBM_Unbind_Text",
+          "type": "dropdown",
+          "help": "$ARC_KBM_Unbind_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingInt",
+            "options": [
+              "$ARC_Cmd_NoChange",
+              "$ARC_Cmd_Unbind",
+              "$ARC_Cmd_Rebind"
+            ]
+          }
+        },
+        {
+          "id": "sReadyWeaponKeyboardStatus:Keyboard",
+          "text": "$ARC_Status",
+          "type": "textinput",
+          "valueOptions": {
+            "sourceType": "ModSettingString"
+          }
+        },
+        {
+          "type": "spacer"
+        },
+        {
+          "type": "section",
+          "text": "$ARC_Sect_PowerArmor"
+        },
+        {
+          "id": "bExitOnSecondaryAction:PowerArmor",
+          "text": "$ARC_PA_ExitOnSecondary_Text",
+          "type": "switcher",
+          "help": "$ARC_PA_ExitOnSecondary_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingBool"
+          }
+        },
+        {
+          "type": "text",
+          "html": true,
+          "text": "<font color='#AAAAAA' size='14'>$ARC_PA_Note</font>"
+        },
+        {
+          "type": "spacer"
+        },
+        {
+          "type": "section",
+          "text": "$ARC_Sect_Combat"
+        },
+        {
+          "id": "bBlockCompanionDrawn:Combat",
+          "text": "$ARC_Cbt_BlockCompanionDrawn_Text",
+          "type": "switcher",
+          "help": "$ARC_Cbt_BlockCompanionDrawn_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingBool"
+          }
+        },
+        {
+          "id": "iBlockNpcActivate:Combat",
+          "text": "$ARC_Cbt_BlockNpcActivate_Text",
+          "type": "dropdown",
+          "help": "$ARC_Cbt_BlockNpcActivate_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingInt",
+            "options": [
+              "$ARC_Opt_Off",
+              "$ARC_Opt_Companions",
+              "$ARC_Opt_AllNpcs"
+            ]
+          }
+        },
+        {
+          "id": "iBlockExtendSeconds:Combat",
+          "text": "$ARC_Cbt_BlockExtend_Text",
+          "type": "slider",
+          "help": "$ARC_Cbt_BlockExtend_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingInt",
+            "min": 0,
+            "max": 10,
+            "step": 1
+          }
+        },
+        {
+          "type": "text",
+          "html": true,
+          "text": "<font color='#AAAAAA' size='14'>$ARC_Cbt_Note</font>"
+        },
+        {
+          "type": "spacer"
+        },
+        {
+          "type": "section",
+          "text": "$ARC_Sect_Advanced"
+        },
+        {
+          "id": "bSilenceActivationSound:Advanced",
+          "text": "$ARC_Adv_SilenceBlip_Text",
+          "type": "switcher",
+          "help": "$ARC_Adv_SilenceBlip_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingBool"
+          }
+        },
+        {
+          "id": "iUnholsterHoldTenths:Advanced",
+          "text": "$ARC_Adv_UnholsterHold_Text",
+          "type": "slider",
+          "help": "$ARC_Adv_UnholsterHold_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingInt",
+            "min": 1,
+            "max": 20,
+            "step": 1
+          }
+        }
+      ]
+    }
+  ]
+}

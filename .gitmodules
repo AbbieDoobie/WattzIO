@@ -13,3 +13,6 @@
 [submodule "mods/WIO-GamepadHotkeys/lib/commonlibf4rd"]
 	path = mods/WIO-GamepadHotkeys/lib/commonlibf4rd
 	url = https://github.com/AbbieDoobie/commonlibf4rd-xmake.git
+[submodule "mods/WIO-ActivateCombo/lib/commonlibf4rd"]
+	path = mods/WIO-ActivateCombo/lib/commonlibf4rd
+	url = https://github.com/AbbieDoobie/commonlibf4rd-xmake.git

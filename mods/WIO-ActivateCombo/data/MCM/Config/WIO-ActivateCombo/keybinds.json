@@ -1,0 +1,13 @@
+{
+    "modName": "WIO-ActivateCombo",
+    "keybinds": [
+        {
+            "id": "SecondaryActionKeyboardHotkey",
+            "desc": "$ARC_KB_SecondaryAction",
+            "action": {
+                "type": "RunConsoleCommand",
+                "command": ""
+            }
+        }
+    ]
+}
