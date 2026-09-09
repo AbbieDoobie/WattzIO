@@ -1,0 +1,90 @@
+{
+	"minMcmVersion": 4,
+	"modName": "WIO-RadioNotifications",
+	"author": "Abbie Doobie",
+	"displayName": "$RNF_ModName",
+	"content": [
+		{
+			"type": "text",
+			"text": "$RNF_Main_Intro"
+		},
+		{
+			"type": "spacer"
+		},
+		{
+			"type": "text",
+			"text": "$RNF_Main_BulletA"
+		},
+		{
+			"type": "text",
+			"text": "$RNF_Main_BulletB"
+		},
+		{
+			"type": "spacer"
+		},
+		{
+			"type": "text",
+			"html": true,
+			"text": "<font color='#AAAAAA' size='14'>$RNF_Main_Credits</font>"
+		}
+	],
+	"pages": [
+		{
+			"pageDisplayName": "$RNF_Page_General",
+			"content": [
+				{
+					"type": "section",
+					"text": "$RNF_Sec_Stations"
+				},
+				{
+					"id": "bHideStationFound:Stations",
+					"type": "switcher",
+					"text": "$RNF_Set_StationFound",
+					"help": "$RNF_Set_StationFound_Help",
+					"valueOptions": {
+						"sourceType": "ModSettingBool"
+					}
+				},
+				{
+					"id": "bHideStationLost:Stations",
+					"type": "switcher",
+					"text": "$RNF_Set_StationLost",
+					"help": "$RNF_Set_StationLost_Help",
+					"valueOptions": {
+						"sourceType": "ModSettingBool"
+					}
+				},
+				{
+					"type": "text",
+					"html": true,
+					"text": "<font color='#AAAAAA' size='14'>$RNF_Sec_Stations_Note</font>"
+				},
+				{
+					"type": "spacer"
+				},
+				{
+					"type": "section",
+					"text": "$RNF_Sec_Beacons"
+				},
+				{
+					"id": "bHideBeaconFound:Beacons",
+					"type": "switcher",
+					"text": "$RNF_Set_BeaconFound",
+					"help": "$RNF_Set_BeaconFound_Help",
+					"valueOptions": {
+						"sourceType": "ModSettingBool"
+					}
+				},
+				{
+					"id": "bHideBeaconLost:Beacons",
+					"type": "switcher",
+					"text": "$RNF_Set_BeaconLost",
+					"help": "$RNF_Set_BeaconLost_Help",
+					"valueOptions": {
+						"sourceType": "ModSettingBool"
+					}
+				}
+			]
+		}
+	]
+}
