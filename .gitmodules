@@ -19,3 +19,6 @@
 [submodule "mods/WIO-RadioNotifications/lib/commonlibf4rd"]
 	path = mods/WIO-RadioNotifications/lib/commonlibf4rd
 	url = https://github.com/AbbieDoobie/commonlibf4rd-xmake.git
+[submodule "mods/WIO-WeaponSwap/lib/commonlibf4rd"]
+	path = mods/WIO-WeaponSwap/lib/commonlibf4rd
+	url = https://github.com/AbbieDoobie/commonlibf4rd-xmake.git

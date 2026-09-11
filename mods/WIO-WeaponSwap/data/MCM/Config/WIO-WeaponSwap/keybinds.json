@@ -1,0 +1,13 @@
+{
+    "modName": "WIO-WeaponSwap",
+    "keybinds": [
+        {
+            "id": "WeaponSwapKeyboardHotkey",
+            "desc": "$WS_KB_WeaponSwap",
+            "action": {
+                "type": "RunConsoleCommand",
+                "command": ""
+            }
+        }
+    ]
+}

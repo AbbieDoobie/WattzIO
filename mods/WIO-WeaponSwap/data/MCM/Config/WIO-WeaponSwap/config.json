@@ -1,0 +1,175 @@
+{
+    "modName": "WIO-WeaponSwap",
+    "author": "Abbie Doobie",
+    "displayName": "$WS_Main_ModName",
+    "minMcmVersion": 4,
+    "content": [
+        {
+            "type": "text",
+            "text": "$WS_Main_Welcome_Intro"
+        },
+        {
+            "type": "text",
+            "text": "$WS_Main_Welcome_BulletA"
+        },
+        { "type": "spacer" },
+        {
+            "type": "text",
+            "html": true,
+            "text": "<font color='#AAAAAA' size='14'>$WS_Main_Welcome_Credits</font>"
+        }
+    ],
+    "pages": [
+        {
+            "pageDisplayName": "$WS_Gen_Page_General",
+            "content": [
+                {
+                    "type": "section",
+                    "text": "$WS_Sect_Input"
+                },
+                {
+                    "id": "iGamepadInput:Input",
+                    "text": "$WS_Input_Gamepad_Text",
+                    "type": "dropdown",
+                    "help": "$WS_Input_Gamepad_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$WS_Opt_None",
+                            "$WS_Input_GP_Up",
+                            "$WS_Input_GP_Down",
+                            "$WS_Input_GP_Left",
+                            "$WS_Input_GP_Right",
+                            "$WS_Input_GP_Start",
+                            "$WS_Input_GP_Select",
+                            "$WS_Input_GP_LS",
+                            "$WS_Input_GP_RS",
+                            "$WS_Input_GP_LB",
+                            "$WS_Input_GP_RB",
+                            "$WS_Input_GP_A",
+                            "$WS_Input_GP_B",
+                            "$WS_Input_GP_X",
+                            "$WS_Input_GP_Y",
+                            "$WS_Input_GP_LT",
+                            "$WS_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "WeaponSwapKeyboardHotkey",
+                    "text": "$WS_Input_Keyboard_Text",
+                    "type": "hotkey",
+                    "help": "$WS_Input_Keyboard_Help"
+                },
+                { "type": "spacer" },
+                {
+                    "type": "section",
+                    "text": "$WS_Sect_Equipment"
+                },
+                {
+                    "id": "iSwapType:Equipment",
+                    "text": "$WS_Equip_SwapType_Text",
+                    "type": "dropdown",
+                    "help": "$WS_Equip_SwapType_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$WS_Opt_SwapType_Two",
+                            "$WS_Opt_SwapType_All"
+                        ]
+                    }
+                },
+                {
+                    "id": "bHoldSlot3:Equipment",
+                    "text": "$WS_Equip_HoldSlot3_Text",
+                    "type": "switcher",
+                    "help": "$WS_Equip_HoldSlot3_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                },
+                {
+                    "id": "bTripleTapSlot4:Equipment",
+                    "text": "$WS_Equip_TripleTapSlot4_Text",
+                    "type": "switcher",
+                    "help": "$WS_Equip_TripleTapSlot4_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                },
+                {
+                    "id": "iHolsteredBehavior:Equipment",
+                    "text": "$WS_Equip_HolsteredBehavior_Text",
+                    "type": "dropdown",
+                    "help": "$WS_Equip_HolsteredBehavior_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$WS_Opt_Holstered_EquipUnholster",
+                            "$WS_Opt_Holstered_EquipOnly",
+                            "$WS_Opt_Holstered_DoNothing",
+                            "$WS_Opt_Holstered_UnholsterOnly"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "html": true,
+                    "text": "<font color='#AAAAAA' size='14'>$WS_Equip_HolsteredBehavior_Note</font>"
+                },
+                {
+                    "id": "bOnlyEquipWeapons:Equipment",
+                    "text": "$WS_Equip_OnlyWeapons_Text",
+                    "type": "switcher",
+                    "help": "$WS_Equip_OnlyWeapons_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                },
+                { "type": "spacer" },
+                {
+                    "type": "section",
+                    "text": "$WS_Sect_Advanced"
+                },
+                {
+                    "id": "iHoldTenths:Advanced",
+                    "text": "$WS_Adv_HoldTenths_Text",
+                    "type": "slider",
+                    "help": "$WS_Adv_HoldTenths_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "min": 1,
+                        "max": 20,
+                        "step": 1
+                    }
+                },
+                {
+                    "id": "iTripleTapTenths:Advanced",
+                    "text": "$WS_Adv_TripleTapTenths_Text",
+                    "type": "slider",
+                    "help": "$WS_Adv_TripleTapTenths_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "min": 1,
+                        "max": 20,
+                        "step": 1
+                    }
+                },
+                {
+                    "id": "iBlockHotkeysInMenus:Advanced",
+                    "text": "$WS_Adv_BlockMenuHotkeys_Text",
+                    "type": "dropdown",
+                    "help": "$WS_Adv_BlockMenuHotkeys_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$WS_Block_MenusOnly",
+                            "$WS_Block_PromptsAndMenus",
+                            "$WS_Block_Off"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
