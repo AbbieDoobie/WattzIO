@@ -15,10 +15,26 @@ namespace WS::Favorites
 	{
 		RE::TESBoundObject* object = nullptr;
 		bool                isWeapon = false;
+		bool                isThrowable = false;
 		bool                isEquipped = false;
 	};
 
 	using SlotArray = std::array<std::optional<Slot>, 12>;
+
+	// Fallout4.esm's GrenadeSlot equip type [00046AAC]. Every grenade, mine, Molotov, flare and
+	// beacon carries it, and it is what sends an item to equip index 2 rather than the hands.
+	// Read from the item's own equip type, not a keyword list, so modded throwables need no setup.
+	inline constexpr RE::TESFormID kGrenadeSlotFormID = 0x00046AAC;
+
+	[[nodiscard]] inline bool IsThrowable(RE::TESBoundObject* a_object)
+	{
+		const auto weap = a_object ? a_object->As<RE::TESObjectWEAP>() : nullptr;
+		if (!weap) {
+			return false;
+		}
+		const auto slot = static_cast<const RE::BGSEquipType*>(weap)->GetEquipSlot(nullptr);
+		return slot && slot->GetFormID() == kGrenadeSlotFormID;
+	}
 
 	// One pass over the player's inventory, indexed by ExtraFavorite::quickkeyIndex (0-11). A
 	// slot with nothing favorited there is std::nullopt - never conflate "missing" with "index 0".
@@ -46,6 +62,7 @@ namespace WS::Favorites
 				slots[static_cast<std::size_t>(idx)] = Slot{
 					.object = item.object,
 					.isWeapon = item.object && item.object->Is<RE::TESObjectWEAP>(),
+					.isThrowable = IsThrowable(item.object),
 					.isEquipped = stack->IsEquipped()
 				};
 			}
@@ -75,11 +92,30 @@ namespace WS::Favorites
 		return item.object && item.object->Is<RE::TESObjectWEAP>();
 	}
 
+	// Index of the favorite slot holding the weapon in hand - equipped, a weapon, not a throwable -
+	// or std::nullopt if the hands hold nothing favorited.
+	[[nodiscard]] inline std::optional<std::int32_t> HandWeaponSlot(const SlotArray& a_slots)
+	{
+		for (std::size_t i = 0; i < a_slots.size(); ++i) {
+			if (a_slots[i] && a_slots[i]->isEquipped && a_slots[i]->isWeapon && !a_slots[i]->isThrowable) {
+				return static_cast<std::int32_t>(i);
+			}
+		}
+		return std::nullopt;
+	}
+
 	// Index of the slot (0-11) whose favorited stack is currently equipped, or std::nullopt if
 	// none of the tracked favorite slots match what's equipped right now (includes the case where
 	// the player is wielding an unfavorited weapon, or is unarmed).
+	//
+	// The weapon in hand wins over any other equipped favorite. A favorited grenade in the grenade
+	// slot, or worn armor, is equipped too, and taking the first equipped slot let one sitting
+	// ahead of the gun pin the position there - every cycle press landed on the same slot.
 	[[nodiscard]] inline std::optional<std::int32_t> CurrentlyEquippedSlot(const SlotArray& a_slots)
 	{
+		if (const auto hand = HandWeaponSlot(a_slots)) {
+			return hand;
+		}
 		for (std::size_t i = 0; i < a_slots.size(); ++i) {
 			if (a_slots[i] && a_slots[i]->isEquipped) {
 				return static_cast<std::int32_t>(i);

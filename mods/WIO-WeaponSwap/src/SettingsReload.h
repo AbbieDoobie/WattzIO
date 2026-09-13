@@ -4,6 +4,7 @@
 #include "Keybinds.h"
 #include "MenuContext.h"
 #include "Settings.h"
+#include "ZoomUnbind.h"
 
 namespace WS::SettingsReload
 {
@@ -36,10 +37,16 @@ namespace WS::SettingsReload
 		RE::BSEventNotifyControl ProcessEvent(const RE::MenuModeChangeEvent& a_event, RE::BSTEventSource<RE::MenuModeChangeEvent>*) override
 		{
 			if (a_event.enteringMenuMode) {
+				// A modifier release swallowed by the menu would otherwise leave it stuck held.
+				InputHook::ResetGamepadModifierState();
+				// Before the player can look at it: MCM's settings store may not exist yet at
+				// kGameLoaded, which would leave the status line blank.
+				ZoomUnbind::RefreshStatus();
 				return RE::BSEventNotifyControl::kContinue;
 			}
 			if (a_event.menuName == "PauseMenu"sv) {
 				Settings::Load();
+				ZoomUnbind::Run();
 				Keybinds::Load();
 				InputHook::RefreshGamepadKeycode();
 				// Retried here in case PlayerCharacter's singleton wasn't up at kGameLoaded -

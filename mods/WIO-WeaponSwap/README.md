@@ -10,25 +10,40 @@ favorite can be cycled through if you want.
 | Press | Swap weapons, according to Weapon Swap Type (either between 1 and 2, or cycle between all favorites) |
 | Hold, then release **(if enabled)** | Equip favorite 3 |
 | Triple tap **(if enabled)** | Equip favorite 4 |
+| Next Favorite Slot **(if bound)** | Equip the next favorite, wrapping around after the last |
+| Previous Favorite Slot **(if bound)** | Equip the previous favorite, wrapping around before the first |
+| Mouse wheel **(if enabled)** | Next or Previous Favorite Slot, one per notch |
+
+Next and Previous always step from whatever you have equipped right now, so a weapon you equipped by
+hand is picked up. If nothing you have equipped is a favorite, they start at the first one. They
+are separate from the swap button and ignore Weapon Swap Type, Hold, and Triple Tap.
 
 ## Initial Setup
 
-Open the Mod Configuration Menu and pick a Gamepad or Keyboard key in **WattzIO - Weapon Swap**.
-Favorite the weapons you want to swap between, just like you would normally.
+Open the Mod Configuration Menu and either pick a Gamepad or Keyboard key, or enable mouse wheel
+cycling, in **WattzIO - Weapon Swap**. Favorite the weapons you want to swap between, just like you
+would normally.
 
 ## Options
 
 - **Weapon Swap Type** is *Slots 1 and 2* or *All Slots*.
-- **Only Equip Weapons** skips any favorite that isn't a weapon.
-- **Hold (Slot 3)**: hold the button, then release, to equip favorite 3. **Off by
-  default.**
-- **Triple Tap (Slot 4)**: tap the button three times in quick succession to equip favorite
-  4. **Off by default.**
+- **Hold (Slot 3)**: hold the button, then release, to equip favorite 3. **Off by default.**
+- **Triple Tap (Slot 4)**: tap the button three times in quick succession to equip favorite 4.
+  **Off by default.**
+- **Mouse Wheel Favorite Slot Cycle** scrolls through your favorites with the wheel. *On (Reverse)*
+  flips the direction. **Off by default.**
+- **Unbind Vanilla Zoom In/Out (Keyboard)** stops the wheel from also zooming the camera. Requires
+  [WattzIO - Control Unbinder](https://www.nexusmods.com/fallout4/mods/108756); without it, the option does nothing.
+- **Favorite Slot Next/Previous Pause Time** sets a minimum gap between Next and Previous changes,
+  so a fast scroll doesn't skip past the weapon you wanted. **0 (no pause) by default.**
+- **Only Equip Weapons** skips any favorite that isn't a weapon. Applies to Next and Previous too.
+- **Don't Equip Throwables (Grenades, Mines, etc)** skips favorited grenades and mines, which
+  count as weapons to the option above. Applies to Next and Previous too.
 - **Hold Time** sets how long a hold has to be.
 - **Triple Tap Wait Time** sets the time window after the first tap that all 3 must fall within.
 - **If Weapon is Holstered or No Weapon is Equipped** decides what a press does in that state: equip
   and draw, equip without drawing, do nothing, or just draw whatever's already equipped without
-  swapping.
+  swapping. Applies to Next and Previous too.
 
 ## Technical Stuff and Limitations
 
@@ -56,7 +71,9 @@ Licensed MIT. [Source](https://github.com/AbbieDoobie/WattzIO/tree/main/mods/WIO
 
 ## Changelog
 
-Initial release.
+**1.1.0** - Added Next and Previous Favorite Slot bindings, mouse wheel cycling, keyboard and gamepad modifiers, and an option to skip throwables.
+
+**1.0.0** - Initial release.
 
 ## Building
 

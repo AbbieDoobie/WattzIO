@@ -20,9 +20,65 @@ namespace WS::WeaponSwapLogic
 {
 	namespace detail
 	{
+		// Only Equip Weapons and Don't Equip Throwables filter independently. Grenades and mines are
+		// weapon records, so only the second one removes them.
 		[[nodiscard]] inline bool Qualifies(const std::optional<Favorites::Slot>& a_slot)
 		{
-			return a_slot.has_value() && (!Settings::bOnlyEquipWeapons || a_slot->isWeapon);
+			return a_slot.has_value() &&
+			       (!Settings::bOnlyEquipWeapons || a_slot->isWeapon) &&
+			       (!Settings::bSkipThrowables || !a_slot->isThrowable);
+		}
+
+		// Off-hand tracking. A throwable or armor favorite equips without changing what is in hand,
+		// so a position read from equip state never moves past it: Rifle, Grenade, Pistol cycled
+		// Rifle -> Grenade -> Grenade forever. The last off-hand slot a cycle or swap press landed
+		// on stands in as the position while it is still equipped and the same weapon is still in
+		// hand; otherwise it is dropped. Memory only - never saved, and cleared on every save load
+		// and new game (main.cpp).
+		//
+		// Skipped entirely with Only Equip Weapons and Don't Equip Throwables both on (the
+		// defaults): every qualifying slot is then a hand weapon, and there is nothing to track.
+		inline std::optional<std::int32_t> s_offHandSlot;
+		inline std::optional<std::int32_t> s_offHandHeldSlot;
+
+		[[nodiscard]] inline bool OffHandTrackingActive()
+		{
+			return !(Settings::bOnlyEquipWeapons && Settings::bSkipThrowables);
+		}
+
+		inline void ResetOffHand()
+		{
+			s_offHandSlot.reset();
+			s_offHandHeldSlot.reset();
+		}
+
+		[[nodiscard]] inline std::optional<std::int32_t> CurrentPosition(const Favorites::SlotArray& a_slots)
+		{
+			if (OffHandTrackingActive() && s_offHandSlot) {
+				const auto& slot = a_slots[static_cast<std::size_t>(*s_offHandSlot)];
+				if (slot && slot->isEquipped && Favorites::HandWeaponSlot(a_slots) == s_offHandHeldSlot) {
+					return s_offHandSlot;
+				}
+			}
+			ResetOffHand();
+			return Favorites::CurrentlyEquippedSlot(a_slots);
+		}
+
+		// Recorded whether or not the equip then happens (Do Nothing while holstered, say): a slot
+		// that did not end up equipped fails CurrentPosition's check on the next press anyway.
+		inline void RememberLanding(const Favorites::SlotArray& a_slots, std::optional<std::int32_t> a_target)
+		{
+			if (!OffHandTrackingActive() || !a_target) {
+				ResetOffHand();
+				return;
+			}
+			const auto& slot = a_slots[static_cast<std::size_t>(*a_target)];
+			if (!slot || (slot->isWeapon && !slot->isThrowable)) {
+				ResetOffHand();
+				return;
+			}
+			s_offHandSlot = a_target;
+			s_offHandHeldSlot = Favorites::HandWeaponSlot(a_slots);
 		}
 
 		// Literal-target resolution for "Slots 1 and 2": the target is always exactly 1 or 2, never
@@ -30,7 +86,7 @@ namespace WS::WeaponSwapLogic
 		// on), nothing happens.
 		[[nodiscard]] inline std::optional<std::int32_t> ResolveToggleTarget(const Favorites::SlotArray& a_slots)
 		{
-			const auto equipped = Favorites::CurrentlyEquippedSlot(a_slots);
+			const auto equipped = CurrentPosition(a_slots);
 			std::int32_t target = 0;  // default: "if you don't have 1 (nor 2) equipped, equip 1"
 			if (equipped == 0) {
 				target = 1;
@@ -40,11 +96,13 @@ namespace WS::WeaponSwapLogic
 			return Qualifies(a_slots[static_cast<std::size_t>(target)]) ? std::optional{ target } : std::nullopt;
 		}
 
-		// "All Slots": cycles only the qualifying slots, so a press always lands on a real next
-		// weapon regardless of gaps, falling back to the first if nothing tracked is equipped.
+		// "All Slots" and Next / Previous Favorite Slot: cycles only the qualifying slots, so a press
+		// always lands on a real next weapon regardless of gaps, falling back to the first if nothing
+		// tracked is equipped - in both directions. The position comes from what is equipped right
+		// now, never from a remembered index, so a manual equip mid-cycle is picked up for free.
 		// Still covers all 12 even with Hold (Slot 3) / Triple Tap (Slot 4) on - those are additive
 		// shortcuts and do not carve their slot out of the cycle.
-		[[nodiscard]] inline std::optional<std::int32_t> ResolveCycleTarget(const Favorites::SlotArray& a_slots)
+		[[nodiscard]] inline std::optional<std::int32_t> ResolveCycleTarget(const Favorites::SlotArray& a_slots, bool a_forward = true)
 		{
 			std::vector<std::int32_t> qualifying;
 			qualifying.reserve(a_slots.size());
@@ -57,7 +115,7 @@ namespace WS::WeaponSwapLogic
 				return std::nullopt;
 			}
 
-			const auto equipped = Favorites::CurrentlyEquippedSlot(a_slots);
+			const auto equipped = CurrentPosition(a_slots);
 			if (!equipped) {
 				return qualifying.front();
 			}
@@ -65,6 +123,9 @@ namespace WS::WeaponSwapLogic
 			const auto it = std::ranges::find(qualifying, *equipped);
 			if (it == qualifying.end()) {
 				return qualifying.front();
+			}
+			if (!a_forward) {
+				return it == qualifying.begin() ? qualifying.back() : *std::prev(it);
 			}
 			const auto next = std::next(it);
 			return next == qualifying.end() ? qualifying.front() : *next;
@@ -106,15 +167,21 @@ namespace WS::WeaponSwapLogic
 			if (!handler) {
 				return;
 			}
+			// value is zeroed too, so a mouse wheel notch - acted on at its press, not a release -
+			// reaches the handler in the same shape as every button release does.
+			const auto realValue = a_event.value;
 			const auto realHeldDownSecs = a_event.heldDownSecs;
+			a_event.value = 0.0f;
 			a_event.heldDownSecs = 0.0f;
 			handler->HandleEvent(&a_event);
+			a_event.value = realValue;
 			a_event.heldDownSecs = realHeldDownSecs;
 		}
 
-		// Normal press, Hold (Slot 3) and Triple Tap (Slot 4) all land here, so the
-		// holstered/none-equipped dropdown governs all three. A nullopt target still runs this:
-		// holstered, "Equip Next and Unholster" then just draws whatever is in hand.
+		// Normal press, Hold (Slot 3), Triple Tap (Slot 4), and Next / Previous Favorite Slot all
+		// land here, so the holstered/none-equipped dropdown governs every one of them. A nullopt
+		// target still runs this: holstered, "Equip Next and Unholster" then just draws whatever is
+		// in hand.
 		inline void Apply(RE::Actor* a_actor, RE::ButtonEvent& a_event, std::optional<std::int32_t> a_target)
 		{
 			if (Favorites::IsWeaponDrawn(a_actor)) {
@@ -166,7 +233,31 @@ namespace WS::WeaponSwapLogic
 		}
 
 		const auto slots = Favorites::BuildSlots(actor);
-		detail::Apply(actor, a_event, detail::ResolveTarget(slots));
+		const auto target = detail::ResolveTarget(slots);
+		detail::RememberLanding(slots, target);
+		detail::Apply(actor, a_event, target);
+	}
+
+	// Called on every save load and new game, so off-hand tracking never outlives the playthrough
+	// it was recorded in.
+	inline void ResetTracking()
+	{
+		detail::ResetOffHand();
+	}
+
+	// Next / Previous Favorite Slot: always the qualifying-slot cycle, whatever Weapon Swap Type is
+	// set to, and through the same holstered/none-equipped dropdown as every other press.
+	inline void TriggerCycle(RE::ButtonEvent& a_event, bool a_forward)
+	{
+		const auto actor = RE::PlayerCharacter::GetSingleton();
+		if (!actor) {
+			return;
+		}
+
+		const auto slots = Favorites::BuildSlots(actor);
+		const auto target = detail::ResolveCycleTarget(slots, a_forward);
+		detail::RememberLanding(slots, target);
+		detail::Apply(actor, a_event, target);
 	}
 
 	// Hold (Slot 3) and Triple Tap (Slot 4): the target is that literal slot, independent of Weapon

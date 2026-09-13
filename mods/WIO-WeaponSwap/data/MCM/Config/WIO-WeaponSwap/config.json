@@ -12,6 +12,10 @@
             "type": "text",
             "text": "$WS_Main_Welcome_BulletA"
         },
+        {
+            "type": "text",
+            "text": "$WS_Main_Welcome_BulletB"
+        },
         { "type": "spacer" },
         {
             "type": "text",
@@ -25,7 +29,7 @@
             "content": [
                 {
                     "type": "section",
-                    "text": "$WS_Sect_Input"
+                    "text": "$WS_Sect_Gamepad"
                 },
                 {
                     "id": "iGamepadInput:Input",
@@ -56,10 +60,150 @@
                     }
                 },
                 {
+                    "id": "iGamepadNextFavorite:Input",
+                    "text": "$WS_Input_GamepadNext_Text",
+                    "type": "dropdown",
+                    "help": "$WS_Input_GamepadNext_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$WS_Opt_None",
+                            "$WS_Input_GP_Up",
+                            "$WS_Input_GP_Down",
+                            "$WS_Input_GP_Left",
+                            "$WS_Input_GP_Right",
+                            "$WS_Input_GP_Start",
+                            "$WS_Input_GP_Select",
+                            "$WS_Input_GP_LS",
+                            "$WS_Input_GP_RS",
+                            "$WS_Input_GP_LB",
+                            "$WS_Input_GP_RB",
+                            "$WS_Input_GP_A",
+                            "$WS_Input_GP_B",
+                            "$WS_Input_GP_X",
+                            "$WS_Input_GP_Y",
+                            "$WS_Input_GP_LT",
+                            "$WS_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iGamepadPreviousFavorite:Input",
+                    "text": "$WS_Input_GamepadPrevious_Text",
+                    "type": "dropdown",
+                    "help": "$WS_Input_GamepadPrevious_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$WS_Opt_None",
+                            "$WS_Input_GP_Up",
+                            "$WS_Input_GP_Down",
+                            "$WS_Input_GP_Left",
+                            "$WS_Input_GP_Right",
+                            "$WS_Input_GP_Start",
+                            "$WS_Input_GP_Select",
+                            "$WS_Input_GP_LS",
+                            "$WS_Input_GP_RS",
+                            "$WS_Input_GP_LB",
+                            "$WS_Input_GP_RB",
+                            "$WS_Input_GP_A",
+                            "$WS_Input_GP_B",
+                            "$WS_Input_GP_X",
+                            "$WS_Input_GP_Y",
+                            "$WS_Input_GP_LT",
+                            "$WS_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iGamepadModifier:Input",
+                    "text": "$WS_Input_GamepadModifier_Text",
+                    "type": "dropdown",
+                    "help": "$WS_Input_GamepadModifier_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$WS_Opt_None",
+                            "$WS_Input_GP_Up",
+                            "$WS_Input_GP_Down",
+                            "$WS_Input_GP_Left",
+                            "$WS_Input_GP_Right",
+                            "$WS_Input_GP_Start",
+                            "$WS_Input_GP_Select",
+                            "$WS_Input_GP_LS",
+                            "$WS_Input_GP_RS",
+                            "$WS_Input_GP_LB",
+                            "$WS_Input_GP_RB",
+                            "$WS_Input_GP_A",
+                            "$WS_Input_GP_B",
+                            "$WS_Input_GP_X",
+                            "$WS_Input_GP_Y",
+                            "$WS_Input_GP_LT",
+                            "$WS_Input_GP_RT"
+                        ]
+                    }
+                },
+                { "type": "spacer" },
+                {
+                    "type": "section",
+                    "text": "$WS_Sect_Keyboard"
+                },
+                {
                     "id": "WeaponSwapKeyboardHotkey",
                     "text": "$WS_Input_Keyboard_Text",
                     "type": "hotkey",
-                    "help": "$WS_Input_Keyboard_Help"
+                    "help": "$WS_Input_Keyboard_Help",
+                    "allowModifierKeys": true
+                },
+                {
+                    "id": "iMouseWheelCycle:Input",
+                    "text": "$WS_Input_MouseWheelCycle_Text",
+                    "type": "dropdown",
+                    "help": "$WS_Input_MouseWheelCycle_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$WS_Opt_Off",
+                            "$WS_Opt_On",
+                            "$WS_Opt_OnReverse"
+                        ]
+                    }
+                },
+                {
+                    "id": "iUnbindZoomKeyboard:Input",
+                    "text": "$WS_Input_UnbindZoom_Text",
+                    "type": "dropdown",
+                    "help": "$WS_Input_UnbindZoom_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$WS_Cmd_NoChange",
+                            "$WS_Cmd_Unbind",
+                            "$WS_Cmd_Rebind"
+                        ]
+                    }
+                },
+                {
+                    "id": "sZoomKeyboardStatus:Input",
+                    "text": "$WS_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "NextFavoriteKeyboardHotkey",
+                    "text": "$WS_Input_KeyboardNext_Text",
+                    "type": "hotkey",
+                    "help": "$WS_Input_KeyboardNext_Help",
+                    "allowModifierKeys": true
+                },
+                {
+                    "id": "PreviousFavoriteKeyboardHotkey",
+                    "text": "$WS_Input_KeyboardPrevious_Text",
+                    "type": "hotkey",
+                    "help": "$WS_Input_KeyboardPrevious_Help",
+                    "allowModifierKeys": true
                 },
                 { "type": "spacer" },
                 {
@@ -98,26 +242,6 @@
                     }
                 },
                 {
-                    "id": "iHolsteredBehavior:Equipment",
-                    "text": "$WS_Equip_HolsteredBehavior_Text",
-                    "type": "dropdown",
-                    "help": "$WS_Equip_HolsteredBehavior_Help",
-                    "valueOptions": {
-                        "sourceType": "ModSettingInt",
-                        "options": [
-                            "$WS_Opt_Holstered_EquipUnholster",
-                            "$WS_Opt_Holstered_EquipOnly",
-                            "$WS_Opt_Holstered_DoNothing",
-                            "$WS_Opt_Holstered_UnholsterOnly"
-                        ]
-                    }
-                },
-                {
-                    "type": "text",
-                    "html": true,
-                    "text": "<font color='#AAAAAA' size='14'>$WS_Equip_HolsteredBehavior_Note</font>"
-                },
-                {
                     "id": "bOnlyEquipWeapons:Equipment",
                     "text": "$WS_Equip_OnlyWeapons_Text",
                     "type": "switcher",
@@ -126,10 +250,23 @@
                         "sourceType": "ModSettingBool"
                     }
                 },
-                { "type": "spacer" },
+                {
+                    "id": "bSkipThrowables:Equipment",
+                    "text": "$WS_Equip_SkipThrowables_Text",
+                    "type": "switcher",
+                    "help": "$WS_Equip_SkipThrowables_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                }
+            ]
+        },
+        {
+            "pageDisplayName": "$WS_Page_Advanced",
+            "content": [
                 {
                     "type": "section",
-                    "text": "$WS_Sect_Advanced"
+                    "text": "$WS_Sect_Input"
                 },
                 {
                     "id": "iHoldTenths:Advanced",
@@ -154,6 +291,38 @@
                         "max": 20,
                         "step": 1
                     }
+                },
+                {
+                    "id": "fCycleCooldown:Advanced",
+                    "text": "$WS_Adv_CycleCooldown_Text",
+                    "type": "slider",
+                    "help": "$WS_Adv_CycleCooldown_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingFloat",
+                        "min": 0,
+                        "max": 1,
+                        "step": 0.1
+                    }
+                },
+                {
+                    "id": "iHolsteredBehavior:Equipment",
+                    "text": "$WS_Equip_HolsteredBehavior_Text",
+                    "type": "dropdown",
+                    "help": "$WS_Equip_HolsteredBehavior_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$WS_Opt_Holstered_EquipUnholster",
+                            "$WS_Opt_Holstered_EquipOnly",
+                            "$WS_Opt_Holstered_DoNothing",
+                            "$WS_Opt_Holstered_UnholsterOnly"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "html": true,
+                    "text": "<font color='#AAAAAA' size='14'>$WS_Equip_HolsteredBehavior_Note</font>"
                 },
                 {
                     "id": "iBlockHotkeysInMenus:Advanced",

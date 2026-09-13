@@ -8,6 +8,22 @@
                 "type": "RunConsoleCommand",
                 "command": ""
             }
+        },
+        {
+            "id": "NextFavoriteKeyboardHotkey",
+            "desc": "$WS_KB_NextFavorite",
+            "action": {
+                "type": "RunConsoleCommand",
+                "command": ""
+            }
+        },
+        {
+            "id": "PreviousFavoriteKeyboardHotkey",
+            "desc": "$WS_KB_PreviousFavorite",
+            "action": {
+                "type": "RunConsoleCommand",
+                "command": ""
+            }
         }
     ]
 }
