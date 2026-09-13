@@ -57,6 +57,9 @@ namespace WattzIO::ControlUnbinderAPI
 		std::uint32_t version;
 
 		// eventID is a ControlMap UserEvent name; a_caller is the requesting mod's File token.
+		// A persistent binding is written through the engine to ControlMap_Custom.txt. An in-memory
+		// binding (see IsInMemory) is written to the provider's own MCM setting for that control and
+		// re-applied by the provider on every launch. Both persist; neither needs a repeat call.
 		Result (*Apply)(const char* a_eventID, Slot a_slot, Action a_action, const char* a_caller);
 		State (*Query)(const char* a_eventID, Slot a_slot);
 
@@ -71,14 +74,14 @@ namespace WattzIO::ControlUnbinderAPI
 		// device by default", or a bare "Bound" for a live key code KeyNames has no name for.
 		const char* (*DescribeBinding)(const char* a_eventID, Slot a_slot);
 
-		// True when the provider must remember this binding for the caller. Most persist in
-		// ControlMap_Custom.txt, so Apply() is one-shot. remappable=0 entries are written
-		// straight into inputKey, persist nowhere, and need SetPersistentUnbind instead. The
-		// Quick Slot D-pad entries are the current examples.
+		// True for remappable=0 entries, which the engine holds only in inputKey and resets on every
+		// launch - e.g. the Quick Slot D-pad entries, ZoomIn/ZoomOut, and Quickkey1-12. Apply()
+		// persists these through the provider's settings.
 		bool (*IsInMemory)(const char* a_eventID);
 
-		// Standing request for an in-memory binding, re-applied on every pass. Pass false to
-		// withdraw. Harmless on a persistent binding, but Apply() is the right call there.
+		// Session-only unbind request for an in-memory binding, kept per caller in provider memory
+		// and ORed with the provider's stored setting on every pass. Not saved. Pass false to
+		// withdraw. Apply() is the persistent call.
 		Result (*SetPersistentUnbind)(const char* a_eventID, Slot a_slot, bool a_unbind,
 			const char* a_caller);
 	};

@@ -39,7 +39,7 @@ namespace
 	}
 }
 
-WIO_PLUGIN_VERSION("WIO-ControlUnbinder", "Abbie Doobie", 1, 0, 1);
+WIO_PLUGIN_VERSION("WIO-ControlUnbinder", "Abbie Doobie", 1, 0, 2);
 
 F4SE_PLUGIN_LOAD(const F4SE::LoadInterface* a_f4se)
 {

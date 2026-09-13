@@ -817,6 +817,307 @@
                     }
                 },
                 {
+                    "id": "bUnbind_ZoomIn:Keyboard",
+                    "text": "$UC_KBM_ZoomIn_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_ZoomIn_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_Bound",
+                            "$UC_Cmd_Unbound"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_ZoomIn:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "bUnbind_ZoomOut:Keyboard",
+                    "text": "$UC_KBM_ZoomOut_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_ZoomOut_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_Bound",
+                            "$UC_Cmd_Unbound"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_ZoomOut:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$UC_Sect_Favorites"
+                },
+                {
+                    "id": "bUnbind_Quickkey1:Keyboard",
+                    "text": "$UC_KBM_Quickkey1_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_Quickkey1_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_Bound",
+                            "$UC_Cmd_Unbound"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Quickkey1:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "bUnbind_Quickkey2:Keyboard",
+                    "text": "$UC_KBM_Quickkey2_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_Quickkey2_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_Bound",
+                            "$UC_Cmd_Unbound"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Quickkey2:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "bUnbind_Quickkey3:Keyboard",
+                    "text": "$UC_KBM_Quickkey3_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_Quickkey3_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_Bound",
+                            "$UC_Cmd_Unbound"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Quickkey3:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "bUnbind_Quickkey4:Keyboard",
+                    "text": "$UC_KBM_Quickkey4_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_Quickkey4_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_Bound",
+                            "$UC_Cmd_Unbound"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Quickkey4:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "bUnbind_Quickkey5:Keyboard",
+                    "text": "$UC_KBM_Quickkey5_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_Quickkey5_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_Bound",
+                            "$UC_Cmd_Unbound"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Quickkey5:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "bUnbind_Quickkey6:Keyboard",
+                    "text": "$UC_KBM_Quickkey6_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_Quickkey6_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_Bound",
+                            "$UC_Cmd_Unbound"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Quickkey6:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "bUnbind_Quickkey7:Keyboard",
+                    "text": "$UC_KBM_Quickkey7_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_Quickkey7_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_Bound",
+                            "$UC_Cmd_Unbound"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Quickkey7:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "bUnbind_Quickkey8:Keyboard",
+                    "text": "$UC_KBM_Quickkey8_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_Quickkey8_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_Bound",
+                            "$UC_Cmd_Unbound"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Quickkey8:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "bUnbind_Quickkey9:Keyboard",
+                    "text": "$UC_KBM_Quickkey9_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_Quickkey9_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_Bound",
+                            "$UC_Cmd_Unbound"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Quickkey9:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "bUnbind_Quickkey10:Keyboard",
+                    "text": "$UC_KBM_Quickkey10_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_Quickkey10_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_Bound",
+                            "$UC_Cmd_Unbound"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Quickkey10:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "bUnbind_Quickkey11:Keyboard",
+                    "text": "$UC_KBM_Quickkey11_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_Quickkey11_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_Bound",
+                            "$UC_Cmd_Unbound"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Quickkey11:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
+                    "id": "bUnbind_Quickkey12:Keyboard",
+                    "text": "$UC_KBM_Quickkey12_Text",
+                    "type": "dropdown",
+                    "help": "$UC_KBM_Quickkey12_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$UC_Cmd_Bound",
+                            "$UC_Cmd_Unbound"
+                        ]
+                    }
+                },
+                {
+                    "id": "sStatus_Quickkey12:Keyboard",
+                    "text": "$UC_Status",
+                    "type": "textinput",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString"
+                    }
+                },
+                {
                     "type": "spacer"
                 },
                 {
@@ -1062,6 +1363,31 @@
                     "text": "$UC_GP_DialogueWorkaround_Text",
                     "type": "switcher",
                     "help": "$UC_GP_DialogueWorkaround_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$UC_Adv_Sect_KBM"
+                },
+                {
+                    "id": "bWorkaroundWorkshopZoomBinds:Keyboard",
+                    "text": "$UC_KBM_WorkshopZoomWorkaround_Text",
+                    "type": "switcher",
+                    "help": "$UC_KBM_WorkshopZoomWorkaround_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                },
+                {
+                    "id": "bWorkaroundFavoriteMenuBinds:Keyboard",
+                    "text": "$UC_KBM_FavoritesWorkaround_Text",
+                    "type": "switcher",
+                    "help": "$UC_KBM_FavoritesWorkaround_Help",
                     "valueOptions": {
                         "sourceType": "ModSettingBool"
                     }

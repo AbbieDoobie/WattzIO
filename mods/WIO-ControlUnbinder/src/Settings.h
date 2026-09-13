@@ -8,7 +8,8 @@
 namespace UnbindAny::Settings
 {
 	// MCM writes to Data\MCM\Settings\WIO-ControlUnbinder.ini on every control change. This
-	// plugin never writes that file; it only reads it on demand via GetPrivateProfileStringA.
+	// plugin reads it on demand, and writes it in two places only: ControlRemap resets a command
+	// dropdown to No Change, and ApiProvider stores an API request for an in-memory binding.
 	constexpr auto kMCMSettingsPath = R"(Data\MCM\Settings\WIO-ControlUnbinder.ini)";
 
 	constexpr std::int32_t kUnbound = static_cast<std::int32_t>(RE::kInvalidMappedKey);

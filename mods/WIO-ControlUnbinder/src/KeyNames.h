@@ -12,7 +12,8 @@
 // keycodes that Keybinds.json stores:
 //
 //   keyboard  Windows Virtual-Key codes (VK_*), same as CustomControlMap.txt
-//   mouse     0-based button index, matching RE::INPUT_DEVICE::kMouse
+//   mouse     0-based button index, matching RE::INPUT_DEVICE::kMouse, plus 0x800 and 0x900 for
+//             the wheel
 //   gamepad   XInput button bitmask, plus 9 and 10 as Bethesda's pseudo-IDs for the triggers
 //
 // Names are not translated - they are what is printed on the hardware.
@@ -92,6 +93,8 @@ namespace UnbindAny::KeyNames
 		case 0: return "Mouse: Left Click";
 		case 1: return "Mouse: Right Click";
 		case 2: return "Mouse: Middle Click";
+		case RE::kBSButtonCodeWheelUp: return "Mouse: Wheel Up";
+		case RE::kBSButtonCodeWheelDown: return "Mouse: Wheel Down";
 		default: break;
 		}
 		if (a_index >= 3 && a_index <= 7) {

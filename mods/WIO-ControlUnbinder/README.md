@@ -23,14 +23,14 @@ device you are using. No controls are changed by default, this is more of a util
 ## Options
 
 - **Gamepad page** - One option per control, including the four Quick Slot D-Pad entries.
-- **Quick Slot Up / Down / Left / Right (D-Pad)** are a stored Bound / Unbound setting rather than
-  a one-shot command, because the game refuses to remap those four and never saves them. They are
-  applied in memory only, so if this mod is uninstalled or fails to load, they go back to vanilla
-  on the next load. Every other entry persists normally.
 - **Keyboard and Mouse page** - One option per control. KBM has more rebindable vanilla buttons, so
-  this page has more slots than gamepad.
-- **Workaround for Incorrect Menu Binds** (Advanced option for gamepad) is **on by default**. Leave it on
-  unless you have a reason not to.
+  this page has a lot more slots than gamepad.
+- Special (normally not editable) bindings can be modified as well, including:
+  **Quick Slot Up / Down / Left / Right (D-Pad)**, **Zoom In / Zoom Out (Mouse Wheel)**, and
+  **Favorite 1-12 (keys 1-0, Minus, Equals)**.
+- **Menu workarounds** (Advanced page, **on by default**) - Keep dialogue, Workshop, Pip-Boy, and
+  Favorites menus working when Quick Slots, Zoom, or Favorites are unbound. Leave them on unless
+  you have a reason not to.
 
 ## Technical Stuff and Limitations
 
@@ -43,8 +43,8 @@ device you are using. No controls are changed by default, this is more of a util
 
 ## Requirements
 
-- **Game version**: tested only on AE 1.11.221. Addresses for OG (1.10.163) and NG (1.10.984) are
-included and it should work, but neither has been tested.
+- **Game version**: tested on AE (1.11.221) and OG (1.10.163). Addresses for NG (1.10.984) are
+  included and it should work, but has not been tested.
 - [F4SE](https://www.nexusmods.com/fallout4/mods/42147)
 - [MCM](https://www.nexusmods.com/fallout4/mods/21497)
 - [Runtime Database](https://www.nexusmods.com/fallout4/mods/108394)
@@ -72,19 +72,23 @@ api->Apply("ReadyWeapon", Slot::kGamepad, Action::kUnbind, "MY-CoolMod");
 ```
 
 The last argument is just your mod's name, which is what ends up in the log. The call is
-one-and-done: it writes the change and the game saves it, so you won't need to call it again on
-the next load. There's no coordination between mods, so if two of them care about the same
-button, last one to write wins.
+one-and-done: the change is saved, so you won't need to call it again on the next load. There's
+no coordination between mods, so if two of them care about the same button, last one to write
+wins.
 
 The rest is for showing things to the player. There are calls for "what is this control actually
 bound to right now", "what is this control called", and a ready-made status line you can drop
 straight into your MCM page. They come back already translated.
 
 Note that keyboard and mouse are a single slot as far as the game is concerned, so asking about
-the keyboard covers the mouse as well. Also, the four D-Pad Quick Slots are a special case: the
-game marks them as not remappable, so they reset every load. There's a separate call for those,
-and Control Unbinder reapplies your request each time. They're the only controls that work this
-way at the moment, and `IsInMemory` will tell you if that ever changes.
+the keyboard covers the mouse as well.
+
+The four D-Pad Quick Slots, the two mouse wheel zoom controls, and the twelve Favorites hotkeys
+are a special case: the game marks them as not remappable and resets them every load. `Apply()`
+still works on them the same way. Control Unbinder saves your request to its own settings and
+reapplies it each launch, and it shows up on Control Unbinder's MCM page as if the player had set
+it there. `IsInMemory` tells you whether a control is one of these. `SetPersistentUnbind` also
+exists for a temporary unbind that lasts only until the game closes.
 
 ## Credits
 
@@ -98,6 +102,8 @@ Licensed MIT. [Source](https://github.com/AbbieDoobie/WattzIO/tree/main/mods/WIO
 
 ## Changelog
 
+**1.0.2** - Added Zoom In/Out (mouse wheel) and Favorite 1-12 to the Keyboard and Mouse page.
+
 **1.0.1** - Fixed an issue causing the original edition of the game to crash.
 
 **1.0.0** - Initial release.
@@ -106,31 +112,29 @@ Licensed MIT. [Source](https://github.com/AbbieDoobie/WattzIO/tree/main/mods/WIO
 
 Requires [xmake](https://xmake.io) 3.0.0 or newer and a C++23 compiler (MSVC or Clang-CL).
 
+This mod lives in a monorepo alongside the rest of the WattzIO Fallout 4 mods, and is
+built from its own directory rather than the repository root:
+
 ```bat
-git clone --recurse-submodules <url-of-this-repo>
+git clone <url-of-this-repo> wattzio
+cd wattzio
+git submodule update --init mods/WIO-ControlUnbinder/lib/commonlibf4rd
+cd mods\WIO-ControlUnbinder
 xmake f -m releasedbg
 xmake
 ```
 
-Cloned without `--recurse-submodules`? Fetch the dependency first:
-
-```bat
-git submodule update --init --recursive
-```
+Every mod pins its own copy of the dependency, so cloning with `--recurse-submodules`
+fetches one for all of them. Initialising just this mod's submodule is enough to build it.
 
 The built plugin lands at `build\windows\x64\releasedbg\WIO-ControlUnbinder.dll`.
 
 | Path | Contents |
 |---|---|
 | `src/` | Plugin source: header-only modules plus `main.cpp` |
-| `data/` | Authored MCM config and translation files, mirroring the game's `Data` folder |
+| `data/` | MCM config and translation files, mirroring the game's `Data` folder |
 | `lib/commonlibf4rd` | CommonLibF4RD (pinned submodule). |
 | `xmake.lua` | Build configuration |
-
-Setting `WIO_PROJECTS_ROOT` makes the build stage the DLL and `data/` into a deploy
-folder automatically. Without it the build still succeeds and the deploy step is
-skipped. To install a local build by hand, copy the contents of `data\` into your
-`Data` folder and the built DLL into `Data\F4SE\Plugins\`.
 
 Every address the plugin resolves is marked with an `F4RD:<kind>` tag and listed in an
 `F4RD RELOCATIONS` banner in the file that resolves it, so `grep -rn "F4RD RELOCATIONS" src`

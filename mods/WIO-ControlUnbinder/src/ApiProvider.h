@@ -9,6 +9,7 @@
 #include "ControlMapService.h"
 #include "ControlUnbinderAPI.h"
 #include "KeyNames.h"
+#include "Settings.h"
 
 // Provider half of the shared binding API. Exposes ControlMapService to consuming mods, so this
 // is the only mod that writes ControlMap and no two mods can contradict each other on the same
@@ -45,6 +46,39 @@ namespace UnbindAny::ApiProvider
 			if (!a_eventID || !a_caller) {
 				return ApiResult::kUnknownAction;
 			}
+
+			// In-memory entries (remappable=0) persist nowhere in the engine, and ControlRemap::Apply
+			// re-writes them from the stored bUnbind_<stem> setting on every pass, so an engine write
+			// alone is undone at the next pause close and lost on restart. The request is written to
+			// that setting first - the same value this mod's own dropdown for the control writes.
+			// Only for a slot the binding has a default on; anything else is not applicable, and
+			// storing it would leave a stray key under the wrong section.
+			const auto binding = Bindings::Find(a_eventID);
+			const bool onSlot = binding &&
+			                    (a_slot == ApiSlot::kGamepad ?
+			                            binding->gamepadDefault != Bindings::kUnbound :
+			                            (binding->keyboardDefault != Bindings::kUnbound ||
+										   binding->mouseDefault != Bindings::kUnbound));
+			if (onSlot && binding->inMemory) {
+				const bool        unbind = a_action == ApiAction::kUnbind;
+				const char*       section = a_slot == ApiSlot::kGamepad ? "Gamepad" : "Keyboard";
+				const std::string key = "bUnbind_" + std::string{ Bindings::SettingStem(a_eventID) };
+				if (!::WritePrivateProfileStringA(section, key.c_str(), unbind ? "1" : "0",
+						Settings::kMCMSettingsPath)) {
+					REX::WARN("Control Unbinder: API - could not store {} - {} will not survive a restart"sv,
+						key, a_eventID);
+				}
+				// MCM's own copy, which it never re-reads from the ini this session.
+				if (const auto game = RE::GameVM::GetSingleton(); game) {
+					if (const auto vm = game->GetVM(); vm) {
+						WIO::Papyrus::DispatchStaticCall(vm, "MCM", "SetModSettingInt", nullptr,
+							RE::BSFixedString{ WattzIO::ControlUnbinderAPI::kProviderName },
+							RE::BSFixedString{ key + ":" + section },
+							unbind ? 1 : 0);
+					}
+				}
+			}
+
 			// No arbitration. Every caller issues a momentary command rather than a standing
 			// claim, so nothing re-asserts and nothing can contradict anything: the engine's own
 			// ControlMap is the only state.

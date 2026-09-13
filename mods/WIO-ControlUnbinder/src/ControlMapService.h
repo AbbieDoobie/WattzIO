@@ -188,18 +188,42 @@ namespace UnbindAny::ControlMapService
 		return state;
 	}
 
+	// The device array an in-memory entry is written to. Every in-memory entry has a default on one
+	// device only, so on the keyboard slot that is whichever of keyboard or mouse carries it.
+	[[nodiscard]] inline RE::INPUT_DEVICE InMemoryDevice(const Bindings::Binding& a_binding, Slot a_slot)
+	{
+		if (a_slot == Slot::kGamepad) {
+			return RE::INPUT_DEVICE::kGamepad;
+		}
+		return a_binding.keyboardDefault != Bindings::kUnbound ? RE::INPUT_DEVICE::kKeyboard :
+		                                                         RE::INPUT_DEVICE::kMouse;
+	}
+
+	[[nodiscard]] inline std::int32_t DefaultFor(const Bindings::Binding& a_binding, RE::INPUT_DEVICE a_device)
+	{
+		switch (a_device) {
+		case RE::INPUT_DEVICE::kKeyboard:
+			return a_binding.keyboardDefault;
+		case RE::INPUT_DEVICE::kMouse:
+			return a_binding.mouseDefault;
+		case RE::INPUT_DEVICE::kGamepad:
+			return a_binding.gamepadDefault;
+		default:
+			return Bindings::kUnbound;
+		}
+	}
+
 	// Raw write with no kick and no save, for callers that batch several entries: all the writes,
-	// then one kick, then one save. A kick and save after each individual write does not work.
-	[[nodiscard]] inline bool WriteRawNoKick(std::string_view a_eventID, Slot a_slot,
+	// then one kick per device array written, then one save. A kick and save after each individual
+	// write does not work.
+	[[nodiscard]] inline bool WriteRawNoKick(std::string_view a_eventID, RE::INPUT_DEVICE a_device,
 		std::int32_t a_value, Context a_ctx = Context::kMainGameplay)
 	{
 		const auto cm = RE::ControlMap::GetSingleton();
 		if (!cm) {
 			return false;
 		}
-		const auto device = a_slot == Slot::kGamepad ? RE::INPUT_DEVICE::kGamepad :
-		                                               RE::INPUT_DEVICE::kKeyboard;
-		auto* mapping = detail::FindMapping(*cm, a_ctx, device, a_eventID);
+		auto* mapping = detail::FindMapping(*cm, a_ctx, a_device, a_eventID);
 		if (!mapping) {
 			return false;
 		}
@@ -207,19 +231,22 @@ namespace UnbindAny::ControlMapService
 		return true;
 	}
 
-	// The tail of that batch: one kick to repair the sort, then one save. The save is what makes a
-	// remappable=0 entry go live in the engine's own input-dispatch cache. Saving only on the pass
-	// a value changed is unreliable.
-	inline void KickAndSave(Slot a_slot, Context a_ctx = Context::kMainGameplay)
+	// Repairs the sort of one device array after a batch of raw writes (rule 2).
+	inline void KickDevice(RE::INPUT_DEVICE a_device, Context a_ctx = Context::kMainGameplay)
 	{
-		const auto cm = RE::ControlMap::GetSingleton();
-		if (!cm) {
-			return;
+		if (const auto cm = RE::ControlMap::GetSingleton(); cm) {
+			detail::Kick(*cm, a_ctx, a_device, ""sv);
 		}
-		const auto device = a_slot == Slot::kGamepad ? RE::INPUT_DEVICE::kGamepad :
-		                                               RE::INPUT_DEVICE::kKeyboard;
-		detail::Kick(*cm, a_ctx, device, ""sv);
-		cm->SaveRemappings();
+	}
+
+	// The tail of that batch, after every kick. The save is what makes a remappable=0 entry go live
+	// in the engine's own input-dispatch cache. Saving only on the pass a value changed is
+	// unreliable.
+	inline void Save()
+	{
+		if (const auto cm = RE::ControlMap::GetSingleton(); cm) {
+			cm->SaveRemappings();
+		}
 	}
 
 	// Writes a specific value, bypassing the already-in-state check. Apply() is the right call for

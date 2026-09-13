@@ -34,7 +34,7 @@ namespace UnbindAny::Bindings
 		bool             inMemory;
 	};
 
-	inline constexpr std::array<Binding, 31> kAll{ {
+	inline constexpr std::array<Binding, 45> kAll{ {
 		{ "Forward"sv, "Move Forward"sv, "$UC_KBM_Forward_Text"sv, 87, kUnbound, kUnbound, "W"sv, ""sv, false },
 		{ "Back"sv, "Move Backward"sv, "$UC_KBM_Back_Text"sv, 83, kUnbound, kUnbound, "S"sv, ""sv, false },
 		{ "StrafeLeft"sv, "Strafe Left"sv, "$UC_KBM_StrafeLeft_Text"sv, 65, kUnbound, kUnbound, "A"sv, ""sv, false },
@@ -52,6 +52,8 @@ namespace UnbindAny::Bindings
 		{ "Activate"sv, "Activate"sv, "$UC_KBM_Activate_Text"sv, 69, kUnbound, 4096, "E"sv, "A Button"sv, false },
 		{ "ReadyWeapon"sv, "Reload / Holster Weapon"sv, "$UC_KBM_ReadyWeapon_Text"sv, 82, kUnbound, 16384, "R"sv, "X Button"sv, false },
 		{ "TogglePOV"sv, "Toggle Camera View (1st/3rd Person)"sv, "$UC_KBM_TogglePOV_Text"sv, 86, 2, 32, "V / Mouse: Middle Click"sv, "Back / View Button"sv, false },
+		{ "ZoomIn"sv, "Zoom In (Mouse Wheel)"sv, "$UC_KBM_ZoomIn_Text"sv, kUnbound, 0x800, kUnbound, "Mouse: Wheel Up"sv, ""sv, true },
+		{ "ZoomOut"sv, "Zoom Out (Mouse Wheel)"sv, "$UC_KBM_ZoomOut_Text"sv, kUnbound, 0x900, kUnbound, "Mouse: Wheel Down"sv, ""sv, true },
 		{ "Pipboy"sv, "Pip-Boy"sv, "$UC_KBM_Pipboy_Text"sv, 9, kUnbound, 8192, "Tab"sv, "B Button"sv, false },
 		{ "Quickkeys"sv, "Favorites Menu"sv, "$UC_KBM_Quickkeys_Text"sv, 70, kUnbound, kUnbound, "F"sv, ""sv, false },
 		{ "Quicksave"sv, "Quick Save"sv, "$UC_KBM_Quicksave_Text"sv, 116, kUnbound, kUnbound, "F5"sv, ""sv, false },
@@ -62,6 +64,18 @@ namespace UnbindAny::Bindings
 		{ "QuickData"sv, "Data / Quests (Quick Access)"sv, "$UC_KBM_QuickData_Text"sv, 74, kUnbound, kUnbound, "J"sv, ""sv, false },
 		{ "QuickMap"sv, "Map (Quick Access)"sv, "$UC_KBM_QuickMap_Text"sv, 77, kUnbound, kUnbound, "M"sv, ""sv, false },
 		{ "QuickRadio"sv, "Radio (Quick Access)"sv, "$UC_KBM_QuickRadio_Text"sv, 79, kUnbound, kUnbound, "O"sv, ""sv, false },
+		{ "Quickkey1"sv, "Favorite 1"sv, "$UC_KBM_Quickkey1_Text"sv, 0x31, kUnbound, kUnbound, "1"sv, ""sv, true },
+		{ "Quickkey2"sv, "Favorite 2"sv, "$UC_KBM_Quickkey2_Text"sv, 0x32, kUnbound, kUnbound, "2"sv, ""sv, true },
+		{ "Quickkey3"sv, "Favorite 3"sv, "$UC_KBM_Quickkey3_Text"sv, 0x33, kUnbound, kUnbound, "3"sv, ""sv, true },
+		{ "Quickkey4"sv, "Favorite 4"sv, "$UC_KBM_Quickkey4_Text"sv, 0x34, kUnbound, kUnbound, "4"sv, ""sv, true },
+		{ "Quickkey5"sv, "Favorite 5"sv, "$UC_KBM_Quickkey5_Text"sv, 0x35, kUnbound, kUnbound, "5"sv, ""sv, true },
+		{ "Quickkey6"sv, "Favorite 6"sv, "$UC_KBM_Quickkey6_Text"sv, 0x36, kUnbound, kUnbound, "6"sv, ""sv, true },
+		{ "Quickkey7"sv, "Favorite 7"sv, "$UC_KBM_Quickkey7_Text"sv, 0x37, kUnbound, kUnbound, "7"sv, ""sv, true },
+		{ "Quickkey8"sv, "Favorite 8"sv, "$UC_KBM_Quickkey8_Text"sv, 0x38, kUnbound, kUnbound, "8"sv, ""sv, true },
+		{ "Quickkey9"sv, "Favorite 9"sv, "$UC_KBM_Quickkey9_Text"sv, 0x39, kUnbound, kUnbound, "9"sv, ""sv, true },
+		{ "Quickkey10"sv, "Favorite 10"sv, "$UC_KBM_Quickkey10_Text"sv, 0x30, kUnbound, kUnbound, "0"sv, ""sv, true },
+		{ "Quickkey11"sv, "Favorite 11"sv, "$UC_KBM_Quickkey11_Text"sv, 0xBD, kUnbound, kUnbound, "Minus"sv, ""sv, true },
+		{ "Quickkey12"sv, "Favorite 12"sv, "$UC_KBM_Quickkey12_Text"sv, 0xBB, kUnbound, kUnbound, "Equals"sv, ""sv, true },
 		{ "QuickkeyUp"sv, "Quick Slot Up"sv, "$UC_GP_QuickSlotUp_Text"sv, kUnbound, kUnbound, 1, ""sv, "D-Pad Up"sv, true },
 		{ "QuickkeyDown"sv, "Quick Slot Down"sv, "$UC_GP_QuickSlotDown_Text"sv, kUnbound, kUnbound, 2, ""sv, "D-Pad Down"sv, true },
 		{ "QuickkeyLeft"sv, "Quick Slot Left"sv, "$UC_GP_QuickSlotLeft_Text"sv, kUnbound, kUnbound, 4, ""sv, "D-Pad Left"sv, true },
