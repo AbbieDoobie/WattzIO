@@ -9,6 +9,15 @@ namespace ARC::ActivateReload
 		// Added on top of Settings::UnholsterHoldSeconds() when forging heldDownSecs, so the value
 		// lands on the "hold" side of whatever threshold ReadyWeaponHandler itself uses.
 		constexpr float kForceHoldMarginSecs = 20.0f;
+
+		// VATSMenu stays open through both targeting and playback. RE::VATS::mode is not a substitute:
+		// it has only kNone/kPlayback, so it reads kNone during targeting.
+		[[nodiscard]] inline bool IsVatsMenuOpen()
+		{
+			static const RE::BSFixedString kVatsMenu{ "VATSMenu" };
+			const auto ui = RE::UI::GetSingleton();
+			return ui && ui->GetMenuOpen(kVatsMenu);
+		}
 	}
 
 	// Drives readyWeaponHandler only, layering Reload/Ready onto the Activate key. The real Activate
@@ -31,8 +40,18 @@ namespace ARC::ActivateReload
 		// the rest of this press/hold/release sequence.
 		static bool s_drawnAtPress = false;
 
+		// Latched at the press like s_drawnAtPress, so ReadyWeaponHandler only ever sees whole
+		// press/release pairs: a press sent before VATS opened still gets its release, and a press
+		// swallowed inside VATS never gets a stray one.
+		static bool s_suppressAtPress = false;
+
 		if (a_event.QJustPressed()) {
 			s_drawnAtPress = player->GetWeaponMagicDrawn();
+			s_suppressAtPress = Settings::bDisableReloadInVATS && detail::IsVatsMenuOpen();
+		}
+
+		if (s_suppressAtPress) {
+			return;
 		}
 
 		if (s_drawnAtPress) {

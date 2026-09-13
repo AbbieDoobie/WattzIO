@@ -46,6 +46,8 @@ Ready/Reload key. If you want the vanilla Ready/Reload button freed up for somet
   otherwise play on every press and get really annoying.
 - **Unholster Hold Time** sets how long a hold has to be to trigger unholstering/drawing your
   weapon. Note that holstering uses vanilla timing.
+- **Disable Reload on Activate Combo Key in VATS** prevents reloading while trying to pick/confirm
+  targets. **On by default.**
 - **Block Companion Orders While Weapon Drawn** stops Activate from starting command mode on
   companions when weapon is drawn. Other interactions are unaffected. **Off by default.**
 - **Block NPC Interaction In Combat** stops Activate from starting command mode on companions
@@ -90,37 +92,41 @@ Licensed MIT. [Source](https://github.com/AbbieDoobie/WattzIO/tree/main/mods/WIO
 
 ## Changelog
 
-Initial release.
+### 1.1.0
+
+- Added option to disable reloading from the Activate Combo key while in VATS, defaults to ON.
+
+### 1.0.0
+
+- Initial release.
 
 ## Building
 
 Requires [xmake](https://xmake.io) 3.0.0 or newer and a C++23 compiler (MSVC or Clang-CL).
 
+This mod lives in a monorepo alongside the rest of the WattzIO Fallout 4 mods, and is
+built from its own directory rather than the repository root:
+
 ```bat
-git clone --recurse-submodules <url-of-this-repo>
+git clone <url-of-this-repo> wattzio
+cd wattzio
+git submodule update --init mods/WIO-ActivateCombo/lib/commonlibf4rd
+cd mods\WIO-ActivateCombo
 xmake f -m releasedbg
 xmake
 ```
 
-Cloned without `--recurse-submodules`? Fetch the dependency first:
-
-```bat
-git submodule update --init --recursive
-```
+Every mod pins its own copy of the dependency, so cloning with `--recurse-submodules`
+fetches one for all of them. Initialising just this mod's submodule is enough to build it.
 
 The built plugin lands at `build\windows\x64\releasedbg\WIO-ActivateCombo.dll`.
 
 | Path | Contents |
 |---|---|
 | `src/` | Plugin source: header-only modules plus `main.cpp` |
-| `data/` | Authored MCM config and translation files, mirroring the game's `Data` folder |
+| `data/` | MCM config and translation files, mirroring the game's `Data` folder |
 | `lib/commonlibf4rd` | CommonLibF4RD (pinned submodule). |
 | `xmake.lua` | Build configuration |
-
-Setting `WIO_PROJECTS_ROOT` makes the build stage the DLL and `data/` into a deploy
-folder automatically. Without it the build still succeeds and the deploy step is
-skipped. To install a local build by hand, copy the contents of `data\` into your
-`Data` folder and the built DLL into `Data\F4SE\Plugins\`.
 
 Every address the plugin resolves is marked with an `F4RD:<kind>` tag and listed in an
 `F4RD RELOCATIONS` banner in the file that resolves it, so `grep -rn "F4RD RELOCATIONS" src`

@@ -50,7 +50,7 @@ namespace
 	}
 }
 
-WIO_PLUGIN_VERSION("WIO-ActivateCombo", "Abbie Doobie", 1, 0, 0);
+WIO_PLUGIN_VERSION("WIO-ActivateCombo", "Abbie Doobie", 1, 1, 0);
 
 F4SE_PLUGIN_LOAD(const F4SE::LoadInterface* a_f4se)
 {

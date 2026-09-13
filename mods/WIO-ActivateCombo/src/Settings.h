@@ -37,6 +37,10 @@ namespace ARC::Settings
 	inline bool          bSilenceActivationSound = true;
 	inline std::int32_t  iUnholsterHoldTenths = 4;
 
+	// Skips the combo's Ready/Reload half for any Activate press made while VATSMenu is open, where
+	// Activate selects targets. Defaults On: the real Activate key never reloads in VATS.
+	inline bool          bDisableReloadInVATS = true;
+
 	// Companions only, gated on the weapon being drawn rather than on combat. Independent of
 	// iBlockNpcActivate below: either one on its own is enough to block. Defaults Off.
 	inline bool          bBlockCompanionDrawn = false;
@@ -64,6 +68,7 @@ namespace ARC::Settings
 		bSilenceActivationSound = detail::GetBool("Advanced", "bSilenceActivationSound", true);
 		iUnholsterHoldTenths = detail::GetInt("Advanced", "iUnholsterHoldTenths", 4);
 
+		bDisableReloadInVATS = detail::GetBool("Combat", "bDisableReloadInVATS", true);
 		bBlockCompanionDrawn = detail::GetBool("Combat", "bBlockCompanionDrawn", false);
 		iBlockNpcActivate = detail::GetInt("Combat", "iBlockNpcActivate", 0);
 		iBlockExtendSeconds = detail::GetInt("Combat", "iBlockExtendSeconds", 1);

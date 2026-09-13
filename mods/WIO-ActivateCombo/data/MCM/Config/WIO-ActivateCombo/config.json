@@ -176,6 +176,15 @@
           "text": "$ARC_Sect_Combat"
         },
         {
+          "id": "bDisableReloadInVATS:Combat",
+          "text": "$ARC_Cbt_NoReloadInVats_Text",
+          "type": "switcher",
+          "help": "$ARC_Cbt_NoReloadInVats_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingBool"
+          }
+        },
+        {
           "id": "bBlockCompanionDrawn:Combat",
           "text": "$ARC_Cbt_BlockCompanionDrawn_Text",
           "type": "switcher",
