@@ -1,0 +1,10 @@
+{
+    "modName": "WIO-QuickTurn",
+    "keybinds": [
+        {
+            "id": "QuickTurnKeyboardHotkey",
+            "desc": "$QT_Gen_TurnKey_Text",
+            "action": { "type": "RunConsoleCommand", "command": "" }
+        }
+    ]
+}

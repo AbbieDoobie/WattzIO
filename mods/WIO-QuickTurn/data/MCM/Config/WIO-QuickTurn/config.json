@@ -1,0 +1,218 @@
+{
+    "modName": "WIO-QuickTurn",
+    "author": "Abbie Doobie",
+    "displayName": "$QT_Main_ModName",
+    "minMcmVersion": 4,
+    "content": [
+        {
+            "type": "text",
+            "text": "$QT_Main_Welcome_Intro"
+        },
+        {
+            "type": "text",
+            "text": "$QT_Main_Welcome_BulletA"
+        },
+        {
+            "type": "text",
+            "text": "$QT_Main_Welcome_BulletB"
+        },
+        { "type": "spacer" },
+        {
+            "type": "text",
+            "html": true,
+            "text": "<font color='#AAAAAA' size='14'>$QT_Main_Welcome_Credits</font>"
+        }
+    ],
+    "pages": [
+        {
+            "pageDisplayName": "$QT_Gen_Page_General",
+            "content": [
+                {
+                    "type": "section",
+                    "text": "$QT_Ctx_Sect"
+                },
+                {
+                    "type": "text",
+                    "html": true,
+                    "text": "<font color='#AAAAAA' size='14'>$QT_Ctx_Note</font>"
+                },
+                {
+                    "id": "iContextualAction:Settings",
+                    "text": "$QT_Ctx_Action_Text",
+                    "type": "dropdown",
+                    "help": "$QT_Ctx_Action_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$QT_Ctx_Action_Off",
+                            "$QT_Ctx_Action_Sneak",
+                            "$QT_Ctx_Action_Sprint",
+                            "$QT_Ctx_Action_Activate",
+                            "$QT_Ctx_Action_Ready"
+                        ]
+                    }
+                },
+                {
+                    "id": "iContextualMoveMod:Settings",
+                    "text": "$QT_Ctx_Dir_Text",
+                    "type": "dropdown",
+                    "help": "$QT_Ctx_Dir_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$QT_MoveMod_Opt_BackOnly",
+                            "$QT_MoveMod_Opt_Cardinals",
+                            "$QT_MoveMod_Opt_Omni"
+                        ]
+                    }
+                },
+                { "type": "spacer" },
+                {
+                    "type": "section",
+                    "text": "$QT_Dir_Sect"
+                },
+                {
+                    "type": "text",
+                    "html": true,
+                    "text": "<font color='#AAAAAA' size='14'>$QT_Dir_Sect_Note</font>"
+                },
+                {
+                    "id": "iQuickTurnGamepadKey:Settings",
+                    "text": "$QT_Gen_TurnGP_Text",
+                    "type": "dropdown",
+                    "help": "$QT_Gen_TurnGP_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$QT_Opt_None",
+                            "$QT_Input_GP_Up",
+                            "$QT_Input_GP_Down",
+                            "$QT_Input_GP_Left",
+                            "$QT_Input_GP_Right",
+                            "$QT_Input_GP_Start",
+                            "$QT_Input_GP_Select",
+                            "$QT_Input_GP_LS",
+                            "$QT_Input_GP_RS",
+                            "$QT_Input_GP_LB",
+                            "$QT_Input_GP_RB",
+                            "$QT_Input_GP_A",
+                            "$QT_Input_GP_B",
+                            "$QT_Input_GP_X",
+                            "$QT_Input_GP_Y",
+                            "$QT_Input_GP_LT",
+                            "$QT_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iQuickTurnGamepadModifier:Settings",
+                    "text": "$QT_Gen_TurnGPMod_Text",
+                    "type": "dropdown",
+                    "help": "$QT_Gen_TurnGPMod_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$QT_Opt_None",
+                            "$QT_Input_GP_Up",
+                            "$QT_Input_GP_Down",
+                            "$QT_Input_GP_Left",
+                            "$QT_Input_GP_Right",
+                            "$QT_Input_GP_Start",
+                            "$QT_Input_GP_Select",
+                            "$QT_Input_GP_LS",
+                            "$QT_Input_GP_RS",
+                            "$QT_Input_GP_LB",
+                            "$QT_Input_GP_RB",
+                            "$QT_Input_GP_A",
+                            "$QT_Input_GP_B",
+                            "$QT_Input_GP_X",
+                            "$QT_Input_GP_Y",
+                            "$QT_Input_GP_LT",
+                            "$QT_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "QuickTurnKeyboardHotkey",
+                    "text": "$QT_Gen_TurnKey_Text",
+                    "type": "hotkey",
+                    "help": "$QT_Gen_TurnKey_Help",
+                    "allowModifierKeys": true
+                },
+                {
+                    "id": "iQuickTurnMovementModifier:Settings",
+                    "text": "$QT_Gen_MoveMod_Text",
+                    "type": "dropdown",
+                    "help": "$QT_Gen_MoveMod_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$QT_MoveMod_Opt_Off",
+                            "$QT_MoveMod_Opt_BackOnly",
+                            "$QT_MoveMod_Opt_Cardinals",
+                            "$QT_MoveMod_Opt_Omni"
+                        ]
+                    }
+                },
+                { "type": "spacer" },
+                {
+                    "type": "section",
+                    "text": "$QT_Persp_Sect"
+                },
+                {
+                    "id": "bApplyInFirstPerson:Settings",
+                    "text": "$QT_Persp_FirstPerson_Text",
+                    "type": "switcher",
+                    "help": "$QT_Persp_FirstPerson_Help",
+                    "valueOptions": { "sourceType": "ModSettingBool" }
+                },
+                {
+                    "id": "iApplyInThirdPerson:Settings",
+                    "text": "$QT_Persp_ThirdPerson_Text",
+                    "type": "dropdown",
+                    "help": "$QT_Persp_ThirdPerson_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$QT_Persp_Third_Off",
+                            "$QT_Persp_Third_Camera",
+                            "$QT_Persp_Third_Player",
+                            "$QT_Persp_Third_Both"
+                        ]
+                    }
+                },
+                { "type": "spacer" },
+                {
+                    "type": "section",
+                    "text": "$QT_Adv_Sect"
+                },
+                {
+                    "id": "iQuickTurnDurationMs:Settings",
+                    "text": "$QT_Gen_Duration_Text",
+                    "type": "slider",
+                    "help": "$QT_Gen_Duration_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "min": 0,
+                        "max": 500,
+                        "step": 10
+                    }
+                },
+                {
+                    "id": "iBlockHotkeysInMenus:Settings",
+                    "text": "$QT_Adv_BlockMenuHotkeys_Text",
+                    "type": "dropdown",
+                    "help": "$QT_Adv_BlockMenuHotkeys_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$QT_Block_MenusOnly",
+                            "$QT_Block_PromptsAndMenus",
+                            "$QT_Block_Off"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
