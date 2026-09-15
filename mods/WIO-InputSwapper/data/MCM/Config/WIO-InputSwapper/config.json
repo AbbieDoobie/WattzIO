@@ -1,0 +1,121 @@
+{
+    "modName": "WIO-InputSwapper",
+    "author": "Abbie Doobie",
+    "displayName": "$FIS_Main_ModName",
+    "minMcmVersion": 4,
+    "content": [
+        {
+            "type": "text",
+            "text": "$FIS_Main_Welcome_Intro"
+        },
+        {
+            "type": "text",
+            "text": "$FIS_Main_Welcome_BulletA"
+        },
+        {
+            "type": "text",
+            "text": "$FIS_Main_Welcome_BulletB"
+        },
+        {
+            "type": "spacer"
+        },
+        {
+            "type": "text",
+            "html": true,
+            "text": "<font color='#AAAAAA' size='14'>$FIS_Main_Welcome_Credits</font>"
+        }
+    ],
+    "pages": [
+        {
+            "pageDisplayName": "$FIS_Gen_Page_General",
+            "content": [
+                {
+                    "type": "section",
+                    "text": "$FIS_Sect_General"
+                },
+                {
+                    "id": "iInputPreference:Settings",
+                    "text": "$FIS_InputPreference_Text",
+                    "type": "dropdown",
+                    "help": "$FIS_InputPreference_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$FIS_InputPreference_Opt_Auto",
+                            "$FIS_InputPreference_Opt_Gamepad",
+                            "$FIS_InputPreference_Opt_KBM"
+                        ]
+                    }
+                },
+                {
+                    "id": "iHysteresisSeconds:Settings",
+                    "text": "$FIS_Hysteresis_Text",
+                    "type": "slider",
+                    "help": "$FIS_Hysteresis_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "min": 0,
+                        "max": 10,
+                        "step": 1
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$FIS_Sect_Advanced"
+                },
+                {
+                    "id": "iLookInputSource:Settings",
+                    "text": "$FIS_LookInputSource_Text",
+                    "type": "dropdown",
+                    "help": "$FIS_LookInputSource_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$FIS_LookInputSource_Opt_Both",
+                            "$FIS_LookInputSource_Opt_MouseOnly",
+                            "$FIS_LookInputSource_Opt_GamepadOnly"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "html": true,
+                    "text": "<font color='#AAAAAA' size='14'>$FIS_LookInputSource_Note</font>"
+                },
+                {
+                    "id": "bStopAutoMoveWithStick:Settings",
+                    "text": "$FIS_AutoMoveStick_Text",
+                    "type": "switcher",
+                    "help": "$FIS_AutoMoveStick_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$FIS_Sect_Logging"
+                },
+                {
+                    "id": "bVerboseDiagnostics:Settings",
+                    "text": "$FIS_VerboseDiagnostics_Text",
+                    "type": "switcher",
+                    "help": "$FIS_VerboseDiagnostics_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool"
+                    }
+                },
+                {
+                    "type": "text",
+                    "html": true,
+                    "text": "<font color='#AAAAAA' size='14'>$FIS_VerboseDiagnostics_Note</font>"
+                }
+            ]
+        }
+    ]
+}
