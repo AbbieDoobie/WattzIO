@@ -28,3 +28,6 @@
 [submodule "mods/WIO-InputSwapper/lib/commonlibf4rd"]
 	path = mods/WIO-InputSwapper/lib/commonlibf4rd
 	url = https://github.com/AbbieDoobie/commonlibf4rd-xmake.git
+[submodule "mods/WIO-PipboyBindings/lib/commonlibf4rd"]
+	path = mods/WIO-PipboyBindings/lib/commonlibf4rd
+	url = https://github.com/AbbieDoobie/commonlibf4rd-xmake.git

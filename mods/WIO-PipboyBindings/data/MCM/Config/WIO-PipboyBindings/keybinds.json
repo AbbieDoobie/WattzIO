@@ -1,0 +1,20 @@
+{
+    "modName": "WIO-PipboyBindings",
+    "keybinds": [
+        {
+            "id": "ZoomKeyboardHotkey",
+            "desc": "Pipboy Zoom (Keyboard)",
+            "action": { "type": "RunConsoleCommand", "command": "" }
+        },
+        {
+            "id": "CloseKeyboardHotkey",
+            "desc": "Pipboy Close (Keyboard)",
+            "action": { "type": "RunConsoleCommand", "command": "" }
+        },
+        {
+            "id": "OrderExitKeyboardHotkey",
+            "desc": "Exit Companion Order Mode (Keyboard)",
+            "action": { "type": "RunConsoleCommand", "command": "" }
+        }
+    ]
+}

@@ -1,0 +1,192 @@
+{
+    "modName": "WIO-PipboyBindings",
+    "author": "Abbie Doobie",
+    "displayName": "$PPF_Main_ModName",
+    "minMcmVersion": 4,
+    "content": [
+        {
+            "type": "text",
+            "text": "$PPF_Main_Intro"
+        },
+        {
+            "type": "text",
+            "text": "$PPF_Main_BulletZoom"
+        },
+        {
+            "type": "text",
+            "text": "$PPF_Main_BulletClose"
+        },
+        {
+            "type": "text",
+            "text": "$PPF_Main_BulletOrder"
+        },
+        {
+            "type": "text",
+            "text": "$PPF_Main_InMemNote"
+        },
+        { "type": "spacer" },
+        {
+            "type": "text",
+            "html": true,
+            "text": "<font color='#AAAAAA' size='14'>$PPF_Main_Credits</font>"
+        }
+    ],
+    "pages": [
+        {
+            "pageDisplayName": "$PPF_Gen_Page",
+            "content": [
+                {
+                    "type": "section",
+                    "text": "$PPF_Zoom_Sect"
+                },
+                {
+                    "type": "text",
+                    "html": true,
+                    "text": "<font color='#AAAAAA' size='14'>$PPF_Zoom_Note</font>"
+                },
+                {
+                    "id": "iZoomGamepadButton:PipboyZoom",
+                    "text": "$PPF_ZoomGP_Text",
+                    "type": "dropdown",
+                    "help": "$PPF_ZoomGP_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$PPF_GP_Off",
+                            "$PPF_GP_DPadUp",
+                            "$PPF_GP_DPadDown",
+                            "$PPF_GP_DPadLeft",
+                            "$PPF_GP_DPadRight",
+                            "$PPF_GP_Start",
+                            "$PPF_GP_Back",
+                            "$PPF_GP_LS",
+                            "$PPF_GP_RS",
+                            "$PPF_GP_LB",
+                            "$PPF_GP_RB",
+                            "$PPF_GP_A",
+                            "$PPF_GP_B",
+                            "$PPF_GP_X",
+                            "$PPF_GP_Y",
+                            "$PPF_GP_LT",
+                            "$PPF_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "ZoomKeyboardHotkey",
+                    "text": "$PPF_ZoomKB_Text",
+                    "type": "hotkey",
+                    "help": "$PPF_ZoomKB_Help"
+                },
+                {
+                    "id": "bSuppressVanillaZoom:PipboyZoom",
+                    "text": "$PPF_ZoomSuppress_Text",
+                    "type": "switcher",
+                    "help": "$PPF_ZoomSuppress_Help",
+                    "valueOptions": { "sourceType": "ModSettingBool" }
+                },
+                { "type": "spacer" },
+                {
+                    "type": "section",
+                    "text": "$PPF_Close_Sect"
+                },
+                {
+                    "type": "text",
+                    "html": true,
+                    "text": "<font color='#AAAAAA' size='14'>$PPF_Close_Note</font>"
+                },
+                {
+                    "id": "iCloseGamepadButton:PipboyClose",
+                    "text": "$PPF_CloseGP_Text",
+                    "type": "dropdown",
+                    "help": "$PPF_CloseGP_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$PPF_GP_SameAsOpen",
+                            "$PPF_GP_Off",
+                            "$PPF_GP_DPadUp",
+                            "$PPF_GP_DPadDown",
+                            "$PPF_GP_DPadLeft",
+                            "$PPF_GP_DPadRight",
+                            "$PPF_GP_Start",
+                            "$PPF_GP_Back",
+                            "$PPF_GP_LS",
+                            "$PPF_GP_RS",
+                            "$PPF_GP_LB",
+                            "$PPF_GP_RB",
+                            "$PPF_GP_A",
+                            "$PPF_GP_B",
+                            "$PPF_GP_X",
+                            "$PPF_GP_Y",
+                            "$PPF_GP_LT",
+                            "$PPF_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "CloseKeyboardHotkey",
+                    "text": "$PPF_CloseKB_Text",
+                    "type": "hotkey",
+                    "help": "$PPF_CloseKB_Help"
+                },
+                {
+                    "type": "text",
+                    "html": true,
+                    "text": "<font color='#AAAAAA' size='14'>$PPF_Close_FallUITip</font>"
+                },
+                {
+                    "type": "section",
+                    "text": "$PPF_Order_Sect"
+                },
+                {
+                    "type": "text",
+                    "html": true,
+                    "text": "<font color='#AAAAAA' size='14'>$PPF_Order_Note</font>"
+                },
+                {
+                    "id": "iOrderExitGamepadButton:CompanionOrder",
+                    "text": "$PPF_OrderGP_Text",
+                    "type": "dropdown",
+                    "help": "$PPF_OrderGP_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$PPF_GP_SameAsOpen",
+                            "$PPF_GP_Off",
+                            "$PPF_GP_DPadUp",
+                            "$PPF_GP_DPadDown",
+                            "$PPF_GP_DPadLeft",
+                            "$PPF_GP_DPadRight",
+                            "$PPF_GP_Start",
+                            "$PPF_GP_Back",
+                            "$PPF_GP_LS",
+                            "$PPF_GP_RS",
+                            "$PPF_GP_LB",
+                            "$PPF_GP_RB",
+                            "$PPF_GP_A",
+                            "$PPF_GP_B",
+                            "$PPF_GP_X",
+                            "$PPF_GP_Y",
+                            "$PPF_GP_LT",
+                            "$PPF_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "OrderExitKeyboardHotkey",
+                    "text": "$PPF_OrderKB_Text",
+                    "type": "hotkey",
+                    "help": "$PPF_OrderKB_Help"
+                },
+                {
+                    "id": "bSuppressVanillaOrderExit:CompanionOrder",
+                    "text": "$PPF_OrderSuppress_Text",
+                    "type": "switcher",
+                    "help": "$PPF_OrderSuppress_Help",
+                    "valueOptions": { "sourceType": "ModSettingBool" }
+                }
+            ]
+        }
+    ]
+}
