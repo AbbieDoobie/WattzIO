@@ -74,7 +74,7 @@ Mod by Abbie Doobie.
 
 ## License
 
-Licensed MIT. [Source](SOURCE_LINK)
+Licensed MIT. [Source](https://github.com/AbbieDoobie/WattzIO/tree/main/mods/WIO-GamepadKbmKeys)
 
 ## Changelog
 
