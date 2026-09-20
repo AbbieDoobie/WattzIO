@@ -1,0 +1,1187 @@
+{
+    "modName": "WIO-GamepadKbmKeys",
+    "author": "Abbie Doobie",
+    "displayName": "$GKK_Main_ModName",
+    "minMcmVersion": 4,
+    "content": [
+        {
+            "type": "text",
+            "text": "$GKK_Main_Welcome_Intro"
+        },
+        {
+            "type": "text",
+            "text": "$GKK_Main_Welcome_BulletA"
+        },
+        {
+            "type": "text",
+            "text": "$GKK_Main_Welcome_BulletB"
+        },
+        {
+            "type": "spacer"
+        },
+        {
+            "type": "text",
+            "html": true,
+            "text": "<font color='#AAAAAA' size='14'>$GKK_Main_Welcome_Credits</font>"
+        }
+    ],
+    "pages": [
+        {
+            "pageDisplayName": "$GKK_Gen_Page_General",
+            "content": [
+                {
+                    "type": "section",
+                    "text": "$GKK_Sect_Saving"
+                },
+                {
+                    "id": "iQuicksaveGamepadButton:Saving",
+                    "text": "$GKK_Gen_Quicksave_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_Quicksave_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_None",
+                            "$GKK_Input_GP_Up",
+                            "$GKK_Input_GP_Down",
+                            "$GKK_Input_GP_Left",
+                            "$GKK_Input_GP_Right",
+                            "$GKK_Input_GP_Start",
+                            "$GKK_Input_GP_Select",
+                            "$GKK_Input_GP_LS",
+                            "$GKK_Input_GP_RS",
+                            "$GKK_Input_GP_LB",
+                            "$GKK_Input_GP_RB",
+                            "$GKK_Input_GP_A",
+                            "$GKK_Input_GP_B",
+                            "$GKK_Input_GP_X",
+                            "$GKK_Input_GP_Y",
+                            "$GKK_Input_GP_LT",
+                            "$GKK_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iQuicksaveGamepadModifier:Saving",
+                    "text": "$GKK_Gen_Quicksave_Mod_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_Quicksave_Mod_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_None",
+                            "$GKK_Input_GP_Up",
+                            "$GKK_Input_GP_Down",
+                            "$GKK_Input_GP_Left",
+                            "$GKK_Input_GP_Right",
+                            "$GKK_Input_GP_Start",
+                            "$GKK_Input_GP_Select",
+                            "$GKK_Input_GP_LS",
+                            "$GKK_Input_GP_RS",
+                            "$GKK_Input_GP_LB",
+                            "$GKK_Input_GP_RB",
+                            "$GKK_Input_GP_A",
+                            "$GKK_Input_GP_B",
+                            "$GKK_Input_GP_X",
+                            "$GKK_Input_GP_Y",
+                            "$GKK_Input_GP_LT",
+                            "$GKK_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iQuicksaveBlockMode:Saving",
+                    "text": "$GKK_Gen_Block_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_Block_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_Block_UseGlobal",
+                            "$GKK_Opt_Block_Off",
+                            "$GKK_Opt_Block_Main",
+                            "$GKK_Opt_Block_Both"
+                        ]
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "id": "iQuickloadGamepadButton:Saving",
+                    "text": "$GKK_Gen_Quickload_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_Quickload_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_None",
+                            "$GKK_Input_GP_Up",
+                            "$GKK_Input_GP_Down",
+                            "$GKK_Input_GP_Left",
+                            "$GKK_Input_GP_Right",
+                            "$GKK_Input_GP_Start",
+                            "$GKK_Input_GP_Select",
+                            "$GKK_Input_GP_LS",
+                            "$GKK_Input_GP_RS",
+                            "$GKK_Input_GP_LB",
+                            "$GKK_Input_GP_RB",
+                            "$GKK_Input_GP_A",
+                            "$GKK_Input_GP_B",
+                            "$GKK_Input_GP_X",
+                            "$GKK_Input_GP_Y",
+                            "$GKK_Input_GP_LT",
+                            "$GKK_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iQuickloadGamepadModifier:Saving",
+                    "text": "$GKK_Gen_Quickload_Mod_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_Quickload_Mod_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_None",
+                            "$GKK_Input_GP_Up",
+                            "$GKK_Input_GP_Down",
+                            "$GKK_Input_GP_Left",
+                            "$GKK_Input_GP_Right",
+                            "$GKK_Input_GP_Start",
+                            "$GKK_Input_GP_Select",
+                            "$GKK_Input_GP_LS",
+                            "$GKK_Input_GP_RS",
+                            "$GKK_Input_GP_LB",
+                            "$GKK_Input_GP_RB",
+                            "$GKK_Input_GP_A",
+                            "$GKK_Input_GP_B",
+                            "$GKK_Input_GP_X",
+                            "$GKK_Input_GP_Y",
+                            "$GKK_Input_GP_LT",
+                            "$GKK_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iQuickloadBlockMode:Saving",
+                    "text": "$GKK_Gen_Block_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_Block_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_Block_UseGlobal",
+                            "$GKK_Opt_Block_Off",
+                            "$GKK_Opt_Block_Main",
+                            "$GKK_Opt_Block_Both"
+                        ]
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$GKK_Sect_PipboyMenus"
+                },
+                {
+                    "id": "iQuickkeysGamepadButton:PipboyMenus",
+                    "text": "$GKK_Gen_Quickkeys_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_Quickkeys_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_None",
+                            "$GKK_Input_GP_Up",
+                            "$GKK_Input_GP_Down",
+                            "$GKK_Input_GP_Left",
+                            "$GKK_Input_GP_Right",
+                            "$GKK_Input_GP_Start",
+                            "$GKK_Input_GP_Select",
+                            "$GKK_Input_GP_LS",
+                            "$GKK_Input_GP_RS",
+                            "$GKK_Input_GP_LB",
+                            "$GKK_Input_GP_RB",
+                            "$GKK_Input_GP_A",
+                            "$GKK_Input_GP_B",
+                            "$GKK_Input_GP_X",
+                            "$GKK_Input_GP_Y",
+                            "$GKK_Input_GP_LT",
+                            "$GKK_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iQuickkeysGamepadModifier:PipboyMenus",
+                    "text": "$GKK_Gen_Quickkeys_Mod_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_Quickkeys_Mod_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_None",
+                            "$GKK_Input_GP_Up",
+                            "$GKK_Input_GP_Down",
+                            "$GKK_Input_GP_Left",
+                            "$GKK_Input_GP_Right",
+                            "$GKK_Input_GP_Start",
+                            "$GKK_Input_GP_Select",
+                            "$GKK_Input_GP_LS",
+                            "$GKK_Input_GP_RS",
+                            "$GKK_Input_GP_LB",
+                            "$GKK_Input_GP_RB",
+                            "$GKK_Input_GP_A",
+                            "$GKK_Input_GP_B",
+                            "$GKK_Input_GP_X",
+                            "$GKK_Input_GP_Y",
+                            "$GKK_Input_GP_LT",
+                            "$GKK_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iQuickkeysBlockMode:PipboyMenus",
+                    "text": "$GKK_Gen_Block_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_Block_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_Block_UseGlobal",
+                            "$GKK_Opt_Block_Off",
+                            "$GKK_Opt_Block_Main",
+                            "$GKK_Opt_Block_Both"
+                        ]
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "id": "iQuickStatsGamepadButton:PipboyMenus",
+                    "text": "$GKK_Gen_QuickStats_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_QuickStats_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_None",
+                            "$GKK_Input_GP_Up",
+                            "$GKK_Input_GP_Down",
+                            "$GKK_Input_GP_Left",
+                            "$GKK_Input_GP_Right",
+                            "$GKK_Input_GP_Start",
+                            "$GKK_Input_GP_Select",
+                            "$GKK_Input_GP_LS",
+                            "$GKK_Input_GP_RS",
+                            "$GKK_Input_GP_LB",
+                            "$GKK_Input_GP_RB",
+                            "$GKK_Input_GP_A",
+                            "$GKK_Input_GP_B",
+                            "$GKK_Input_GP_X",
+                            "$GKK_Input_GP_Y",
+                            "$GKK_Input_GP_LT",
+                            "$GKK_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iQuickStatsGamepadModifier:PipboyMenus",
+                    "text": "$GKK_Gen_QuickStats_Mod_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_QuickStats_Mod_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_None",
+                            "$GKK_Input_GP_Up",
+                            "$GKK_Input_GP_Down",
+                            "$GKK_Input_GP_Left",
+                            "$GKK_Input_GP_Right",
+                            "$GKK_Input_GP_Start",
+                            "$GKK_Input_GP_Select",
+                            "$GKK_Input_GP_LS",
+                            "$GKK_Input_GP_RS",
+                            "$GKK_Input_GP_LB",
+                            "$GKK_Input_GP_RB",
+                            "$GKK_Input_GP_A",
+                            "$GKK_Input_GP_B",
+                            "$GKK_Input_GP_X",
+                            "$GKK_Input_GP_Y",
+                            "$GKK_Input_GP_LT",
+                            "$GKK_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iQuickStatsBlockMode:PipboyMenus",
+                    "text": "$GKK_Gen_Block_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_Block_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_Block_UseGlobal",
+                            "$GKK_Opt_Block_Off",
+                            "$GKK_Opt_Block_Main",
+                            "$GKK_Opt_Block_Both"
+                        ]
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "id": "iQuickInventoryGamepadButton:PipboyMenus",
+                    "text": "$GKK_Gen_QuickInventory_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_QuickInventory_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_None",
+                            "$GKK_Input_GP_Up",
+                            "$GKK_Input_GP_Down",
+                            "$GKK_Input_GP_Left",
+                            "$GKK_Input_GP_Right",
+                            "$GKK_Input_GP_Start",
+                            "$GKK_Input_GP_Select",
+                            "$GKK_Input_GP_LS",
+                            "$GKK_Input_GP_RS",
+                            "$GKK_Input_GP_LB",
+                            "$GKK_Input_GP_RB",
+                            "$GKK_Input_GP_A",
+                            "$GKK_Input_GP_B",
+                            "$GKK_Input_GP_X",
+                            "$GKK_Input_GP_Y",
+                            "$GKK_Input_GP_LT",
+                            "$GKK_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iQuickInventoryGamepadModifier:PipboyMenus",
+                    "text": "$GKK_Gen_QuickInventory_Mod_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_QuickInventory_Mod_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_None",
+                            "$GKK_Input_GP_Up",
+                            "$GKK_Input_GP_Down",
+                            "$GKK_Input_GP_Left",
+                            "$GKK_Input_GP_Right",
+                            "$GKK_Input_GP_Start",
+                            "$GKK_Input_GP_Select",
+                            "$GKK_Input_GP_LS",
+                            "$GKK_Input_GP_RS",
+                            "$GKK_Input_GP_LB",
+                            "$GKK_Input_GP_RB",
+                            "$GKK_Input_GP_A",
+                            "$GKK_Input_GP_B",
+                            "$GKK_Input_GP_X",
+                            "$GKK_Input_GP_Y",
+                            "$GKK_Input_GP_LT",
+                            "$GKK_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iQuickInventoryBlockMode:PipboyMenus",
+                    "text": "$GKK_Gen_Block_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_Block_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_Block_UseGlobal",
+                            "$GKK_Opt_Block_Off",
+                            "$GKK_Opt_Block_Main",
+                            "$GKK_Opt_Block_Both"
+                        ]
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "id": "iQuickDataGamepadButton:PipboyMenus",
+                    "text": "$GKK_Gen_QuickData_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_QuickData_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_None",
+                            "$GKK_Input_GP_Up",
+                            "$GKK_Input_GP_Down",
+                            "$GKK_Input_GP_Left",
+                            "$GKK_Input_GP_Right",
+                            "$GKK_Input_GP_Start",
+                            "$GKK_Input_GP_Select",
+                            "$GKK_Input_GP_LS",
+                            "$GKK_Input_GP_RS",
+                            "$GKK_Input_GP_LB",
+                            "$GKK_Input_GP_RB",
+                            "$GKK_Input_GP_A",
+                            "$GKK_Input_GP_B",
+                            "$GKK_Input_GP_X",
+                            "$GKK_Input_GP_Y",
+                            "$GKK_Input_GP_LT",
+                            "$GKK_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iQuickDataGamepadModifier:PipboyMenus",
+                    "text": "$GKK_Gen_QuickData_Mod_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_QuickData_Mod_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_None",
+                            "$GKK_Input_GP_Up",
+                            "$GKK_Input_GP_Down",
+                            "$GKK_Input_GP_Left",
+                            "$GKK_Input_GP_Right",
+                            "$GKK_Input_GP_Start",
+                            "$GKK_Input_GP_Select",
+                            "$GKK_Input_GP_LS",
+                            "$GKK_Input_GP_RS",
+                            "$GKK_Input_GP_LB",
+                            "$GKK_Input_GP_RB",
+                            "$GKK_Input_GP_A",
+                            "$GKK_Input_GP_B",
+                            "$GKK_Input_GP_X",
+                            "$GKK_Input_GP_Y",
+                            "$GKK_Input_GP_LT",
+                            "$GKK_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iQuickDataBlockMode:PipboyMenus",
+                    "text": "$GKK_Gen_Block_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_Block_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_Block_UseGlobal",
+                            "$GKK_Opt_Block_Off",
+                            "$GKK_Opt_Block_Main",
+                            "$GKK_Opt_Block_Both"
+                        ]
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "id": "iQuickMapGamepadButton:PipboyMenus",
+                    "text": "$GKK_Gen_QuickMap_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_QuickMap_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_None",
+                            "$GKK_Input_GP_Up",
+                            "$GKK_Input_GP_Down",
+                            "$GKK_Input_GP_Left",
+                            "$GKK_Input_GP_Right",
+                            "$GKK_Input_GP_Start",
+                            "$GKK_Input_GP_Select",
+                            "$GKK_Input_GP_LS",
+                            "$GKK_Input_GP_RS",
+                            "$GKK_Input_GP_LB",
+                            "$GKK_Input_GP_RB",
+                            "$GKK_Input_GP_A",
+                            "$GKK_Input_GP_B",
+                            "$GKK_Input_GP_X",
+                            "$GKK_Input_GP_Y",
+                            "$GKK_Input_GP_LT",
+                            "$GKK_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iQuickMapGamepadModifier:PipboyMenus",
+                    "text": "$GKK_Gen_QuickMap_Mod_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_QuickMap_Mod_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_None",
+                            "$GKK_Input_GP_Up",
+                            "$GKK_Input_GP_Down",
+                            "$GKK_Input_GP_Left",
+                            "$GKK_Input_GP_Right",
+                            "$GKK_Input_GP_Start",
+                            "$GKK_Input_GP_Select",
+                            "$GKK_Input_GP_LS",
+                            "$GKK_Input_GP_RS",
+                            "$GKK_Input_GP_LB",
+                            "$GKK_Input_GP_RB",
+                            "$GKK_Input_GP_A",
+                            "$GKK_Input_GP_B",
+                            "$GKK_Input_GP_X",
+                            "$GKK_Input_GP_Y",
+                            "$GKK_Input_GP_LT",
+                            "$GKK_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iQuickMapBlockMode:PipboyMenus",
+                    "text": "$GKK_Gen_Block_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_Block_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_Block_UseGlobal",
+                            "$GKK_Opt_Block_Off",
+                            "$GKK_Opt_Block_Main",
+                            "$GKK_Opt_Block_Both"
+                        ]
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "id": "iQuickRadioGamepadButton:PipboyMenus",
+                    "text": "$GKK_Gen_QuickRadio_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_QuickRadio_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_None",
+                            "$GKK_Input_GP_Up",
+                            "$GKK_Input_GP_Down",
+                            "$GKK_Input_GP_Left",
+                            "$GKK_Input_GP_Right",
+                            "$GKK_Input_GP_Start",
+                            "$GKK_Input_GP_Select",
+                            "$GKK_Input_GP_LS",
+                            "$GKK_Input_GP_RS",
+                            "$GKK_Input_GP_LB",
+                            "$GKK_Input_GP_RB",
+                            "$GKK_Input_GP_A",
+                            "$GKK_Input_GP_B",
+                            "$GKK_Input_GP_X",
+                            "$GKK_Input_GP_Y",
+                            "$GKK_Input_GP_LT",
+                            "$GKK_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iQuickRadioGamepadModifier:PipboyMenus",
+                    "text": "$GKK_Gen_QuickRadio_Mod_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_QuickRadio_Mod_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_None",
+                            "$GKK_Input_GP_Up",
+                            "$GKK_Input_GP_Down",
+                            "$GKK_Input_GP_Left",
+                            "$GKK_Input_GP_Right",
+                            "$GKK_Input_GP_Start",
+                            "$GKK_Input_GP_Select",
+                            "$GKK_Input_GP_LS",
+                            "$GKK_Input_GP_RS",
+                            "$GKK_Input_GP_LB",
+                            "$GKK_Input_GP_RB",
+                            "$GKK_Input_GP_A",
+                            "$GKK_Input_GP_B",
+                            "$GKK_Input_GP_X",
+                            "$GKK_Input_GP_Y",
+                            "$GKK_Input_GP_LT",
+                            "$GKK_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iQuickRadioBlockMode:PipboyMenus",
+                    "text": "$GKK_Gen_Block_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_Block_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_Block_UseGlobal",
+                            "$GKK_Opt_Block_Off",
+                            "$GKK_Opt_Block_Main",
+                            "$GKK_Opt_Block_Both"
+                        ]
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "section",
+                    "text": "$GKK_Sect_Movement"
+                },
+                {
+                    "id": "iAutoMoveGamepadButton:Movement",
+                    "text": "$GKK_Gen_AutoMove_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_AutoMove_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_None",
+                            "$GKK_Input_GP_Up",
+                            "$GKK_Input_GP_Down",
+                            "$GKK_Input_GP_Left",
+                            "$GKK_Input_GP_Right",
+                            "$GKK_Input_GP_Start",
+                            "$GKK_Input_GP_Select",
+                            "$GKK_Input_GP_LS",
+                            "$GKK_Input_GP_RS",
+                            "$GKK_Input_GP_LB",
+                            "$GKK_Input_GP_RB",
+                            "$GKK_Input_GP_A",
+                            "$GKK_Input_GP_B",
+                            "$GKK_Input_GP_X",
+                            "$GKK_Input_GP_Y",
+                            "$GKK_Input_GP_LT",
+                            "$GKK_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iAutoMoveGamepadModifier:Movement",
+                    "text": "$GKK_Gen_AutoMove_Mod_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_AutoMove_Mod_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_None",
+                            "$GKK_Input_GP_Up",
+                            "$GKK_Input_GP_Down",
+                            "$GKK_Input_GP_Left",
+                            "$GKK_Input_GP_Right",
+                            "$GKK_Input_GP_Start",
+                            "$GKK_Input_GP_Select",
+                            "$GKK_Input_GP_LS",
+                            "$GKK_Input_GP_RS",
+                            "$GKK_Input_GP_LB",
+                            "$GKK_Input_GP_RB",
+                            "$GKK_Input_GP_A",
+                            "$GKK_Input_GP_B",
+                            "$GKK_Input_GP_X",
+                            "$GKK_Input_GP_Y",
+                            "$GKK_Input_GP_LT",
+                            "$GKK_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iAutoMoveBlockMode:Movement",
+                    "text": "$GKK_Gen_Block_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_Block_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_Block_UseGlobal",
+                            "$GKK_Opt_Block_Off",
+                            "$GKK_Opt_Block_Main",
+                            "$GKK_Opt_Block_Both"
+                        ]
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "id": "iRunGamepadButton:Movement",
+                    "text": "$GKK_Gen_Run_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_Run_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_None",
+                            "$GKK_Input_GP_Up",
+                            "$GKK_Input_GP_Down",
+                            "$GKK_Input_GP_Left",
+                            "$GKK_Input_GP_Right",
+                            "$GKK_Input_GP_Start",
+                            "$GKK_Input_GP_Select",
+                            "$GKK_Input_GP_LS",
+                            "$GKK_Input_GP_RS",
+                            "$GKK_Input_GP_LB",
+                            "$GKK_Input_GP_RB",
+                            "$GKK_Input_GP_A",
+                            "$GKK_Input_GP_B",
+                            "$GKK_Input_GP_X",
+                            "$GKK_Input_GP_Y",
+                            "$GKK_Input_GP_LT",
+                            "$GKK_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iRunGamepadModifier:Movement",
+                    "text": "$GKK_Gen_Run_Mod_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_Run_Mod_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_None",
+                            "$GKK_Input_GP_Up",
+                            "$GKK_Input_GP_Down",
+                            "$GKK_Input_GP_Left",
+                            "$GKK_Input_GP_Right",
+                            "$GKK_Input_GP_Start",
+                            "$GKK_Input_GP_Select",
+                            "$GKK_Input_GP_LS",
+                            "$GKK_Input_GP_RS",
+                            "$GKK_Input_GP_LB",
+                            "$GKK_Input_GP_RB",
+                            "$GKK_Input_GP_A",
+                            "$GKK_Input_GP_B",
+                            "$GKK_Input_GP_X",
+                            "$GKK_Input_GP_Y",
+                            "$GKK_Input_GP_LT",
+                            "$GKK_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iRunBlockMode:Movement",
+                    "text": "$GKK_Gen_Block_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_Block_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_Block_UseGlobal",
+                            "$GKK_Opt_Block_Off",
+                            "$GKK_Opt_Block_Main",
+                            "$GKK_Opt_Block_Both"
+                        ]
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "id": "iToggleAlwaysRunGamepadButton:Movement",
+                    "text": "$GKK_Gen_ToggleAlwaysRun_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_ToggleAlwaysRun_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_None",
+                            "$GKK_Input_GP_Up",
+                            "$GKK_Input_GP_Down",
+                            "$GKK_Input_GP_Left",
+                            "$GKK_Input_GP_Right",
+                            "$GKK_Input_GP_Start",
+                            "$GKK_Input_GP_Select",
+                            "$GKK_Input_GP_LS",
+                            "$GKK_Input_GP_RS",
+                            "$GKK_Input_GP_LB",
+                            "$GKK_Input_GP_RB",
+                            "$GKK_Input_GP_A",
+                            "$GKK_Input_GP_B",
+                            "$GKK_Input_GP_X",
+                            "$GKK_Input_GP_Y",
+                            "$GKK_Input_GP_LT",
+                            "$GKK_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iToggleAlwaysRunGamepadModifier:Movement",
+                    "text": "$GKK_Gen_ToggleAlwaysRun_Mod_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_ToggleAlwaysRun_Mod_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_None",
+                            "$GKK_Input_GP_Up",
+                            "$GKK_Input_GP_Down",
+                            "$GKK_Input_GP_Left",
+                            "$GKK_Input_GP_Right",
+                            "$GKK_Input_GP_Start",
+                            "$GKK_Input_GP_Select",
+                            "$GKK_Input_GP_LS",
+                            "$GKK_Input_GP_RS",
+                            "$GKK_Input_GP_LB",
+                            "$GKK_Input_GP_RB",
+                            "$GKK_Input_GP_A",
+                            "$GKK_Input_GP_B",
+                            "$GKK_Input_GP_X",
+                            "$GKK_Input_GP_Y",
+                            "$GKK_Input_GP_LT",
+                            "$GKK_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iToggleAlwaysRunBlockMode:Movement",
+                    "text": "$GKK_Gen_Block_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_Block_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_Block_UseGlobal",
+                            "$GKK_Opt_Block_Off",
+                            "$GKK_Opt_Block_Main",
+                            "$GKK_Opt_Block_Both"
+                        ]
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "id": "iForwardGamepadButton:Movement",
+                    "text": "$GKK_Gen_Forward_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_Forward_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_None",
+                            "$GKK_Input_GP_Up",
+                            "$GKK_Input_GP_Down",
+                            "$GKK_Input_GP_Left",
+                            "$GKK_Input_GP_Right",
+                            "$GKK_Input_GP_Start",
+                            "$GKK_Input_GP_Select",
+                            "$GKK_Input_GP_LS",
+                            "$GKK_Input_GP_RS",
+                            "$GKK_Input_GP_LB",
+                            "$GKK_Input_GP_RB",
+                            "$GKK_Input_GP_A",
+                            "$GKK_Input_GP_B",
+                            "$GKK_Input_GP_X",
+                            "$GKK_Input_GP_Y",
+                            "$GKK_Input_GP_LT",
+                            "$GKK_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iForwardGamepadModifier:Movement",
+                    "text": "$GKK_Gen_Forward_Mod_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_Forward_Mod_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_None",
+                            "$GKK_Input_GP_Up",
+                            "$GKK_Input_GP_Down",
+                            "$GKK_Input_GP_Left",
+                            "$GKK_Input_GP_Right",
+                            "$GKK_Input_GP_Start",
+                            "$GKK_Input_GP_Select",
+                            "$GKK_Input_GP_LS",
+                            "$GKK_Input_GP_RS",
+                            "$GKK_Input_GP_LB",
+                            "$GKK_Input_GP_RB",
+                            "$GKK_Input_GP_A",
+                            "$GKK_Input_GP_B",
+                            "$GKK_Input_GP_X",
+                            "$GKK_Input_GP_Y",
+                            "$GKK_Input_GP_LT",
+                            "$GKK_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iForwardBlockMode:Movement",
+                    "text": "$GKK_Gen_Block_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_Block_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_Block_UseGlobal",
+                            "$GKK_Opt_Block_Off",
+                            "$GKK_Opt_Block_Main",
+                            "$GKK_Opt_Block_Both"
+                        ]
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "id": "iBackGamepadButton:Movement",
+                    "text": "$GKK_Gen_Back_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_Back_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_None",
+                            "$GKK_Input_GP_Up",
+                            "$GKK_Input_GP_Down",
+                            "$GKK_Input_GP_Left",
+                            "$GKK_Input_GP_Right",
+                            "$GKK_Input_GP_Start",
+                            "$GKK_Input_GP_Select",
+                            "$GKK_Input_GP_LS",
+                            "$GKK_Input_GP_RS",
+                            "$GKK_Input_GP_LB",
+                            "$GKK_Input_GP_RB",
+                            "$GKK_Input_GP_A",
+                            "$GKK_Input_GP_B",
+                            "$GKK_Input_GP_X",
+                            "$GKK_Input_GP_Y",
+                            "$GKK_Input_GP_LT",
+                            "$GKK_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iBackGamepadModifier:Movement",
+                    "text": "$GKK_Gen_Back_Mod_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_Back_Mod_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_None",
+                            "$GKK_Input_GP_Up",
+                            "$GKK_Input_GP_Down",
+                            "$GKK_Input_GP_Left",
+                            "$GKK_Input_GP_Right",
+                            "$GKK_Input_GP_Start",
+                            "$GKK_Input_GP_Select",
+                            "$GKK_Input_GP_LS",
+                            "$GKK_Input_GP_RS",
+                            "$GKK_Input_GP_LB",
+                            "$GKK_Input_GP_RB",
+                            "$GKK_Input_GP_A",
+                            "$GKK_Input_GP_B",
+                            "$GKK_Input_GP_X",
+                            "$GKK_Input_GP_Y",
+                            "$GKK_Input_GP_LT",
+                            "$GKK_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iBackBlockMode:Movement",
+                    "text": "$GKK_Gen_Block_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_Block_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_Block_UseGlobal",
+                            "$GKK_Opt_Block_Off",
+                            "$GKK_Opt_Block_Main",
+                            "$GKK_Opt_Block_Both"
+                        ]
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "id": "iStrafeLeftGamepadButton:Movement",
+                    "text": "$GKK_Gen_StrafeLeft_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_StrafeLeft_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_None",
+                            "$GKK_Input_GP_Up",
+                            "$GKK_Input_GP_Down",
+                            "$GKK_Input_GP_Left",
+                            "$GKK_Input_GP_Right",
+                            "$GKK_Input_GP_Start",
+                            "$GKK_Input_GP_Select",
+                            "$GKK_Input_GP_LS",
+                            "$GKK_Input_GP_RS",
+                            "$GKK_Input_GP_LB",
+                            "$GKK_Input_GP_RB",
+                            "$GKK_Input_GP_A",
+                            "$GKK_Input_GP_B",
+                            "$GKK_Input_GP_X",
+                            "$GKK_Input_GP_Y",
+                            "$GKK_Input_GP_LT",
+                            "$GKK_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iStrafeLeftGamepadModifier:Movement",
+                    "text": "$GKK_Gen_StrafeLeft_Mod_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_StrafeLeft_Mod_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_None",
+                            "$GKK_Input_GP_Up",
+                            "$GKK_Input_GP_Down",
+                            "$GKK_Input_GP_Left",
+                            "$GKK_Input_GP_Right",
+                            "$GKK_Input_GP_Start",
+                            "$GKK_Input_GP_Select",
+                            "$GKK_Input_GP_LS",
+                            "$GKK_Input_GP_RS",
+                            "$GKK_Input_GP_LB",
+                            "$GKK_Input_GP_RB",
+                            "$GKK_Input_GP_A",
+                            "$GKK_Input_GP_B",
+                            "$GKK_Input_GP_X",
+                            "$GKK_Input_GP_Y",
+                            "$GKK_Input_GP_LT",
+                            "$GKK_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iStrafeLeftBlockMode:Movement",
+                    "text": "$GKK_Gen_Block_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_Block_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_Block_UseGlobal",
+                            "$GKK_Opt_Block_Off",
+                            "$GKK_Opt_Block_Main",
+                            "$GKK_Opt_Block_Both"
+                        ]
+                    }
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "id": "iStrafeRightGamepadButton:Movement",
+                    "text": "$GKK_Gen_StrafeRight_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_StrafeRight_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_None",
+                            "$GKK_Input_GP_Up",
+                            "$GKK_Input_GP_Down",
+                            "$GKK_Input_GP_Left",
+                            "$GKK_Input_GP_Right",
+                            "$GKK_Input_GP_Start",
+                            "$GKK_Input_GP_Select",
+                            "$GKK_Input_GP_LS",
+                            "$GKK_Input_GP_RS",
+                            "$GKK_Input_GP_LB",
+                            "$GKK_Input_GP_RB",
+                            "$GKK_Input_GP_A",
+                            "$GKK_Input_GP_B",
+                            "$GKK_Input_GP_X",
+                            "$GKK_Input_GP_Y",
+                            "$GKK_Input_GP_LT",
+                            "$GKK_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iStrafeRightGamepadModifier:Movement",
+                    "text": "$GKK_Gen_StrafeRight_Mod_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_StrafeRight_Mod_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_None",
+                            "$GKK_Input_GP_Up",
+                            "$GKK_Input_GP_Down",
+                            "$GKK_Input_GP_Left",
+                            "$GKK_Input_GP_Right",
+                            "$GKK_Input_GP_Start",
+                            "$GKK_Input_GP_Select",
+                            "$GKK_Input_GP_LS",
+                            "$GKK_Input_GP_RS",
+                            "$GKK_Input_GP_LB",
+                            "$GKK_Input_GP_RB",
+                            "$GKK_Input_GP_A",
+                            "$GKK_Input_GP_B",
+                            "$GKK_Input_GP_X",
+                            "$GKK_Input_GP_Y",
+                            "$GKK_Input_GP_LT",
+                            "$GKK_Input_GP_RT"
+                        ]
+                    }
+                },
+                {
+                    "id": "iStrafeRightBlockMode:Movement",
+                    "text": "$GKK_Gen_Block_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Gen_Block_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_Block_UseGlobal",
+                            "$GKK_Opt_Block_Off",
+                            "$GKK_Opt_Block_Main",
+                            "$GKK_Opt_Block_Both"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "pageDisplayName": "$GKK_Adv_Page_Advanced",
+            "content": [
+                {
+                    "type": "section",
+                    "text": "$GKK_Sect_Blocking"
+                },
+                {
+                    "id": "iGlobalBlockMode:Advanced",
+                    "text": "$GKK_Adv_Global_Text",
+                    "type": "dropdown",
+                    "help": "$GKK_Adv_Global_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "options": [
+                            "$GKK_Opt_Block_Off",
+                            "$GKK_Opt_Block_Main",
+                            "$GKK_Opt_Block_Both"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "html": true,
+                    "text": "<font color='#AAAAAA' size='14'>$GKK_Adv_Global_NoteA</font>"
+                },
+                {
+                    "type": "text",
+                    "html": true,
+                    "text": "<font color='#AAAAAA' size='14'>$GKK_Adv_Global_NoteB</font>"
+                }
+            ]
+        }
+    ]
+}
