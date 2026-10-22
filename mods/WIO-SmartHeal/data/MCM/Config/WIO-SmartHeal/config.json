@@ -1,0 +1,551 @@
+{
+  "modName": "WIO-SmartHeal",
+  "author": "Abbie Doobie",
+  "displayName": "$SH_Main_ModName",
+  "minMcmVersion": 4,
+  "content": [
+    {
+      "type": "text",
+      "text": "$SH_Main_Welcome_Intro"
+    },
+    {
+      "type": "text",
+      "text": "$SH_Main_Welcome_BulletA"
+    },
+    {
+      "type": "text",
+      "text": "$SH_Main_Welcome_BulletB"
+    },
+    {
+      "type": "text",
+      "text": "$SH_Main_Welcome_BulletC"
+    },
+    {
+      "type": "spacer"
+    },
+    {
+      "type": "text",
+      "text": "$SH_Main_Welcome_Behaviour"
+    },
+    {
+      "type": "spacer"
+    },
+    {
+      "type": "text",
+      "html": true,
+      "text": "<font color='#AAAAAA' size='14'>$SH_Main_Welcome_Credits</font>"
+    }
+  ],
+  "pages": [
+    {
+      "pageDisplayName": "$SH_Gen_Page_General",
+      "content": [
+        {
+          "type": "section",
+          "text": "$SH_Sect_Input"
+        },
+        {
+          "id": "iGamepadKey:Input",
+          "text": "$SH_In_GPKey_Text",
+          "type": "dropdown",
+          "help": "$SH_In_GPKey_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingInt",
+            "options": [
+              "$SH_Opt_None",
+              "$SH_Input_GP_Up",
+              "$SH_Input_GP_Down",
+              "$SH_Input_GP_Left",
+              "$SH_Input_GP_Right",
+              "$SH_Input_GP_Start",
+              "$SH_Input_GP_Select",
+              "$SH_Input_GP_LS",
+              "$SH_Input_GP_RS",
+              "$SH_Input_GP_LB",
+              "$SH_Input_GP_RB",
+              "$SH_Input_GP_A",
+              "$SH_Input_GP_B",
+              "$SH_Input_GP_X",
+              "$SH_Input_GP_Y",
+              "$SH_Input_GP_LT",
+              "$SH_Input_GP_RT"
+            ]
+          }
+        },
+        {
+          "id": "iGamepadModifier:Input",
+          "text": "$SH_In_GPMod_Text",
+          "type": "dropdown",
+          "help": "$SH_In_GPMod_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingInt",
+            "options": [
+              "$SH_Opt_None",
+              "$SH_Input_GP_Up",
+              "$SH_Input_GP_Down",
+              "$SH_Input_GP_Left",
+              "$SH_Input_GP_Right",
+              "$SH_Input_GP_Start",
+              "$SH_Input_GP_Select",
+              "$SH_Input_GP_LS",
+              "$SH_Input_GP_RS",
+              "$SH_Input_GP_LB",
+              "$SH_Input_GP_RB",
+              "$SH_Input_GP_A",
+              "$SH_Input_GP_B",
+              "$SH_Input_GP_X",
+              "$SH_Input_GP_Y",
+              "$SH_Input_GP_LT",
+              "$SH_Input_GP_RT"
+            ]
+          }
+        },
+        {
+          "id": "SmartHealKeyboardHotkey",
+          "text": "$SH_In_KBHotkey_Text",
+          "type": "hotkey",
+          "help": "$SH_In_KBHotkey_Help",
+          "allowModifierKeys": true
+        },
+        {
+          "type": "spacer"
+        },
+        {
+          "type": "section",
+          "text": "$SH_Sect_Health"
+        },
+        {
+          "id": "iHPTarget:Health",
+          "text": "$SH_HP_Target_Text",
+          "type": "slider",
+          "help": "$SH_HP_Target_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingInt",
+            "min": 0,
+            "max": 100,
+            "step": 1
+          }
+        },
+        {
+          "type": "text",
+          "html": true,
+          "text": "<font color='#AAAAAA' size='14'>$SH_HP_Target_Note</font>"
+        },
+        {
+          "id": "iHPHysteresis:Health",
+          "text": "$SH_HP_Hyst_Text",
+          "type": "slider",
+          "help": "$SH_HP_Hyst_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingInt",
+            "min": 0,
+            "max": 25,
+            "step": 1
+          }
+        },
+        {
+          "id": "bStimpakOnCrippled:Health",
+          "text": "$SH_HP_Crippled_Text",
+          "type": "switcher",
+          "help": "$SH_HP_Crippled_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingBool"
+          }
+        },
+        {
+          "type": "spacer"
+        },
+        {
+          "type": "section",
+          "text": "$SH_Sect_Radiation"
+        },
+        {
+          "id": "bHealRadiation:Radiation",
+          "text": "$SH_Rad_Heal_Text",
+          "type": "switcher",
+          "help": "$SH_Rad_Heal_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingBool"
+          }
+        },
+        {
+          "type": "text",
+          "html": true,
+          "text": "<font color='#AAAAAA' size='14'>$SH_Rad_Heal_Note</font>"
+        },
+        {
+          "id": "iMaxRads:Radiation",
+          "text": "$SH_Rad_Max_Text",
+          "type": "slider",
+          "help": "$SH_Rad_Max_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingInt",
+            "min": 0,
+            "max": 100,
+            "step": 1
+          }
+        },
+        {
+          "type": "text",
+          "html": true,
+          "text": "<font color='#AAAAAA' size='14'>$SH_Rad_Max_Note</font>"
+        },
+        {
+          "id": "iRadHysteresis:Radiation",
+          "text": "$SH_Rad_Hyst_Text",
+          "type": "slider",
+          "help": "$SH_Rad_Hyst_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingInt",
+            "min": 0,
+            "max": 25,
+            "step": 1
+          }
+        }
+      ]
+    },
+    {
+      "pageDisplayName": "$SH_It_Page_Items",
+      "content": [
+        {
+          "type": "section",
+          "text": "$SH_Sect_ItemSelection"
+        },
+        {
+          "id": "iItemOrder:Items",
+          "text": "$SH_It_Order_Text",
+          "type": "dropdown",
+          "help": "$SH_It_Order_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingInt",
+            "options": [
+              "$SH_Order_Cheapest",
+              "$SH_Order_PreferStimpak",
+              "$SH_Order_AvoidStimpak"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "html": true,
+          "text": "<font color='#AAAAAA' size='14'>$SH_It_Order_Note</font>"
+        },
+        {
+          "id": "iMaxItems:Items",
+          "text": "$SH_It_MaxItems_Text",
+          "type": "slider",
+          "help": "$SH_It_MaxItems_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingInt",
+            "min": 2,
+            "max": 50,
+            "step": 1
+          }
+        },
+        {
+          "type": "spacer"
+        },
+        {
+          "type": "section",
+          "text": "$SH_Sect_Healing"
+        },
+        {
+          "id": "bUseStimpak:Items",
+          "text": "$SH_It_Stimpak_Text",
+          "type": "switcher",
+          "help": "$SH_It_Stimpak_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingBool"
+          }
+        },
+        {
+          "id": "bUseAid:Items",
+          "text": "$SH_It_Aid_Text",
+          "type": "switcher",
+          "help": "$SH_It_Aid_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingBool"
+          }
+        },
+        {
+          "id": "bUseRadaway:Items",
+          "text": "$SH_It_Radaway_Text",
+          "type": "switcher",
+          "help": "$SH_It_Radaway_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingBool"
+          }
+        },
+        {
+          "type": "spacer"
+        },
+        {
+          "type": "section",
+          "text": "$SH_Sect_Food"
+        },
+        {
+          "id": "bUseFood:Items",
+          "text": "$SH_It_Food_Text",
+          "type": "switcher",
+          "help": "$SH_It_Food_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingBool"
+          }
+        },
+        {
+          "id": "iFoodSpecial:Items",
+          "text": "$SH_It_FoodSpecial_Text",
+          "type": "dropdown",
+          "help": "$SH_It_FoodSpecial_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingInt",
+            "options": [
+              "$SH_FoodSpecial_Off",
+              "$SH_FoodSpecial_LastResort",
+              "$SH_FoodSpecial_Preferred"
+            ]
+          }
+        },
+        {
+          "id": "iFoodIrradiated:Items",
+          "text": "$SH_It_FoodRad_Text",
+          "type": "dropdown",
+          "help": "$SH_It_FoodRad_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingInt",
+            "options": [
+              "$SH_FoodRad_Off",
+              "$SH_FoodRad_LastResort",
+              "$SH_FoodRad_Preferred"
+            ]
+          }
+        },
+        {
+          "type": "spacer"
+        },
+        {
+          "type": "section",
+          "text": "$SH_Sect_Alcohol"
+        },
+        {
+          "id": "iAlcohol:Items",
+          "text": "$SH_It_Alcohol_Text",
+          "type": "dropdown",
+          "help": "$SH_It_Alcohol_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingInt",
+            "options": [
+              "$SH_Alcohol_Off",
+              "$SH_Alcohol_Always1",
+              "$SH_Alcohol_Combat"
+            ]
+          }
+        },
+        {
+          "id": "iAlcoholHealing:Items",
+          "text": "$SH_It_AlcHealing_Text",
+          "type": "dropdown",
+          "help": "$SH_It_AlcHealing_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingInt",
+            "options": [
+              "$SH_AlcHealing_Off",
+              "$SH_AlcHealing_LastResort",
+              "$SH_AlcHealing_Preferred"
+            ]
+          }
+        },
+        {
+          "id": "iAlcoholTopShelf:Items",
+          "text": "$SH_It_AlcTopShelf_Text",
+          "type": "dropdown",
+          "help": "$SH_It_AlcTopShelf_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingInt",
+            "options": [
+              "$SH_AlcTopShelf_Off",
+              "$SH_AlcTopShelf_LastResort",
+              "$SH_AlcTopShelf_Preferred"
+            ]
+          }
+        },
+        {
+          "id": "iAlcoholIrradiated:Items",
+          "text": "$SH_It_AlcIrradiated_Text",
+          "type": "dropdown",
+          "help": "$SH_It_AlcIrradiated_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingInt",
+            "options": [
+              "$SH_AlcIrradiated_Off",
+              "$SH_AlcIrradiated_LastResort",
+              "$SH_AlcIrradiated_Preferred"
+            ]
+          }
+        },
+        {
+          "id": "fAlcoholCooldown:Items",
+          "text": "$SH_It_AlcoholCooldown_Text",
+          "type": "slider",
+          "help": "$SH_It_AlcoholCooldown_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingFloat",
+            "min": 0,
+            "max": 10,
+            "step": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "pageDisplayName": "$SH_Adv_Page_Advanced",
+      "content": [
+        {
+          "type": "section",
+          "text": "$SH_Sect_Animation"
+        },
+        {
+          "id": "bAnimateLastItem:Animation",
+          "text": "$SH_An_AnimateLast_Text",
+          "type": "switcher",
+          "help": "$SH_An_AnimateLast_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingBool"
+          }
+        },
+        {
+          "id": "iPreferredLastItem:Animation",
+          "text": "$SH_An_Preferred_Text",
+          "type": "dropdown",
+          "help": "$SH_An_Preferred_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingInt",
+            "options": [
+              "$SH_Pref_Stimpak",
+              "$SH_Pref_Aid",
+              "$SH_Pref_Alcohol",
+              "$SH_Pref_Food",
+              "$SH_Pref_Radaway",
+              "$SH_Pref_Random"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "html": true,
+          "text": "<font color='#AAAAAA' size='14'>$SH_An_Note</font>"
+        },
+        {
+          "type": "spacer"
+        },
+        {
+          "type": "section",
+          "text": "$SH_Sect_TargetDirection"
+        },
+        {
+          "id": "iHPDirection:Advanced",
+          "text": "$SH_Adv_HPDir_Text",
+          "type": "dropdown",
+          "help": "$SH_Adv_HPDir_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingInt",
+            "options": [
+              "$SH_Dir_Over",
+              "$SH_Dir_Under"
+            ]
+          }
+        },
+        {
+          "id": "iRadDirection:Advanced",
+          "text": "$SH_Adv_RadDir_Text",
+          "type": "dropdown",
+          "help": "$SH_Adv_RadDir_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingInt",
+            "options": [
+              "$SH_Dir_Over",
+              "$SH_Dir_Under"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "html": true,
+          "text": "<font color='#AAAAAA' size='14'>$SH_Adv_Dir_Note</font>"
+        },
+        {
+          "type": "spacer"
+        },
+        {
+          "type": "section",
+          "text": "$SH_Sect_Notifications"
+        },
+        {
+          "id": "bNotify:Advanced",
+          "text": "$SH_Adv_Notify_Text",
+          "type": "switcher",
+          "help": "$SH_Adv_Notify_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingBool"
+          }
+        },
+        {
+          "id": "bCleanNotificationNames:Advanced",
+          "text": "$SH_Adv_CleanNames_Text",
+          "type": "switcher",
+          "help": "$SH_Adv_CleanNames_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingBool"
+          }
+        },
+        {
+          "type": "spacer"
+        },
+        {
+          "type": "section",
+          "text": "$SH_Sect_Input"
+        },
+        {
+          "id": "iBlockHotkeysInMenus:Advanced",
+          "text": "$SH_Adv_BlockMenus_Text",
+          "type": "dropdown",
+          "help": "$SH_Adv_BlockMenus_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingInt",
+            "options": [
+              "$SH_Block_MenusOnly",
+              "$SH_Block_PromptsAndMenus",
+              "$SH_Block_Off"
+            ]
+          }
+        },
+        {
+          "type": "spacer"
+        },
+        {
+          "type": "section",
+          "text": "$SH_Sect_Content"
+        },
+        {
+          "type": "text",
+          "html": true,
+          "text": "<font color='#AAAAAA' size='14'>$SH_Adv_ItemSource_Note</font>"
+        },
+        {
+          "id": "iItemSource:Advanced",
+          "text": "$SH_Adv_ItemSource_Text",
+          "type": "dropdown",
+          "help": "$SH_Adv_ItemSource_Help",
+          "valueOptions": {
+            "sourceType": "ModSettingInt",
+            "options": [
+              "$SH_ItemSource_Base",
+              "$SH_ItemSource_BaseCC",
+              "$SH_ItemSource_All"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

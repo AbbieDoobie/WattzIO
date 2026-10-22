@@ -1,0 +1,13 @@
+{
+    "modName": "WIO-SmartHeal",
+    "keybinds": [
+        {
+            "id": "SmartHealKeyboardHotkey",
+            "desc": "$SH_KB_SmartHeal",
+            "action": {
+                "type": "RunConsoleCommand",
+                "command": ""
+            }
+        }
+    ]
+}
