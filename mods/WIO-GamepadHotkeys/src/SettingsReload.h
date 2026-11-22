@@ -1,5 +1,6 @@
 #pragma once
 
+#include "ButtonBlockHandler.h"
 #include "DiscoveredHotkeys.h"
 #include "InputHook.h"
 #include "Settings.h"
@@ -39,6 +40,7 @@ namespace GMH::SettingsReload
 				// Any menu opening, not just PauseMenu: Pip-Boy, dialogue and container menus can all
 				// swallow a modifier release the same way.
 				InputHook::ResetGamepadModifierState();
+				ButtonBlockHandler::Handler::Reset();
 
 				if (a_event.menuName == "PauseMenu"sv) {
 					// Pushed on the way into the pause menu, not at kGameLoaded: MCM's SettingStore
@@ -54,6 +56,7 @@ namespace GMH::SettingsReload
 			}
 			if (a_event.menuName == "PauseMenu"sv) {
 				Settings::Load();
+				ButtonBlockHandler::Handler::Install();
 				// Retried in case PlayerCharacter's singleton was not up at kGameLoaded. A
 				// no-op once the sink is registered.
 				MenuContext::CrosshairWatcher::Install();

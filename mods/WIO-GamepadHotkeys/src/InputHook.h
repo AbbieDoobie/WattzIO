@@ -36,6 +36,17 @@ namespace GMH
 			s_modHeld.fill(false);
 		}
 
+		// The dropdown's ModSettingInt value is the raw 0-based option index into config.json's
+		// "options" array, not an engine keycode. That 17-entry list (None plus 16 buttons) is in
+		// F4SE::InputMap's own button-offset enum order, so this is offset + index - 1.
+		[[nodiscard]] static std::uint32_t GamepadDropdownToKeycode(std::int32_t a_dropdownValue)
+		{
+			if (a_dropdownValue <= 0 || a_dropdownValue > 16) {
+				return 0;  // "None", or out of range
+			}
+			return static_cast<std::uint32_t>(F4SE::InputMap::kMacro_GamepadOffset) + static_cast<std::uint32_t>(a_dropdownValue) - 1;
+		}
+
 	private:
 		// Menu and prompt classification lives in MenuContext.h. A single "is any non-gameplay
 		// context up" boolean over-blocks, counting the engine's own crosshair button-prompt contexts
@@ -161,17 +172,6 @@ namespace GMH
 					s_injectedDown[i] = false;
 				}
 			}
-		}
-
-		// The dropdown's ModSettingInt value is the raw 0-based option index into config.json's
-		// "options" array, not an engine keycode. That 17-entry list (None plus 16 buttons) is in
-		// F4SE::InputMap's own button-offset enum order, so this is offset + index - 1.
-		[[nodiscard]] static std::uint32_t GamepadDropdownToKeycode(std::int32_t a_dropdownValue)
-		{
-			if (a_dropdownValue <= 0 || a_dropdownValue > 16) {
-				return 0;  // "None", or out of range
-			}
-			return static_cast<std::uint32_t>(F4SE::InputMap::kMacro_GamepadOffset) + static_cast<std::uint32_t>(a_dropdownValue) - 1;
 		}
 
 		static inline std::array<bool, Settings::kSlotCount> s_modHeld{};

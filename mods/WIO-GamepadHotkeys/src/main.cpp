@@ -1,3 +1,4 @@
+#include "ButtonBlockHandler.h"
 #include "DiscoveredHotkeys.h"
 #include "InputHook.h"
 #include "Settings.h"
@@ -12,6 +13,7 @@ namespace
 			// PlayerCamera, BSScaleformManager, UI and the Papyrus VM's live state are not
 			// safely touchable earlier than kGameLoaded.
 			GMH::InputHook::Install();
+			GMH::ButtonBlockHandler::Handler::Install();
 			GMH::MenuContext::CrosshairWatcher::Install();
 			GMH::MenuContext::CrosshairModeWatcher::Install();
 			GMH::SettingsReload::MenuWatcher::Install();
@@ -21,7 +23,7 @@ namespace
 	}
 }
 
-WIO_PLUGIN_VERSION("WIO-GamepadHotkeys", "Abbie Doobie", 1, 0, 0);
+WIO_PLUGIN_VERSION("WIO-GamepadHotkeys", "Abbie Doobie", 1, 1, 0);
 
 F4SE_PLUGIN_LOAD(const F4SE::LoadInterface* a_f4se)
 {

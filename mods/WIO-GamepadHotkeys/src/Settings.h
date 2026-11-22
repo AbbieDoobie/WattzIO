@@ -3,6 +3,7 @@
 #include <array>
 #include <cstdio>
 
+#include "ButtonBlock.h"
 #include "MenuContext.h"
 
 // Reads MCM's runtime settings file through the Win32 GetPrivateProfileString*A APIs, not
@@ -37,6 +38,10 @@ namespace GMH::Settings
 		// and 1/2/3 are the three MenuContext::BlockMode values shifted up by one. The raw value is
 		// not a BlockMode; EffectiveBlockMode() translates.
 		std::int32_t blockMode = 0;
+
+		// Whether the gamepad button keeps its normal action while this slot fires. Per-key
+		// numbering: see ButtonBlock::FromKeyIndex.
+		ButtonBlock::Mode buttonBlockMode = ButtonBlock::Mode::kUseGlobal;
 	};
 
 	inline constexpr int kSlotCount = 10;
@@ -48,9 +53,16 @@ namespace GMH::Settings
 	// convention, because a hotkey firing mid-dialogue or mid-loot reads as a bug.
 	inline MenuContext::BlockMode blockMode = MenuContext::BlockMode::kMenusOnly;
 
+	// Advanced page: what a slot set to Use Global Setting does with its button's normal action.
+	inline ButtonBlock::Mode globalButtonBlockMode = ButtonBlock::Mode::kMainOnly;
+
 	// Hidden diagnostic switch, not in config.json, so it has no MCM control. Add bDebugLog=1 under
 	// [Advanced] in Data/MCM/Settings/WIO-GamepadHotkeys.ini by hand and close the pause menu; MCM
 	// leaves keys it does not own alone. Turns on the state and block-decision traces in InputHook.
+	//
+	// Load() hands it to WIO::SetVerbose, which is what actually lifts the log level: a release
+	// build is pinned to Info and REX::DEBUG is spdlog::debug, so without that these lines are
+	// formatted and dropped.
 	inline bool debugLog = false;
 
 	// Resolves one slot's raw dropdown value against the global. Called per slot at dispatch
@@ -62,6 +74,12 @@ namespace GMH::Settings
 			return blockMode;  // "Use Global Setting", or an out-of-range value
 		}
 		return static_cast<MenuContext::BlockMode>(raw - 1);
+	}
+
+	// The button blocking a slot actually gets, with Use Global Setting resolved.
+	[[nodiscard]] inline ButtonBlock::Mode EffectiveButtonBlockMode(int a_slotIndex)
+	{
+		return ButtonBlock::Resolve(slots[a_slotIndex].buttonBlockMode, globalButtonBlockMode);
 	}
 
 	// Slot 1 -> NumPad 1 through Slot 9 -> NumPad 9, Slot 10 -> NumPad 0, so each slot's default
@@ -90,11 +108,17 @@ namespace GMH::Settings
 
 			std::snprintf(key, sizeof(key), "iSlot%dBlockInMenus", slotNum);
 			slots[i].blockMode = detail::GetInt("Slots", key, 0);  // 0 = Use Global Setting
+
+			std::snprintf(key, sizeof(key), "iSlot%dButtonBlockMode", slotNum);
+			slots[i].buttonBlockMode = ButtonBlock::FromKeyIndex(detail::GetInt("Slots", key, 0));
 		}
 
 		debugLog = detail::GetBool("Advanced", "bDebugLog", false);
+		WIO::SetVerbose(debugLog);
 
 		const auto mode = detail::GetInt("Advanced", "iBlockHotkeysInMenus", 0);
+		globalButtonBlockMode = ButtonBlock::FromGlobalIndex(detail::GetInt("Advanced", "iGlobalButtonBlockMode", 1));
+
 		blockMode = (mode >= 0 && mode <= 2) ? static_cast<MenuContext::BlockMode>(mode) : MenuContext::BlockMode::kMenusOnly;
 	}
 }

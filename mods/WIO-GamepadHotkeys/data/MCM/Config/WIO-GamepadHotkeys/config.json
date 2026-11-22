@@ -126,7 +126,55 @@
                                                                                "$GMH_VKey_Home",
                                                                                "$GMH_VKey_End",
                                                                                "$GMH_VKey_PageUp",
-                                                                               "$GMH_VKey_PageDown"
+                                                                               "$GMH_VKey_PageDown",
+                                                                               "$GMH_VKey_F1",
+                                                                               "$GMH_VKey_F2",
+                                                                               "$GMH_VKey_F3",
+                                                                               "$GMH_VKey_F4",
+                                                                               "$GMH_VKey_F5",
+                                                                               "$GMH_VKey_F6",
+                                                                               "$GMH_VKey_F7",
+                                                                               "$GMH_VKey_F8",
+                                                                               "$GMH_VKey_F9",
+                                                                               "$GMH_VKey_F10",
+                                                                               "$GMH_VKey_F11",
+                                                                               "$GMH_VKey_F12",
+                                                                               "$GMH_VKey_Digit0",
+                                                                               "$GMH_VKey_Digit1",
+                                                                               "$GMH_VKey_Digit2",
+                                                                               "$GMH_VKey_Digit3",
+                                                                               "$GMH_VKey_Digit4",
+                                                                               "$GMH_VKey_Digit5",
+                                                                               "$GMH_VKey_Digit6",
+                                                                               "$GMH_VKey_Digit7",
+                                                                               "$GMH_VKey_Digit8",
+                                                                               "$GMH_VKey_Digit9",
+                                                                               "$GMH_VKey_A",
+                                                                               "$GMH_VKey_B",
+                                                                               "$GMH_VKey_C",
+                                                                               "$GMH_VKey_D",
+                                                                               "$GMH_VKey_E",
+                                                                               "$GMH_VKey_F",
+                                                                               "$GMH_VKey_G",
+                                                                               "$GMH_VKey_H",
+                                                                               "$GMH_VKey_I",
+                                                                               "$GMH_VKey_J",
+                                                                               "$GMH_VKey_K",
+                                                                               "$GMH_VKey_L",
+                                                                               "$GMH_VKey_M",
+                                                                               "$GMH_VKey_N",
+                                                                               "$GMH_VKey_O",
+                                                                               "$GMH_VKey_P",
+                                                                               "$GMH_VKey_Q",
+                                                                               "$GMH_VKey_R",
+                                                                               "$GMH_VKey_S",
+                                                                               "$GMH_VKey_T",
+                                                                               "$GMH_VKey_U",
+                                                                               "$GMH_VKey_V",
+                                                                               "$GMH_VKey_W",
+                                                                               "$GMH_VKey_X",
+                                                                               "$GMH_VKey_Y",
+                                                                               "$GMH_VKey_Z"
                                                                            ]
                                                            }
                                       },
@@ -141,7 +189,22 @@
                                                                                "$GMH_Block_UseGlobal",
                                                                                "$GMH_Block_MenusOnly",
                                                                                "$GMH_Block_PromptsAndMenus",
-                                                                               "$GMH_Block_Off"
+                                                                               "$GMH_Slots_Block_Off"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot1ButtonBlockMode:Slots",
+                                          "text":  "$GMH_Slots_ButtonBlock_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_ButtonBlock_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Block_UseGlobal",
+                                                                               "$GMH_ButtonBlock_Off",
+                                                                               "$GMH_ButtonBlock_Main",
+                                                                               "$GMH_ButtonBlock_Both"
                                                                            ]
                                                            }
                                       },
@@ -237,7 +300,55 @@
                                                                                "$GMH_VKey_Home",
                                                                                "$GMH_VKey_End",
                                                                                "$GMH_VKey_PageUp",
-                                                                               "$GMH_VKey_PageDown"
+                                                                               "$GMH_VKey_PageDown",
+                                                                               "$GMH_VKey_F1",
+                                                                               "$GMH_VKey_F2",
+                                                                               "$GMH_VKey_F3",
+                                                                               "$GMH_VKey_F4",
+                                                                               "$GMH_VKey_F5",
+                                                                               "$GMH_VKey_F6",
+                                                                               "$GMH_VKey_F7",
+                                                                               "$GMH_VKey_F8",
+                                                                               "$GMH_VKey_F9",
+                                                                               "$GMH_VKey_F10",
+                                                                               "$GMH_VKey_F11",
+                                                                               "$GMH_VKey_F12",
+                                                                               "$GMH_VKey_Digit0",
+                                                                               "$GMH_VKey_Digit1",
+                                                                               "$GMH_VKey_Digit2",
+                                                                               "$GMH_VKey_Digit3",
+                                                                               "$GMH_VKey_Digit4",
+                                                                               "$GMH_VKey_Digit5",
+                                                                               "$GMH_VKey_Digit6",
+                                                                               "$GMH_VKey_Digit7",
+                                                                               "$GMH_VKey_Digit8",
+                                                                               "$GMH_VKey_Digit9",
+                                                                               "$GMH_VKey_A",
+                                                                               "$GMH_VKey_B",
+                                                                               "$GMH_VKey_C",
+                                                                               "$GMH_VKey_D",
+                                                                               "$GMH_VKey_E",
+                                                                               "$GMH_VKey_F",
+                                                                               "$GMH_VKey_G",
+                                                                               "$GMH_VKey_H",
+                                                                               "$GMH_VKey_I",
+                                                                               "$GMH_VKey_J",
+                                                                               "$GMH_VKey_K",
+                                                                               "$GMH_VKey_L",
+                                                                               "$GMH_VKey_M",
+                                                                               "$GMH_VKey_N",
+                                                                               "$GMH_VKey_O",
+                                                                               "$GMH_VKey_P",
+                                                                               "$GMH_VKey_Q",
+                                                                               "$GMH_VKey_R",
+                                                                               "$GMH_VKey_S",
+                                                                               "$GMH_VKey_T",
+                                                                               "$GMH_VKey_U",
+                                                                               "$GMH_VKey_V",
+                                                                               "$GMH_VKey_W",
+                                                                               "$GMH_VKey_X",
+                                                                               "$GMH_VKey_Y",
+                                                                               "$GMH_VKey_Z"
                                                                            ]
                                                            }
                                       },
@@ -252,7 +363,22 @@
                                                                                "$GMH_Block_UseGlobal",
                                                                                "$GMH_Block_MenusOnly",
                                                                                "$GMH_Block_PromptsAndMenus",
-                                                                               "$GMH_Block_Off"
+                                                                               "$GMH_Slots_Block_Off"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot2ButtonBlockMode:Slots",
+                                          "text":  "$GMH_Slots_ButtonBlock_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_ButtonBlock_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Block_UseGlobal",
+                                                                               "$GMH_ButtonBlock_Off",
+                                                                               "$GMH_ButtonBlock_Main",
+                                                                               "$GMH_ButtonBlock_Both"
                                                                            ]
                                                            }
                                       },
@@ -348,7 +474,55 @@
                                                                                "$GMH_VKey_Home",
                                                                                "$GMH_VKey_End",
                                                                                "$GMH_VKey_PageUp",
-                                                                               "$GMH_VKey_PageDown"
+                                                                               "$GMH_VKey_PageDown",
+                                                                               "$GMH_VKey_F1",
+                                                                               "$GMH_VKey_F2",
+                                                                               "$GMH_VKey_F3",
+                                                                               "$GMH_VKey_F4",
+                                                                               "$GMH_VKey_F5",
+                                                                               "$GMH_VKey_F6",
+                                                                               "$GMH_VKey_F7",
+                                                                               "$GMH_VKey_F8",
+                                                                               "$GMH_VKey_F9",
+                                                                               "$GMH_VKey_F10",
+                                                                               "$GMH_VKey_F11",
+                                                                               "$GMH_VKey_F12",
+                                                                               "$GMH_VKey_Digit0",
+                                                                               "$GMH_VKey_Digit1",
+                                                                               "$GMH_VKey_Digit2",
+                                                                               "$GMH_VKey_Digit3",
+                                                                               "$GMH_VKey_Digit4",
+                                                                               "$GMH_VKey_Digit5",
+                                                                               "$GMH_VKey_Digit6",
+                                                                               "$GMH_VKey_Digit7",
+                                                                               "$GMH_VKey_Digit8",
+                                                                               "$GMH_VKey_Digit9",
+                                                                               "$GMH_VKey_A",
+                                                                               "$GMH_VKey_B",
+                                                                               "$GMH_VKey_C",
+                                                                               "$GMH_VKey_D",
+                                                                               "$GMH_VKey_E",
+                                                                               "$GMH_VKey_F",
+                                                                               "$GMH_VKey_G",
+                                                                               "$GMH_VKey_H",
+                                                                               "$GMH_VKey_I",
+                                                                               "$GMH_VKey_J",
+                                                                               "$GMH_VKey_K",
+                                                                               "$GMH_VKey_L",
+                                                                               "$GMH_VKey_M",
+                                                                               "$GMH_VKey_N",
+                                                                               "$GMH_VKey_O",
+                                                                               "$GMH_VKey_P",
+                                                                               "$GMH_VKey_Q",
+                                                                               "$GMH_VKey_R",
+                                                                               "$GMH_VKey_S",
+                                                                               "$GMH_VKey_T",
+                                                                               "$GMH_VKey_U",
+                                                                               "$GMH_VKey_V",
+                                                                               "$GMH_VKey_W",
+                                                                               "$GMH_VKey_X",
+                                                                               "$GMH_VKey_Y",
+                                                                               "$GMH_VKey_Z"
                                                                            ]
                                                            }
                                       },
@@ -363,7 +537,22 @@
                                                                                "$GMH_Block_UseGlobal",
                                                                                "$GMH_Block_MenusOnly",
                                                                                "$GMH_Block_PromptsAndMenus",
-                                                                               "$GMH_Block_Off"
+                                                                               "$GMH_Slots_Block_Off"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot3ButtonBlockMode:Slots",
+                                          "text":  "$GMH_Slots_ButtonBlock_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_ButtonBlock_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Block_UseGlobal",
+                                                                               "$GMH_ButtonBlock_Off",
+                                                                               "$GMH_ButtonBlock_Main",
+                                                                               "$GMH_ButtonBlock_Both"
                                                                            ]
                                                            }
                                       },
@@ -459,7 +648,55 @@
                                                                                "$GMH_VKey_Home",
                                                                                "$GMH_VKey_End",
                                                                                "$GMH_VKey_PageUp",
-                                                                               "$GMH_VKey_PageDown"
+                                                                               "$GMH_VKey_PageDown",
+                                                                               "$GMH_VKey_F1",
+                                                                               "$GMH_VKey_F2",
+                                                                               "$GMH_VKey_F3",
+                                                                               "$GMH_VKey_F4",
+                                                                               "$GMH_VKey_F5",
+                                                                               "$GMH_VKey_F6",
+                                                                               "$GMH_VKey_F7",
+                                                                               "$GMH_VKey_F8",
+                                                                               "$GMH_VKey_F9",
+                                                                               "$GMH_VKey_F10",
+                                                                               "$GMH_VKey_F11",
+                                                                               "$GMH_VKey_F12",
+                                                                               "$GMH_VKey_Digit0",
+                                                                               "$GMH_VKey_Digit1",
+                                                                               "$GMH_VKey_Digit2",
+                                                                               "$GMH_VKey_Digit3",
+                                                                               "$GMH_VKey_Digit4",
+                                                                               "$GMH_VKey_Digit5",
+                                                                               "$GMH_VKey_Digit6",
+                                                                               "$GMH_VKey_Digit7",
+                                                                               "$GMH_VKey_Digit8",
+                                                                               "$GMH_VKey_Digit9",
+                                                                               "$GMH_VKey_A",
+                                                                               "$GMH_VKey_B",
+                                                                               "$GMH_VKey_C",
+                                                                               "$GMH_VKey_D",
+                                                                               "$GMH_VKey_E",
+                                                                               "$GMH_VKey_F",
+                                                                               "$GMH_VKey_G",
+                                                                               "$GMH_VKey_H",
+                                                                               "$GMH_VKey_I",
+                                                                               "$GMH_VKey_J",
+                                                                               "$GMH_VKey_K",
+                                                                               "$GMH_VKey_L",
+                                                                               "$GMH_VKey_M",
+                                                                               "$GMH_VKey_N",
+                                                                               "$GMH_VKey_O",
+                                                                               "$GMH_VKey_P",
+                                                                               "$GMH_VKey_Q",
+                                                                               "$GMH_VKey_R",
+                                                                               "$GMH_VKey_S",
+                                                                               "$GMH_VKey_T",
+                                                                               "$GMH_VKey_U",
+                                                                               "$GMH_VKey_V",
+                                                                               "$GMH_VKey_W",
+                                                                               "$GMH_VKey_X",
+                                                                               "$GMH_VKey_Y",
+                                                                               "$GMH_VKey_Z"
                                                                            ]
                                                            }
                                       },
@@ -474,7 +711,22 @@
                                                                                "$GMH_Block_UseGlobal",
                                                                                "$GMH_Block_MenusOnly",
                                                                                "$GMH_Block_PromptsAndMenus",
-                                                                               "$GMH_Block_Off"
+                                                                               "$GMH_Slots_Block_Off"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot4ButtonBlockMode:Slots",
+                                          "text":  "$GMH_Slots_ButtonBlock_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_ButtonBlock_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Block_UseGlobal",
+                                                                               "$GMH_ButtonBlock_Off",
+                                                                               "$GMH_ButtonBlock_Main",
+                                                                               "$GMH_ButtonBlock_Both"
                                                                            ]
                                                            }
                                       },
@@ -570,7 +822,55 @@
                                                                                "$GMH_VKey_Home",
                                                                                "$GMH_VKey_End",
                                                                                "$GMH_VKey_PageUp",
-                                                                               "$GMH_VKey_PageDown"
+                                                                               "$GMH_VKey_PageDown",
+                                                                               "$GMH_VKey_F1",
+                                                                               "$GMH_VKey_F2",
+                                                                               "$GMH_VKey_F3",
+                                                                               "$GMH_VKey_F4",
+                                                                               "$GMH_VKey_F5",
+                                                                               "$GMH_VKey_F6",
+                                                                               "$GMH_VKey_F7",
+                                                                               "$GMH_VKey_F8",
+                                                                               "$GMH_VKey_F9",
+                                                                               "$GMH_VKey_F10",
+                                                                               "$GMH_VKey_F11",
+                                                                               "$GMH_VKey_F12",
+                                                                               "$GMH_VKey_Digit0",
+                                                                               "$GMH_VKey_Digit1",
+                                                                               "$GMH_VKey_Digit2",
+                                                                               "$GMH_VKey_Digit3",
+                                                                               "$GMH_VKey_Digit4",
+                                                                               "$GMH_VKey_Digit5",
+                                                                               "$GMH_VKey_Digit6",
+                                                                               "$GMH_VKey_Digit7",
+                                                                               "$GMH_VKey_Digit8",
+                                                                               "$GMH_VKey_Digit9",
+                                                                               "$GMH_VKey_A",
+                                                                               "$GMH_VKey_B",
+                                                                               "$GMH_VKey_C",
+                                                                               "$GMH_VKey_D",
+                                                                               "$GMH_VKey_E",
+                                                                               "$GMH_VKey_F",
+                                                                               "$GMH_VKey_G",
+                                                                               "$GMH_VKey_H",
+                                                                               "$GMH_VKey_I",
+                                                                               "$GMH_VKey_J",
+                                                                               "$GMH_VKey_K",
+                                                                               "$GMH_VKey_L",
+                                                                               "$GMH_VKey_M",
+                                                                               "$GMH_VKey_N",
+                                                                               "$GMH_VKey_O",
+                                                                               "$GMH_VKey_P",
+                                                                               "$GMH_VKey_Q",
+                                                                               "$GMH_VKey_R",
+                                                                               "$GMH_VKey_S",
+                                                                               "$GMH_VKey_T",
+                                                                               "$GMH_VKey_U",
+                                                                               "$GMH_VKey_V",
+                                                                               "$GMH_VKey_W",
+                                                                               "$GMH_VKey_X",
+                                                                               "$GMH_VKey_Y",
+                                                                               "$GMH_VKey_Z"
                                                                            ]
                                                            }
                                       },
@@ -585,7 +885,22 @@
                                                                                "$GMH_Block_UseGlobal",
                                                                                "$GMH_Block_MenusOnly",
                                                                                "$GMH_Block_PromptsAndMenus",
-                                                                               "$GMH_Block_Off"
+                                                                               "$GMH_Slots_Block_Off"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot5ButtonBlockMode:Slots",
+                                          "text":  "$GMH_Slots_ButtonBlock_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_ButtonBlock_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Block_UseGlobal",
+                                                                               "$GMH_ButtonBlock_Off",
+                                                                               "$GMH_ButtonBlock_Main",
+                                                                               "$GMH_ButtonBlock_Both"
                                                                            ]
                                                            }
                                       },
@@ -681,7 +996,55 @@
                                                                                "$GMH_VKey_Home",
                                                                                "$GMH_VKey_End",
                                                                                "$GMH_VKey_PageUp",
-                                                                               "$GMH_VKey_PageDown"
+                                                                               "$GMH_VKey_PageDown",
+                                                                               "$GMH_VKey_F1",
+                                                                               "$GMH_VKey_F2",
+                                                                               "$GMH_VKey_F3",
+                                                                               "$GMH_VKey_F4",
+                                                                               "$GMH_VKey_F5",
+                                                                               "$GMH_VKey_F6",
+                                                                               "$GMH_VKey_F7",
+                                                                               "$GMH_VKey_F8",
+                                                                               "$GMH_VKey_F9",
+                                                                               "$GMH_VKey_F10",
+                                                                               "$GMH_VKey_F11",
+                                                                               "$GMH_VKey_F12",
+                                                                               "$GMH_VKey_Digit0",
+                                                                               "$GMH_VKey_Digit1",
+                                                                               "$GMH_VKey_Digit2",
+                                                                               "$GMH_VKey_Digit3",
+                                                                               "$GMH_VKey_Digit4",
+                                                                               "$GMH_VKey_Digit5",
+                                                                               "$GMH_VKey_Digit6",
+                                                                               "$GMH_VKey_Digit7",
+                                                                               "$GMH_VKey_Digit8",
+                                                                               "$GMH_VKey_Digit9",
+                                                                               "$GMH_VKey_A",
+                                                                               "$GMH_VKey_B",
+                                                                               "$GMH_VKey_C",
+                                                                               "$GMH_VKey_D",
+                                                                               "$GMH_VKey_E",
+                                                                               "$GMH_VKey_F",
+                                                                               "$GMH_VKey_G",
+                                                                               "$GMH_VKey_H",
+                                                                               "$GMH_VKey_I",
+                                                                               "$GMH_VKey_J",
+                                                                               "$GMH_VKey_K",
+                                                                               "$GMH_VKey_L",
+                                                                               "$GMH_VKey_M",
+                                                                               "$GMH_VKey_N",
+                                                                               "$GMH_VKey_O",
+                                                                               "$GMH_VKey_P",
+                                                                               "$GMH_VKey_Q",
+                                                                               "$GMH_VKey_R",
+                                                                               "$GMH_VKey_S",
+                                                                               "$GMH_VKey_T",
+                                                                               "$GMH_VKey_U",
+                                                                               "$GMH_VKey_V",
+                                                                               "$GMH_VKey_W",
+                                                                               "$GMH_VKey_X",
+                                                                               "$GMH_VKey_Y",
+                                                                               "$GMH_VKey_Z"
                                                                            ]
                                                            }
                                       },
@@ -696,7 +1059,22 @@
                                                                                "$GMH_Block_UseGlobal",
                                                                                "$GMH_Block_MenusOnly",
                                                                                "$GMH_Block_PromptsAndMenus",
-                                                                               "$GMH_Block_Off"
+                                                                               "$GMH_Slots_Block_Off"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot6ButtonBlockMode:Slots",
+                                          "text":  "$GMH_Slots_ButtonBlock_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_ButtonBlock_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Block_UseGlobal",
+                                                                               "$GMH_ButtonBlock_Off",
+                                                                               "$GMH_ButtonBlock_Main",
+                                                                               "$GMH_ButtonBlock_Both"
                                                                            ]
                                                            }
                                       },
@@ -792,7 +1170,55 @@
                                                                                "$GMH_VKey_Home",
                                                                                "$GMH_VKey_End",
                                                                                "$GMH_VKey_PageUp",
-                                                                               "$GMH_VKey_PageDown"
+                                                                               "$GMH_VKey_PageDown",
+                                                                               "$GMH_VKey_F1",
+                                                                               "$GMH_VKey_F2",
+                                                                               "$GMH_VKey_F3",
+                                                                               "$GMH_VKey_F4",
+                                                                               "$GMH_VKey_F5",
+                                                                               "$GMH_VKey_F6",
+                                                                               "$GMH_VKey_F7",
+                                                                               "$GMH_VKey_F8",
+                                                                               "$GMH_VKey_F9",
+                                                                               "$GMH_VKey_F10",
+                                                                               "$GMH_VKey_F11",
+                                                                               "$GMH_VKey_F12",
+                                                                               "$GMH_VKey_Digit0",
+                                                                               "$GMH_VKey_Digit1",
+                                                                               "$GMH_VKey_Digit2",
+                                                                               "$GMH_VKey_Digit3",
+                                                                               "$GMH_VKey_Digit4",
+                                                                               "$GMH_VKey_Digit5",
+                                                                               "$GMH_VKey_Digit6",
+                                                                               "$GMH_VKey_Digit7",
+                                                                               "$GMH_VKey_Digit8",
+                                                                               "$GMH_VKey_Digit9",
+                                                                               "$GMH_VKey_A",
+                                                                               "$GMH_VKey_B",
+                                                                               "$GMH_VKey_C",
+                                                                               "$GMH_VKey_D",
+                                                                               "$GMH_VKey_E",
+                                                                               "$GMH_VKey_F",
+                                                                               "$GMH_VKey_G",
+                                                                               "$GMH_VKey_H",
+                                                                               "$GMH_VKey_I",
+                                                                               "$GMH_VKey_J",
+                                                                               "$GMH_VKey_K",
+                                                                               "$GMH_VKey_L",
+                                                                               "$GMH_VKey_M",
+                                                                               "$GMH_VKey_N",
+                                                                               "$GMH_VKey_O",
+                                                                               "$GMH_VKey_P",
+                                                                               "$GMH_VKey_Q",
+                                                                               "$GMH_VKey_R",
+                                                                               "$GMH_VKey_S",
+                                                                               "$GMH_VKey_T",
+                                                                               "$GMH_VKey_U",
+                                                                               "$GMH_VKey_V",
+                                                                               "$GMH_VKey_W",
+                                                                               "$GMH_VKey_X",
+                                                                               "$GMH_VKey_Y",
+                                                                               "$GMH_VKey_Z"
                                                                            ]
                                                            }
                                       },
@@ -807,7 +1233,22 @@
                                                                                "$GMH_Block_UseGlobal",
                                                                                "$GMH_Block_MenusOnly",
                                                                                "$GMH_Block_PromptsAndMenus",
-                                                                               "$GMH_Block_Off"
+                                                                               "$GMH_Slots_Block_Off"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot7ButtonBlockMode:Slots",
+                                          "text":  "$GMH_Slots_ButtonBlock_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_ButtonBlock_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Block_UseGlobal",
+                                                                               "$GMH_ButtonBlock_Off",
+                                                                               "$GMH_ButtonBlock_Main",
+                                                                               "$GMH_ButtonBlock_Both"
                                                                            ]
                                                            }
                                       },
@@ -903,7 +1344,55 @@
                                                                                "$GMH_VKey_Home",
                                                                                "$GMH_VKey_End",
                                                                                "$GMH_VKey_PageUp",
-                                                                               "$GMH_VKey_PageDown"
+                                                                               "$GMH_VKey_PageDown",
+                                                                               "$GMH_VKey_F1",
+                                                                               "$GMH_VKey_F2",
+                                                                               "$GMH_VKey_F3",
+                                                                               "$GMH_VKey_F4",
+                                                                               "$GMH_VKey_F5",
+                                                                               "$GMH_VKey_F6",
+                                                                               "$GMH_VKey_F7",
+                                                                               "$GMH_VKey_F8",
+                                                                               "$GMH_VKey_F9",
+                                                                               "$GMH_VKey_F10",
+                                                                               "$GMH_VKey_F11",
+                                                                               "$GMH_VKey_F12",
+                                                                               "$GMH_VKey_Digit0",
+                                                                               "$GMH_VKey_Digit1",
+                                                                               "$GMH_VKey_Digit2",
+                                                                               "$GMH_VKey_Digit3",
+                                                                               "$GMH_VKey_Digit4",
+                                                                               "$GMH_VKey_Digit5",
+                                                                               "$GMH_VKey_Digit6",
+                                                                               "$GMH_VKey_Digit7",
+                                                                               "$GMH_VKey_Digit8",
+                                                                               "$GMH_VKey_Digit9",
+                                                                               "$GMH_VKey_A",
+                                                                               "$GMH_VKey_B",
+                                                                               "$GMH_VKey_C",
+                                                                               "$GMH_VKey_D",
+                                                                               "$GMH_VKey_E",
+                                                                               "$GMH_VKey_F",
+                                                                               "$GMH_VKey_G",
+                                                                               "$GMH_VKey_H",
+                                                                               "$GMH_VKey_I",
+                                                                               "$GMH_VKey_J",
+                                                                               "$GMH_VKey_K",
+                                                                               "$GMH_VKey_L",
+                                                                               "$GMH_VKey_M",
+                                                                               "$GMH_VKey_N",
+                                                                               "$GMH_VKey_O",
+                                                                               "$GMH_VKey_P",
+                                                                               "$GMH_VKey_Q",
+                                                                               "$GMH_VKey_R",
+                                                                               "$GMH_VKey_S",
+                                                                               "$GMH_VKey_T",
+                                                                               "$GMH_VKey_U",
+                                                                               "$GMH_VKey_V",
+                                                                               "$GMH_VKey_W",
+                                                                               "$GMH_VKey_X",
+                                                                               "$GMH_VKey_Y",
+                                                                               "$GMH_VKey_Z"
                                                                            ]
                                                            }
                                       },
@@ -918,7 +1407,22 @@
                                                                                "$GMH_Block_UseGlobal",
                                                                                "$GMH_Block_MenusOnly",
                                                                                "$GMH_Block_PromptsAndMenus",
-                                                                               "$GMH_Block_Off"
+                                                                               "$GMH_Slots_Block_Off"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot8ButtonBlockMode:Slots",
+                                          "text":  "$GMH_Slots_ButtonBlock_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_ButtonBlock_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Block_UseGlobal",
+                                                                               "$GMH_ButtonBlock_Off",
+                                                                               "$GMH_ButtonBlock_Main",
+                                                                               "$GMH_ButtonBlock_Both"
                                                                            ]
                                                            }
                                       },
@@ -1014,7 +1518,55 @@
                                                                                "$GMH_VKey_Home",
                                                                                "$GMH_VKey_End",
                                                                                "$GMH_VKey_PageUp",
-                                                                               "$GMH_VKey_PageDown"
+                                                                               "$GMH_VKey_PageDown",
+                                                                               "$GMH_VKey_F1",
+                                                                               "$GMH_VKey_F2",
+                                                                               "$GMH_VKey_F3",
+                                                                               "$GMH_VKey_F4",
+                                                                               "$GMH_VKey_F5",
+                                                                               "$GMH_VKey_F6",
+                                                                               "$GMH_VKey_F7",
+                                                                               "$GMH_VKey_F8",
+                                                                               "$GMH_VKey_F9",
+                                                                               "$GMH_VKey_F10",
+                                                                               "$GMH_VKey_F11",
+                                                                               "$GMH_VKey_F12",
+                                                                               "$GMH_VKey_Digit0",
+                                                                               "$GMH_VKey_Digit1",
+                                                                               "$GMH_VKey_Digit2",
+                                                                               "$GMH_VKey_Digit3",
+                                                                               "$GMH_VKey_Digit4",
+                                                                               "$GMH_VKey_Digit5",
+                                                                               "$GMH_VKey_Digit6",
+                                                                               "$GMH_VKey_Digit7",
+                                                                               "$GMH_VKey_Digit8",
+                                                                               "$GMH_VKey_Digit9",
+                                                                               "$GMH_VKey_A",
+                                                                               "$GMH_VKey_B",
+                                                                               "$GMH_VKey_C",
+                                                                               "$GMH_VKey_D",
+                                                                               "$GMH_VKey_E",
+                                                                               "$GMH_VKey_F",
+                                                                               "$GMH_VKey_G",
+                                                                               "$GMH_VKey_H",
+                                                                               "$GMH_VKey_I",
+                                                                               "$GMH_VKey_J",
+                                                                               "$GMH_VKey_K",
+                                                                               "$GMH_VKey_L",
+                                                                               "$GMH_VKey_M",
+                                                                               "$GMH_VKey_N",
+                                                                               "$GMH_VKey_O",
+                                                                               "$GMH_VKey_P",
+                                                                               "$GMH_VKey_Q",
+                                                                               "$GMH_VKey_R",
+                                                                               "$GMH_VKey_S",
+                                                                               "$GMH_VKey_T",
+                                                                               "$GMH_VKey_U",
+                                                                               "$GMH_VKey_V",
+                                                                               "$GMH_VKey_W",
+                                                                               "$GMH_VKey_X",
+                                                                               "$GMH_VKey_Y",
+                                                                               "$GMH_VKey_Z"
                                                                            ]
                                                            }
                                       },
@@ -1029,7 +1581,22 @@
                                                                                "$GMH_Block_UseGlobal",
                                                                                "$GMH_Block_MenusOnly",
                                                                                "$GMH_Block_PromptsAndMenus",
-                                                                               "$GMH_Block_Off"
+                                                                               "$GMH_Slots_Block_Off"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot9ButtonBlockMode:Slots",
+                                          "text":  "$GMH_Slots_ButtonBlock_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_ButtonBlock_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Block_UseGlobal",
+                                                                               "$GMH_ButtonBlock_Off",
+                                                                               "$GMH_ButtonBlock_Main",
+                                                                               "$GMH_ButtonBlock_Both"
                                                                            ]
                                                            }
                                       },
@@ -1125,7 +1692,55 @@
                                                                                "$GMH_VKey_Home",
                                                                                "$GMH_VKey_End",
                                                                                "$GMH_VKey_PageUp",
-                                                                               "$GMH_VKey_PageDown"
+                                                                               "$GMH_VKey_PageDown",
+                                                                               "$GMH_VKey_F1",
+                                                                               "$GMH_VKey_F2",
+                                                                               "$GMH_VKey_F3",
+                                                                               "$GMH_VKey_F4",
+                                                                               "$GMH_VKey_F5",
+                                                                               "$GMH_VKey_F6",
+                                                                               "$GMH_VKey_F7",
+                                                                               "$GMH_VKey_F8",
+                                                                               "$GMH_VKey_F9",
+                                                                               "$GMH_VKey_F10",
+                                                                               "$GMH_VKey_F11",
+                                                                               "$GMH_VKey_F12",
+                                                                               "$GMH_VKey_Digit0",
+                                                                               "$GMH_VKey_Digit1",
+                                                                               "$GMH_VKey_Digit2",
+                                                                               "$GMH_VKey_Digit3",
+                                                                               "$GMH_VKey_Digit4",
+                                                                               "$GMH_VKey_Digit5",
+                                                                               "$GMH_VKey_Digit6",
+                                                                               "$GMH_VKey_Digit7",
+                                                                               "$GMH_VKey_Digit8",
+                                                                               "$GMH_VKey_Digit9",
+                                                                               "$GMH_VKey_A",
+                                                                               "$GMH_VKey_B",
+                                                                               "$GMH_VKey_C",
+                                                                               "$GMH_VKey_D",
+                                                                               "$GMH_VKey_E",
+                                                                               "$GMH_VKey_F",
+                                                                               "$GMH_VKey_G",
+                                                                               "$GMH_VKey_H",
+                                                                               "$GMH_VKey_I",
+                                                                               "$GMH_VKey_J",
+                                                                               "$GMH_VKey_K",
+                                                                               "$GMH_VKey_L",
+                                                                               "$GMH_VKey_M",
+                                                                               "$GMH_VKey_N",
+                                                                               "$GMH_VKey_O",
+                                                                               "$GMH_VKey_P",
+                                                                               "$GMH_VKey_Q",
+                                                                               "$GMH_VKey_R",
+                                                                               "$GMH_VKey_S",
+                                                                               "$GMH_VKey_T",
+                                                                               "$GMH_VKey_U",
+                                                                               "$GMH_VKey_V",
+                                                                               "$GMH_VKey_W",
+                                                                               "$GMH_VKey_X",
+                                                                               "$GMH_VKey_Y",
+                                                                               "$GMH_VKey_Z"
                                                                            ]
                                                            }
                                       },
@@ -1140,7 +1755,22 @@
                                                                                "$GMH_Block_UseGlobal",
                                                                                "$GMH_Block_MenusOnly",
                                                                                "$GMH_Block_PromptsAndMenus",
-                                                                               "$GMH_Block_Off"
+                                                                               "$GMH_Slots_Block_Off"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "id":  "iSlot10ButtonBlockMode:Slots",
+                                          "text":  "$GMH_Slots_ButtonBlock_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Slots_ButtonBlock_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_Block_UseGlobal",
+                                                                               "$GMH_ButtonBlock_Off",
+                                                                               "$GMH_ButtonBlock_Main",
+                                                                               "$GMH_ButtonBlock_Both"
                                                                            ]
                                                            }
                                       }
@@ -1618,7 +2248,7 @@
                       "content":  [
                                       {
                                           "type":  "section",
-                                          "text":  "$GMH_Adv_Sect"
+                                          "text":  "$GMH_Adv_Sect_InputBehavior"
                                       },
                                       {
                                           "id":  "iBlockHotkeysInMenus:Advanced",
@@ -1633,6 +2263,53 @@
                                                                                "$GMH_Block_Off"
                                                                            ]
                                                            }
+                                      },
+                                      {
+                                          "type":  "text",
+                                          "html":  true,
+                                          "text":  "\u003cfont color=\u0027#AAAAAA\u0027 size=\u002714\u0027\u003e$GMH_Adv_Menus_NoteA\u003c/font\u003e"
+                                      },
+                                      {
+                                          "type":  "text",
+                                          "html":  true,
+                                          "text":  "\u003cfont color=\u0027#AAAAAA\u0027 size=\u002714\u0027\u003e$GMH_Adv_Menus_NoteB\u003c/font\u003e"
+                                      },
+                                      {
+                                          "type":  "text",
+                                          "html":  true,
+                                          "text":  "\u003cfont color=\u0027#AAAAAA\u0027 size=\u002714\u0027\u003e$GMH_Adv_Menus_NoteC\u003c/font\u003e"
+                                      },
+                                      {
+                                          "type":  "spacer"
+                                      },
+                                      {
+                                          "id":  "iGlobalButtonBlockMode:Advanced",
+                                          "text":  "$GMH_Adv_ButtonBlock_Text",
+                                          "type":  "dropdown",
+                                          "help":  "$GMH_Adv_ButtonBlock_Help",
+                                          "valueOptions":  {
+                                                               "sourceType":  "ModSettingInt",
+                                                               "options":  [
+                                                                               "$GMH_ButtonBlock_Off",
+                                                                               "$GMH_ButtonBlock_Main",
+                                                                               "$GMH_ButtonBlock_Both"
+                                                                           ]
+                                                           }
+                                      },
+                                      {
+                                          "type":  "text",
+                                          "html":  true,
+                                          "text":  "\u003cfont color=\u0027#AAAAAA\u0027 size=\u002714\u0027\u003e$GMH_Adv_ButtonBlock_NoteOff\u003c/font\u003e"
+                                      },
+                                      {
+                                          "type":  "text",
+                                          "html":  true,
+                                          "text":  "\u003cfont color=\u0027#AAAAAA\u0027 size=\u002714\u0027\u003e$GMH_Adv_ButtonBlock_NoteA\u003c/font\u003e"
+                                      },
+                                      {
+                                          "type":  "text",
+                                          "html":  true,
+                                          "text":  "\u003cfont color=\u0027#AAAAAA\u0027 size=\u002714\u0027\u003e$GMH_Adv_ButtonBlock_NoteB\u003c/font\u003e"
                                       }
                                   ]
                   }

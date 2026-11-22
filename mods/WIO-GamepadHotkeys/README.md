@@ -8,7 +8,7 @@ This mod bridges any mod's MCM hotkeys with gamepad inputs through simulated key
 
 | What you do | What happens |
 |---|---|
-| Press your chosen gamepad button | The other mod's MCM hotkey fires |
+| Press your chosen gamepad button | The other mod's MCM hotkey fires, and the button's normal action is blocked (optional) |
 | Press the original keyboard hotkey | Still works, exactly as before |
 
 Ten slots, so ten different mods' hotkeys can live on your controller at once.
@@ -19,7 +19,8 @@ Open the Mod Configuration Menu, find **WattzIO - Gamepad MCM Hotkeys**, and set
 time:
 
 1. Pick a gamepad button. Optionally pick a second gamepad button to act as a modifier / shift key (if set, the slot only triggers when both are held).
-2. Pick a **simulated key** - one of a pool of keys typically unused (Numpad and Navigation Keys).
+2. Pick a **simulated key** - Numpad and Navigation Keys are typically unused, and F1-F12, 0-9, and A-Z
+   are available too.
 3. Go into the *other* mod's MCM page and bind the desired hotkey to the key chosen in step 2.
 
 Pressing the gamepad button should now fire that mod's hotkey.
@@ -31,8 +32,11 @@ Pressing the gamepad button should now fire that mod's hotkey.
 - **Discovered Hotkeys** is a second page listing every MCM hotkey found across your installed mods
   and what key each is currently bound to, so you can pick a simulated key that isn't already
   claimed by something else.
-- **Block Hotkeys During Menus** on the Advanced page decides whether hotkeys fire while a menu
+- **Disable Hotkeys During Menus** on the Advanced page decides whether hotkeys fire while a menu
   or a prompt is on screen, and each slot can override it.
+- **Block Buttons' Normal Actions** on the Advanced page stops a bound button doing what it normally
+  does while its hotkey fires (the main button only, or the modifier too), and each slot can
+  override it.
 
 ## Technical Stuff and Limitations
 
@@ -61,37 +65,42 @@ Licensed MIT. [Source](https://github.com/AbbieDoobie/WattzIO/tree/main/mods/WIO
 
 ## Changelog
 
-Initial release.
+### 1.1.0
+- Added F1-F12, 0-9, and A-Z to the Simulated Key options.
+- Added Block Button's Normal Action, so a bound gamepad button no longer does its usual thing while
+  its hotkey fires. Set per slot, with a global default on the Advanced page (Main Button Only).
+- Block Hotkeys During Menus is now Disable Hotkeys During Menus, with clearer option names and a
+  note under each option explaining it. Existing settings carry over.
+### 1.0.0
+- Initial release.
 
 ## Building
 
 Requires [xmake](https://xmake.io) 3.0.0 or newer and a C++23 compiler (MSVC or Clang-CL).
 
+This mod lives in a monorepo alongside the rest of the WattzIO Fallout 4 mods, and is
+built from its own directory rather than the repository root:
+
 ```bat
-git clone --recurse-submodules <url-of-this-repo>
+git clone <url-of-this-repo> wattzio
+cd wattzio
+git submodule update --init mods/WIO-GamepadHotkeys/lib/commonlibf4rd
+cd mods\WIO-GamepadHotkeys
 xmake f -m releasedbg
 xmake
 ```
 
-Cloned without `--recurse-submodules`? Fetch the dependency first:
-
-```bat
-git submodule update --init --recursive
-```
+Every mod pins its own copy of the dependency, so cloning with `--recurse-submodules`
+fetches one for all of them. Initialising just this mod's submodule is enough to build it.
 
 The built plugin lands at `build\windows\x64\releasedbg\WIO-GamepadHotkeys.dll`.
 
 | Path | Contents |
 |---|---|
 | `src/` | Plugin source: header-only modules plus `main.cpp` |
-| `data/` | Authored MCM config and translation files, mirroring the game's `Data` folder |
+| `data/` | MCM config and translation files, mirroring the game's `Data` folder |
 | `lib/commonlibf4rd` | CommonLibF4RD (pinned submodule). |
 | `xmake.lua` | Build configuration |
-
-Setting `WIO_PROJECTS_ROOT` makes the build stage the DLL and `data/` into a deploy
-folder automatically. Without it the build still succeeds and the deploy step is
-skipped. To install a local build by hand, copy the contents of `data\` into your
-`Data` folder and the built DLL into `Data\F4SE\Plugins\`.
 
 Every address the plugin resolves is marked with an `F4RD:<kind>` tag and listed in an
 `F4RD RELOCATIONS` banner in the file that resolves it, so `grep -rn "F4RD RELOCATIONS" src`
